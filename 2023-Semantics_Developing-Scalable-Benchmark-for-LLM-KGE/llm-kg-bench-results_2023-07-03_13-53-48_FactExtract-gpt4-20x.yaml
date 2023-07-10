@@ -1,0 +1,3069 @@
+---
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 34
+  - 173259
+  info:
+    parsableTriples: '_:n43b7e0597f774ce5a76020ea3c0898afb1 <http://qudt.org/schema/qudt/unit>
+      <http://qudt.org/vocab/unit/MilliMETER> .
+
+      _:n43b7e0597f774ce5a76020ea3c0898afb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:n43b7e0597f774ce5a76020ea3c0898afb1 .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      _:n43b7e0597f774ce5a76020ea3c0898afb1 <http://qudt.org/schema/qudt/numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      '
+    parsableTriplesCount: 7
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 13:53:48.836721
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 13:54:23.009969
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix qudt: <http://qudt.org/schema/qudt/> .\n@prefix unit: <http://qudt.org/vocab/unit/>\
+      \ .\n@prefix schema: <http://schema.org/> .\n@prefix sk: <https://data.semper-ki.org/resources/>\
+      \ .\n@prefix sp: <https://data.semper-ki.org/properties/> .\n\nsk:Industry_F340\n\
+      \  rdf:type <https://purl.org/tema/051993> ;\n  schema:manufacturer sk:3DGence\
+      \ ;\n  sp:printMaterial sk:materials/ABS, sk:materials/PLA, sk:materials/PA,\
+      \ sk:materials/ASA, sk:materials/PP, sk:materials/TPU,\n                   sk:materials/PA-CF,\
+      \ sk:materials/PA-GF, sk:materials/PC, sk:materials/PC-ABS, sk:materials/PC-ESD,\
+      \ sk:materials/PC-CF,\n                   sk:materials/PEEK, sk:materials/PEKK\
+      \ ;\n  sp:supportMaterial sk:materials/ESM-10, sk:materials/HIPS, sk:materials/BVOH,\
+      \ sk:materials/ABS ;\n  schema:width [ a qudt:QuantityValue ; qudt:numericValue\
+      \ \"1200.0\"^^xsd:double ; qudt:unit unit:MilliMETER ],\n  schema:depth [ a\
+      \ qudt:QuantityValue ; qudt:numericValue \"800.0\"^^xsd:double ; qudt:unit unit:MilliMETER\
+      \ ],\n  schema:height [ a qudt:QuantityValue ; qudt:numericValue \"1100.0\"\
+      ^^xsd:double ; qudt:unit unit:MilliMETER ] .\n\nsk:3DGence\n  rdfs:label \"\
+      3DGence\" ."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 0.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.3744821872410936
+    normDiffRatio: 0.31379883624272653
+    norm_f-measure: 0.3783783783783784
+    norm_precision: 0.875
+    norm_recall: 0.2413793103448276
+    parsableTripleRatio: 0.21875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 13:53:48.836710
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 31
+  - 303359
+  info:
+    parsableTriples: '_:n02b7a532b35d40d188e956e8c7c47cb9b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      _:n02b7a532b35d40d188e956e8c7c47cb9b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:n02b7a532b35d40d188e956e8c7c47cb9b3 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:n02b7a532b35d40d188e956e8c7c47cb9b2 <http://qudt.org/schema/qudt#numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:n02b7a532b35d40d188e956e8c7c47cb9b2 .
+
+      _:n02b7a532b35d40d188e956e8c7c47cb9b3 <http://qudt.org/schema/qudt#unit> <http://qudt.org/vocab/unit#MilliM>
+      .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:n02b7a532b35d40d188e956e8c7c47cb9b1 .
+
+      _:n02b7a532b35d40d188e956e8c7c47cb9b2 <http://qudt.org/schema/qudt#unit> <http://qudt.org/vocab/unit#MilliM>
+      .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      _:n02b7a532b35d40d188e956e8c7c47cb9b1 <http://qudt.org/schema/qudt#numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      _:n02b7a532b35d40d188e956e8c7c47cb9b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      _:n02b7a532b35d40d188e956e8c7c47cb9b3 <http://qudt.org/schema/qudt#numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:n02b7a532b35d40d188e956e8c7c47cb9b1 <http://qudt.org/schema/qudt#unit> <http://qudt.org/vocab/unit#MilliM>
+      .
+
+      '
+    parsableTriplesCount: 15
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 13:54:23.299808
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 13:54:54.603162
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix qudt: <http://qudt.org/schema/qudt#>\
+      \ .\n@prefix qudtu: <http://qudt.org/vocab/unit#> .\n@prefix skio: <https://data.semper-ki.org/resources/>\
+      \ .\n@prefix skip: <https://data.semper-ki.org/properties/> .\n\nskio:Industry_F340\
+      \ rdf:type <https://purl.org/tema/051993> ;\n                  schema:manufacturer\
+      \ skio:3DGence ;\n                  skip:printMaterial skio:materials/ABS, skio:materials/PLA,\
+      \ skio:materials/PA, \n                            skio:materials/ASA, skio:materials/PP,\
+      \ skio:materials/TPU, skio:materials/PEEK, \n                            skio:materials/PEKK\
+      \ ;\n                  skip:supportMaterial skio:materials/ESM-10, skio:materials/HIPS,\
+      \ skio:materials/BVOH ;\n                  schema:width [\n                \
+      \    a qudt:QuantityValue ;\n                    qudt:numericValue \"1200\"\
+      ^^xsd:double ;\n                    qudt:unit qudtu:MilliM\n               \
+      \   ];\n                  schema:height [\n                    a qudt:QuantityValue\
+      \ ;\n                    qudt:numericValue \"1100\"^^xsd:double ;\n        \
+      \            qudt:unit qudtu:MilliM\n                  ];\n                \
+      \  schema:depth [\n                    a qudt:QuantityValue ;\n            \
+      \        qudt:numericValue \"800\"^^xsd:double ;\n                    qudt:unit\
+      \ qudtu:MilliM\n                 ] .\n\nskio:3DGence rdfs:label \"3DGence\"\
+      \ ."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.4461178914567645
+    normDiffRatio: 0.42985302538652415
+    norm_f-measure: 0.34146341463414637
+    norm_precision: 0.5833333333333334
+    norm_recall: 0.2413793103448276
+    parsableTripleRatio: 0.46875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 13:54:23.299803
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 37
+  - 133964
+  info:
+    parsableTriples: '_:n1af70dcbbe094d24b43fba87a8f76397b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:n1af70dcbbe094d24b43fba87a8f76397b2 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:n1af70dcbbe094d24b43fba87a8f76397b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:n1af70dcbbe094d24b43fba87a8f76397b1 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://schema.org/width>
+      _:n1af70dcbbe094d24b43fba87a8f76397b1 .
+
+      _:n1af70dcbbe094d24b43fba87a8f76397b1 <http://qudt.org/schema/qudt/numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://schema.org/depth>
+      _:n1af70dcbbe094d24b43fba87a8f76397b3 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://schema.org/height>
+      _:n1af70dcbbe094d24b43fba87a8f76397b2 .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      _:n1af70dcbbe094d24b43fba87a8f76397b2 <http://qudt.org/schema/qudt/numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:n1af70dcbbe094d24b43fba87a8f76397b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:n1af70dcbbe094d24b43fba87a8f76397b3 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      _:n1af70dcbbe094d24b43fba87a8f76397b3 <http://qudt.org/schema/qudt/numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      '
+    parsableTriplesCount: 15
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 13:54:54.858237
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 13:55:31.992195
+    - "```ttl\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:\
+      \ <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix schema: <https://schema.org/> .\n@prefix qudt: <http://qudt.org/schema/qudt/>\
+      \ .\n@prefix skires: <https://data.semper-ki.org/resources/> .\n@prefix skiprop:\
+      \ <https://data.semper-ki.org/properties/> .\n\nskires:Industry_F340\n    rdf:type\
+      \ <https://purl.org/tema/051993> ;\n    schema:manufacturer skires:3DGence ;\n\
+      \    skiprop:printMaterial skires:materials/ABS, \n                        \
+      \  skires:materials/PLA, \n                          skires:materials/PA, \n\
+      \                          skires:materials/ASA, \n                        \
+      \  skires:materials/PP, \n                          skires:materials/TPU, \n\
+      \                          skires:materials/PC, \n                         \
+      \ skires:materials/PC_ABS,\n                          skires:materials/PC_ESD,\
+      \ \n                          skires:materials/PC_CF, \n                   \
+      \       skires:materials/PEEK, \n                          skires:materials/PEKK\
+      \ ;\n    skiprop:supportMaterial skires:materials/ESM-10, \n               \
+      \              skires:materials/HIPS, \n                             skires:materials/BVOH\
+      \ ;\n    schema:width [ a qudt:QuantityValue ; \n                   qudt:numericValue\
+      \ \"1200\"^^xsd:double ; \n                   qudt:hasUnit <http://qudt.org/vocab/unit#MilliM>\
+      \ ] ;\n    schema:height [ a qudt:QuantityValue ; \n                    qudt:numericValue\
+      \ \"1100\"^^xsd:double ; \n                    qudt:hasUnit <http://qudt.org/vocab/unit#MilliM>\
+      \ ] ;\n    schema:depth [ a qudt:QuantityValue ; \n                   qudt:numericValue\
+      \ \"800\"^^xsd:double ; \n                   qudt:hasUnit <http://qudt.org/vocab/unit#MilliM>\
+      \ ] .\n\nskires:3DGence \n    rdfs:label \"3DGence\" .\n```"
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 0.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.39159826170931916
+    normDiffRatio: 0.4041174227983225
+    norm_f-measure: 0.34146341463414637
+    norm_precision: 0.5833333333333334
+    norm_recall: 0.2413793103448276
+    parsableTripleRatio: 0.46875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 13:54:54.858231
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 51
+  - 987858
+  info:
+    parsableTriples: '_:nd48fb9a36d004a32b4cc6bd276ddb3b0b3 <http://qudt.org/schema/qudt/numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/ABS> .
+
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b2 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit/MilliM> .
+
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b1 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit/MilliM> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PEKK> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PLA> .
+
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b1 <http://qudt.org/schema/qudt/numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-ESD> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PEEK> .
+
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b3 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit/MilliM> .
+
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b2 <http://qudt.org/schema/qudt/numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/TPU> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b3 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PA> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b2 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/HIPS> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/ESM-10> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/BVOH> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-ABS> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/ASA> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PP> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-CF> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:nd48fb9a36d004a32b4cc6bd276ddb3b0b1 .
+
+      '
+    parsableTriplesCount: 30
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 13:55:32.332650
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 13:56:24.320503
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix qudt: <http://qudt.org/schema/qudt/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix temaki: <https://purl.org/tema/> .\n@prefix skires: <https://data.semper-ki.org/resources/>\
+      \ .\n@prefix skiprop: <https://data.semper-ki.org/properties/> .\n@prefix qudtunit:\
+      \ <http://qudt.org/vocab/unit/> .\n\n<https://data.semper-ki.org/resources/Industry_F340>\
+      \ rdf:type temaki:051993 ;\n    schema:manufacturer <https://data.semper-ki.org/resources/3DGence>\
+      \ ;\n    skiprop:printMaterial <https://data.semper-ki.org/resources/materials/ABS>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/PLA>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/PA>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/ASA>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/PP>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/TPU>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/PC>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/PC-ABS>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/PC-ESD>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/PC-CF>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/PEEK>,\n\
+      \                          <https://data.semper-ki.org/resources/materials/PEKK>\
+      \ ;\n    skiprop:supportMaterial <https://data.semper-ki.org/resources/materials/ESM-10>,\n\
+      \                            <https://data.semper-ki.org/resources/materials/HIPS>,\n\
+      \                            <https://data.semper-ki.org/resources/materials/BVOH>\
+      \ ;\n    schema:depth [\n        a qudt:QuantityValue ;\n        qudt:numericValue\
+      \ 800.0 ;\n        qudt:hasUnit qudtunit:MilliM\n    ] ;\n    schema:width [\n\
+      \        a qudt:QuantityValue ;\n        qudt:numericValue 1200.0 ;\n      \
+      \  qudt:hasUnit qudtunit:MilliM\n    ] ;\n    schema:height [\n        a qudt:QuantityValue\
+      \ ;\n        qudt:numericValue 1100.0 ;\n        qudt:hasUnit qudtunit:MilliM\n\
+      \    ] .\n \n<https://data.semper-ki.org/resources/3DGence> rdfs:label \"3DGence\"\
+      \ ."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 1.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 1.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 0.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.3912667531344574
+    normDiffRatio: 0.9442350188483036
+    norm_f-measure: 0.8214285714285715
+    norm_precision: 0.8518518518518519
+    norm_recall: 0.7931034482758621
+    parsableTripleRatio: 0.9375
+    printMat_f-measure: 0.8799999999999999
+    printMat_precision: 0.9166666666666666
+    printMat_recall: 0.8461538461538461
+    supportMat_f-measure: 0.8571428571428571
+    supportMat_precision: 1.0
+    supportMat_recall: 0.75
+  startTime: 2023-07-03 13:55:32.332645
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 34
+  - 455329
+  info:
+    parsableTriples: '<https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:n12ab8432239343d496c6224648306d90b1 .
+
+      _:n12ab8432239343d496c6224648306d90b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:n12ab8432239343d496c6224648306d90b3 <http://qudt.org/schema/qudt/numericValue>
+      "1200"^^<http://www.w3.org/2001/XMLSchema#integer> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:n12ab8432239343d496c6224648306d90b3 .
+
+      _:n12ab8432239343d496c6224648306d90b1 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit/mm> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:n12ab8432239343d496c6224648306d90b2 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit/mm> .
+
+      _:n12ab8432239343d496c6224648306d90b1 <http://qudt.org/schema/qudt/numericValue>
+      "1100"^^<http://www.w3.org/2001/XMLSchema#integer> .
+
+      _:n12ab8432239343d496c6224648306d90b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:n12ab8432239343d496c6224648306d90b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:n12ab8432239343d496c6224648306d90b3 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit/mm> .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      _:n12ab8432239343d496c6224648306d90b2 <http://qudt.org/schema/qudt/numericValue>
+      "800"^^<http://www.w3.org/2001/XMLSchema#integer> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:n12ab8432239343d496c6224648306d90b2 .
+
+      '
+    parsableTriplesCount: 15
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 13:56:24.440008
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 13:56:58.895332
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix qudt: <http://qudt.org/schema/qudt/>\
+      \ .\n@prefix uom: <http://qudt.org/vocab/unit/> .\n@prefix ki: <https://data.semper-ki.org/resources/>\
+      \ .\n@prefix kiProp: <https://data.semper-ki.org/properties/> .\n\nki:Industry_F340\
+      \  rdf:type <https://purl.org/tema/051993> ;\n                  schema:manufacturer\
+      \ ki:3DGence ;\n                  kiProp:printMaterial ki:materials/ABS, ki:materials/PLA,\
+      \ ki:materials/PA, ki:materials/ASA, ki:materials/PP, ki:materials/TPU, ki:materials/PA-CF,\
+      \ ki:materials/PA-GF, ki:materials/PC, ki:materials/PC-ABS, ki:materials/PC-ESD,\
+      \ ki:materials/PC-CF, ki:materials/PEEK, ki:materials/PEKK ;\n             \
+      \     kiProp:supportMaterial ki:materials/ESM-10, ki:materials/HIPS, ki:materials/BVOH,\
+      \ ki:materials/ABS ;\n                  schema:height [ a qudt:QuantityValue\
+      \ ; qudt:numericValue 1100 ; qudt:hasUnit uom:mm ] ;\n                  schema:width\
+      \ [ a qudt:QuantityValue ; qudt:numericValue 800 ; qudt:hasUnit uom:mm ] ;\n\
+      \                  schema:depth [ a qudt:QuantityValue ; qudt:numericValue 1200\
+      \ ; qudt:hasUnit uom:mm ] .\n\nki:3DGence  rdfs:label \"3DGence\" ."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 0.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 0.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.32450331125827814
+    normDiffRatio: 0.4393505253104107
+    norm_f-measure: 0.3902439024390244
+    norm_precision: 0.6666666666666666
+    norm_recall: 0.27586206896551724
+    parsableTripleRatio: 0.46875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 13:56:24.440003
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 30
+  - 551823
+  info:
+    parsableTriples: '<https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PP> .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PEKK> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PLA> .
+
+      <http://qudt.org/schema/qudt/QuantityValue> <http://qudt.org/schema/qudt/numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-ESD> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PEEK> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/TPU> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/ABS> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PA> .
+
+      <http://qudt.org/schema/qudt/QuantityValue> <http://qudt.org/schema/qudt/numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/HIPS> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/ESM-10> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/BVOH> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PA-CF> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-ABS> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PA-GF> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/ASA> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <http://qudt.org/schema/qudt/QuantityValue> <http://qudt.org/schema/qudt/numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <http://qudt.org/schema/qudt/QuantityValue> <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit/MILLI_M> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-CF> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/ABS> .
+
+      '
+    parsableTriplesCount: 28
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 13:56:58.989162
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 13:57:29.540980
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix qudt: <http://qudt.org/schema/qudt/>\
+      \ .\n@prefix unit: <http://qudt.org/vocab/unit/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix schema: <http://schema.org/> .\n@prefix data: <https://data.semper-ki.org/resources/>\
+      \ .\n@prefix props: <https://data.semper-ki.org/properties/> .\n@prefix material:\
+      \ <https://data.semper-ki.org/resources/materials/> .\n\ndata:Industry_F340\
+      \ rdf:type <https://purl.org/tema/051993> ;\n   schema:manufacturer data:3DGence\
+      \ ;\n   props:printMaterial material:ABS, material:PLA, material:PA, material:ASA,\
+      \ material:PP, material:TPU, material:ABS, material:ASA, material:PA-CF, material:PA-GF,\
+      \ material:PA, material:PP, material:PC, material:PC-ABS, material:PC-ESD, material:PC-CF,\
+      \ material:PEEK, material:PEKK ;\n   props:supportMaterial material:ESM-10,\
+      \ material:HIPS, material:BVOH, material:ESM-10, material:HIPS, material:ABS,\
+      \ material:ESM-10, material:ESM-10 ;\n   schema:height qudt:QuantityValue ;\n\
+      \   schema:width qudt:QuantityValue ;\n   schema:depth qudt:QuantityValue .\n\
+      \nqudt:QuantityValue\n    qudt:numericValue \"1200.0\"^^xsd:double ;\n    qudt:hasUnit\
+      \ unit:MILLI_M .\n\nqudt:QuantityValue\n    qudt:numericValue \"800.0\"^^xsd:double\
+      \ ;\n    qudt:hasUnit unit:MILLI_M .\n\nqudt:QuantityValue\n    qudt:numericValue\
+      \ \"1100.0\"^^xsd:double ;\n    qudt:hasUnit unit:MILLI_M .\n\ndata:3DGence\
+      \ rdfs:label \"3DGence\" ."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 0.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.5
+    DimValues_precision: 0.3333333333333333
+    DimValues_recall: 1.0
+    diffRatioRaw: 0.37697993664202745
+    normDiffRatio: 0.8171782118160864
+    norm_f-measure: 0.7241379310344829
+    norm_precision: 0.7241379310344828
+    norm_recall: 0.7241379310344828
+    parsableTripleRatio: 0.875
+    printMat_f-measure: 0.962962962962963
+    printMat_precision: 0.9285714285714286
+    printMat_recall: 1.0
+    supportMat_f-measure: 1.0
+    supportMat_precision: 1.0
+    supportMat_recall: 1.0
+  startTime: 2023-07-03 13:56:58.989157
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 40
+  - 338889
+  info:
+    parsableTriples: '_:n3f94783cc88f434aa152d47a27f3970db3 <http://qudt.org/schema/qudt/unit>
+      <http://qudt.org/vocab/unit/MilliM> .
+
+      _:n3f94783cc88f434aa152d47a27f3970db2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:n3f94783cc88f434aa152d47a27f3970db2 <http://qudt.org/schema/qudt/unit> <http://qudt.org/vocab/unit/MilliM>
+      .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:n3f94783cc88f434aa152d47a27f3970db1 .
+
+      _:n3f94783cc88f434aa152d47a27f3970db1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:n3f94783cc88f434aa152d47a27f3970db2 .
+
+      _:n3f94783cc88f434aa152d47a27f3970db2 <http://qudt.org/schema/qudt/numericValue>
+      "260.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:n3f94783cc88f434aa152d47a27f3970db3 <http://qudt.org/schema/qudt/numericValue>
+      "300.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:n3f94783cc88f434aa152d47a27f3970db3 .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      _:n3f94783cc88f434aa152d47a27f3970db1 <http://qudt.org/schema/qudt/unit> <http://qudt.org/vocab/unit/MilliM>
+      .
+
+      _:n3f94783cc88f434aa152d47a27f3970db3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:n3f94783cc88f434aa152d47a27f3970db1 <http://qudt.org/schema/qudt/numericValue>
+      "340.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      '
+    parsableTriplesCount: 15
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 13:57:29.691493
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 13:58:10.030376
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix qudt: <http://qudt.org/schema/qudt/> .\n@prefix qudtUnit: <http://qudt.org/vocab/unit/>\
+      \ .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix sk: <https://data.semper-ki.org/resources/>\
+      \ .\n@prefix skp: <https://data.semper-ki.org/properties/> .\n@prefix tema:\
+      \ <https://purl.org/tema/> .\n\nsk:Industry_F340 rdf:type tema:051993 ;\n  schema:manufacturer\
+      \ sk:3DGence \n  ;\n  skp:printMaterial sk:materials/ABS, sk:materials/PLA,\
+      \ sk:materials/PA, sk:materials/ASA, sk:materials/PP, sk:materials/TPU, sk:materials/PC,\
+      \ sk:materials/PC-ABS, sk:materials/PC-ESD, sk:materials/PC-CF, sk:materials/PEEK,\
+      \ sk:materials/PEKK\n  ;\n  skp:supportMaterial sk:materials/ESM-10, sk:materials/HIPS,\
+      \ sk:materials/BVOH, sk:materials/ABS\n  ;\n  schema:height [\n    rdf:type\
+      \ qudt:QuantityValue ;\n    qudt:numericValue \"340\"^^xsd:double ;\n    qudt:unit\
+      \ qudtUnit:MilliM\n  ] ;\n  schema:width [\n    rdf:type qudt:QuantityValue\
+      \ ;\n    qudt:numericValue \"260\"^^xsd:double ;\n    qudt:unit qudtUnit:MilliM\n\
+      \  ] ;\n  schema:depth [\n    rdf:type qudt:QuantityValue ;\n    qudt:numericValue\
+      \ \"300\"^^xsd:double ;\n    qudt:unit qudtUnit:MilliM\n  ] .\n\nsk:3DGence\
+      \ rdfs:label \"3DGence\" .\n"
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 0.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.30451541850220265
+    normDiffRatio: 0.4116860798166889
+    norm_f-measure: 0.3902439024390244
+    norm_precision: 0.6666666666666666
+    norm_recall: 0.27586206896551724
+    parsableTripleRatio: 0.46875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 13:57:29.691487
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 39
+  - 257892
+  info:
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 13:58:10.153679
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 13:58:49.411567
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix sk: <https://data.semper-ki.org/> .\n@prefix qudt: <http://qudt.org/schema/qudt#>\
+      \ .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nsk:resources/Industry_F340\n\
+      \    rdf:type <https://purl.org/tema/051993> ;\n    schema:manufacturer sk:resources/3DGence\
+      \ ;\n    sk:properties/printMaterial sk:resources/materials/ABS, sk:resources/materials/PLA,\
+      \ sk:resources/materials/PA, sk:resources/materials/ASA, sk:resources/materials/PP,\
+      \ sk:resources/materials/TPU, sk:resources/materials/PA-CF, sk:resources/materials/PA-GF,\
+      \ sk:resources/materials/PC, sk:resources/materials/PC-ABS, sk:resources/materials/PC-ESD,\
+      \ sk:resources/materials/PC-CF, sk:resources/materials/PEEK, sk:resources/materials/PEKK\
+      \ ;\n    sk:properties/supportMaterial sk:resources/materials/ESM-10, sk:resources/materials/HIPS,\
+      \ sk:resources/materials/BVOH, sk:resources/materials/ABS ;\n    schema:width\
+      \ [ qudt:numericValue \"1200.0\"^^xsd:double ; qudt:hasUnit <http://qudt.org/vocab/unit#MilliM>\
+      \ ] ;\n    schema:height [ qudt:numericValue \"1100.0\"^^xsd:double ; qudt:hasUnit\
+      \ <http://qudt.org/vocab/unit#MilliM> ] ;\n    schema:depth [ qudt:numericValue\
+      \ \"800.0\"^^xsd:double ; qudt:hasUnit <http://qudt.org/vocab/unit#MilliM> ]\
+      \ .\n\nsk:resources/3DGence\n    rdfs:label \"3DGence\" .\n"
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.28855454056958624
+    normDiffRatio: 0.0
+    norm_f-measure: 0.0
+    norm_precision: 1.0
+    norm_recall: 0.0
+    parsableTripleRatio: 0.0
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 13:58:10.153675
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 33
+  - 109574
+  info:
+    parsableTriples: '_:n208edddc343d428e804b0a13c98a279ab2 <http://qudt.org/schema/qudt#numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      _:n208edddc343d428e804b0a13c98a279ab2 <http://qudt.org/schema/qudt#hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:n208edddc343d428e804b0a13c98a279ab1 <http://qudt.org/schema/qudt#hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      _:n208edddc343d428e804b0a13c98a279ab1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:n208edddc343d428e804b0a13c98a279ab2 .
+
+      _:n208edddc343d428e804b0a13c98a279ab1 <http://qudt.org/schema/qudt#numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      _:n208edddc343d428e804b0a13c98a279ab3 <http://qudt.org/schema/qudt#hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:n208edddc343d428e804b0a13c98a279ab1 .
+
+      _:n208edddc343d428e804b0a13c98a279ab2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      _:n208edddc343d428e804b0a13c98a279ab3 <http://qudt.org/schema/qudt#numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      _:n208edddc343d428e804b0a13c98a279ab3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:n208edddc343d428e804b0a13c98a279ab3 .
+
+      '
+    parsableTriplesCount: 15
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 13:58:49.583424
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 13:59:22.692992
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix schema: <http://schema.org/> .\n@prefix qudt: <http://qudt.org/schema/qudt#>\
+      \ .\n@prefix qudt-unit: <http://qudt.org/vocab/unit#> .\n@prefix tema: <https://purl.org/tema/>\
+      \ .\n@prefix semperki: <https://data.semper-ki.org/> .\n@prefix materials: <https://data.semper-ki.org/resources/materials/>\
+      \ .\n\n<https://data.semper-ki.org/resources/Industry_F340> \n  rdf:type tema:051993\
+      \ ;\n  schema:manufacturer <https://data.semper-ki.org/resources/3DGence> ;\n\
+      \  semperki:properties/printMaterial materials:ABS, materials:PLA, materials:PA,\
+      \ materials:ASA, materials:PP, materials:TPU, materials:PA-CF, materials:PA-GF,\
+      \ materials:PC, materials:PC-ABS, materials:PC-ESD, materials:PC-CF, materials:PEEK,\
+      \ materials:PEKK ;\n  semperki:properties/supportMaterial materials:ESM-10,\
+      \ materials:HIPS, materials:BVOH ;\n  schema:depth [ a qudt:QuantityValue ;\
+      \ qudt:numericValue 1200.0 ; qudt:hasUnit qudt-unit:MilliM ] ;\n  schema:height\
+      \ [ a qudt:QuantityValue ; qudt:numericValue 800.0 ; qudt:hasUnit qudt-unit:MilliM\
+      \ ] ;\n  schema:width [ a qudt:QuantityValue ; qudt:numericValue 1100.0 ; qudt:hasUnit\
+      \ qudt-unit:MilliM ] .\n\n<https://data.semper-ki.org/resources/3DGence> rdfs:label\
+      \ \"3DGence\" .\n"
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.4391707583196945
+    normDiffRatio: 0.4293612964728313
+    norm_f-measure: 0.34146341463414637
+    norm_precision: 0.5833333333333334
+    norm_recall: 0.2413793103448276
+    parsableTripleRatio: 0.46875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 13:58:49.583418
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 37
+  - 244187
+  info:
+    parsableTriples: '_:na259e53b0ae14ac2af7163554fa1b02cb1 <http://schema.org/width>
+      _:na259e53b0ae14ac2af7163554fa1b02cb4 .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb5 <http://qudt.org/schema/qudt/numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb4 <http://qudt.org/schema/qudt/numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb1 <http://schema.org/height> _:na259e53b0ae14ac2af7163554fa1b02cb3
+      .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb5 <http://qudt.org/schema/qudt/unit> <http://qudt.org/vocab/unit#MilliM>
+      .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb3 <http://qudt.org/schema/qudt/unit> <http://qudt.org/vocab/unit#MilliM>
+      .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb4 <http://qudt.org/schema/qudt/unit> <http://qudt.org/vocab/unit#MilliM>
+      .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb2 <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb3 <http://qudt.org/schema/qudt/numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb1 <http://schema.org/depth> _:na259e53b0ae14ac2af7163554fa1b02cb5
+      .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb1 <http://schema.org/manufacturer> _:na259e53b0ae14ac2af7163554fa1b02cb2
+      .
+
+      _:na259e53b0ae14ac2af7163554fa1b02cb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      '
+    parsableTriplesCount: 15
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 13:59:22.798178
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:00:00.042360
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix qudt: <http://qudt.org/schema/qudt/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix skio: <https://data.semper-ki.org/resources/> .\n@prefix skprop:\
+      \ <https://data.semper-ki.org/properties/> .\n@prefix tema: <https://purl.org/tema/>\
+      \ .\n\n_:Industry_F340 rdf:type tema:051993 ;\n    schema:manufacturer _:3DGence\
+      \ ;\n    skprop:printMaterial skio:materials/ABS, skio:materials/PLA, skio:materials/PA,\
+      \ skio:materials/ASA, skio:materials/PP, skio:materials/TPU, skio:materials/PC,\
+      \ skio:materials/PC_ABS, skio:materials/PC_ESD, skio:materials/PC_CF, skio:materials/PEEK,\
+      \ skio:materials/PEKK ;\n    skprop:supportMaterial skio:materials/ESM_10, skio:materials/HIPS,\
+      \ skio:materials/BVOH ;\n    schema:height [ a qudt:QuantityValue ; qudt:numericValue\
+      \ \"1100\"^^xsd:double ; qudt:unit <http://qudt.org/vocab/unit#MilliM> ] ;\n\
+      \    schema:width [ a qudt:QuantityValue ; qudt:numericValue \"1200\"^^xsd:double\
+      \ ; qudt:unit <http://qudt.org/vocab/unit#MilliM> ] ;\n    schema:depth [ a\
+      \ qudt:QuantityValue ; qudt:numericValue \"800\"^^xsd:double ; qudt:unit <http://qudt.org/vocab/unit#MilliM>\
+      \ ] .\n\n_:3DGence rdfs:label \"3DGence\" ."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.3333333333333333
+    DimValues_precision: 0.3333333333333333
+    DimValues_recall: 0.3333333333333333
+    diffRatioRaw: 0.3211314475873544
+    normDiffRatio: 0.03949730700179533
+    norm_f-measure: 0.2439024390243903
+    norm_precision: 0.4166666666666667
+    norm_recall: 0.1724137931034483
+    parsableTripleRatio: 0.46875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 13:59:22.798173
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 43
+  - 260503
+  info:
+    parsableTriples: '_:n50fe73ea74fd431e8a5ffc8ca76bf7edb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb2 .
+
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb1 <http://qudt.org/schema/qudt#unit> <http://qudt.org/vocab/unit/MilliM>
+      .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb1 .
+
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb3 <http://qudt.org/schema/qudt#numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb3 <http://qudt.org/schema/qudt#unit> <http://qudt.org/vocab/unit/MilliM>
+      .
+
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb1 <http://qudt.org/schema/qudt#numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb2 <http://qudt.org/schema/qudt#unit> <http://qudt.org/vocab/unit/MilliM>
+      .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb3 .
+
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      _:n50fe73ea74fd431e8a5ffc8ca76bf7edb2 <http://qudt.org/schema/qudt#numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      '
+    parsableTriplesCount: 15
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 14:00:00.141436
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:00:43.401934
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix qudt: <http://qudt.org/schema/qudt#> .\n@prefix unit: <http://qudt.org/vocab/unit/>\
+      \ .\n@prefix schema: <http://schema.org/> .\n@prefix semper-ki: <https://data.semper-ki.org/resources/>\
+      \ .\n@prefix semper-ki-prop: <https://data.semper-ki.org/properties/> .\n\n\
+      semper-ki:Industry_F340 rdf:type <https://purl.org/tema/051993> ;\n    schema:manufacturer\
+      \ semper-ki:3DGence ;\n    semper-ki-prop:printMaterial semper-ki:materials/ABS,\
+      \ semper-ki:materials/PLA, semper-ki:materials/PA, semper-ki:materials/ASA,\
+      \ semper-ki:materials/PP, semper-ki:materials/TPU, semper-ki:materials/PA-CF,\
+      \ semper-ki:materials/PA-GF, semper-ki:materials/PC, semper-ki:materials/PC-ABS,\
+      \ semper-ki:materials/PC-ESD, semper-ki:materials/PC-CF, semper-ki:materials/PEEK,\
+      \ semper-ki:materials/PEKK ;\n    semper-ki-prop:supportMaterial semper-ki:materials/ESM-10,\
+      \ semper-ki:materials/HIPS, semper-ki:materials/BVOH, semper-ki:materials/ABS\
+      \ ;\n    schema:depth [\n        a qudt:QuantityValue ;\n        qudt:numericValue\
+      \ \"1200\"^^xsd:double ;\n        qudt:unit unit:MilliM\n    ] ;\n    schema:width\
+      \ [\n        a qudt:QuantityValue ;\n        qudt:numericValue \"800\"^^xsd:double\
+      \ ;\n        qudt:unit unit:MilliM\n    ] ;\n    schema:height [\n        a\
+      \ qudt:QuantityValue ;\n        qudt:numericValue \"1100\"^^xsd:double ;\n \
+      \       qudt:unit unit:MilliM\n    ] .\n\nsemper-ki:3DGence rdfs:label \"3DGence\"\
+      \ ."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.4401143154065991
+    normDiffRatio: 0.42985302538652415
+    norm_f-measure: 0.34146341463414637
+    norm_precision: 0.5833333333333334
+    norm_recall: 0.2413793103448276
+    parsableTripleRatio: 0.46875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 14:00:00.141431
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 44
+  - 544617
+  info:
+    parsableTriples: '_:nbb148e369f7348abbfd5127c6096f19bb1 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:nbb148e369f7348abbfd5127c6096f19bb1 .
+
+      _:nbb148e369f7348abbfd5127c6096f19bb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:nbb148e369f7348abbfd5127c6096f19bb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:nbb148e369f7348abbfd5127c6096f19bb2 <http://qudt.org/schema/qudt/numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:nbb148e369f7348abbfd5127c6096f19bb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:nbb148e369f7348abbfd5127c6096f19bb2 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      _:nbb148e369f7348abbfd5127c6096f19bb3 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      _:nbb148e369f7348abbfd5127c6096f19bb1 <http://qudt.org/schema/qudt/numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      _:nbb148e369f7348abbfd5127c6096f19bb3 <http://qudt.org/schema/qudt/numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:nbb148e369f7348abbfd5127c6096f19bb3 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:nbb148e369f7348abbfd5127c6096f19bb2 .
+
+      '
+    parsableTriplesCount: 15
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 14:00:43.503554
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:01:28.048166
+    - "```\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix qudt: <http://qudt.org/schema/qudt/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix sk: <https://data.semper-ki.org/resources/> .\n@prefix skp: <https://data.semper-ki.org/properties/>\
+      \ .\n\n<https://data.semper-ki.org/resources/Industry_F340> \n    rdf:type <https://purl.org/tema/051993>\
+      \ ;\n    schema:manufacturer <https://data.semper-ki.org/resources/3DGence>\
+      \ ;\n    skp:printMaterial sk:materials/ABS, sk:materials/PLA, sk:materials/PA,\
+      \ sk:materials/ASA, sk:materials/PP, sk:materials/TPU, sk:materials/PC, sk:materials/PC-ABS,\
+      \ sk:materials/PC-ESD, sk:materials/PC-CF, sk:materials/PEEK, sk:materials/PEKK;\n\
+      \    skp:supportMaterial sk:materials/ESM-10, sk:materials/HIPS, sk:materials/BVOH;\n\
+      \    schema:depth [\n        a qudt:QuantityValue ; \n        qudt:numericValue\
+      \ \"800\"^^xsd:double ; qudt:hasUnit <http://qudt.org/vocab/unit#MilliM> \n\
+      \    ] ;\n    schema:height [\n        a qudt:QuantityValue ; \n        qudt:numericValue\
+      \ \"1100\"^^xsd:double ; qudt:hasUnit <http://qudt.org/vocab/unit#MilliM>  \n\
+      \    ] ;\n    schema:width [\n        a qudt:QuantityValue ; \n        qudt:numericValue\
+      \ \"1200\"^^xsd:double ; qudt:hasUnit <http://qudt.org/vocab/unit#MilliM>  \n\
+      \    ] .\n\n<https://data.semper-ki.org/resources/3DGence>\n    rdfs:label \"\
+      3DGence\" .\n```"
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 0.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.3333333333333333
+    DimValues_precision: 0.3333333333333333
+    DimValues_recall: 0.3333333333333333
+    diffRatioRaw: 0.399893219434063
+    normDiffRatio: 0.44982830980541777
+    norm_f-measure: 0.5365853658536586
+    norm_precision: 0.9166666666666666
+    norm_recall: 0.3793103448275862
+    parsableTripleRatio: 0.46875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 14:00:43.503549
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 35
+  - 318447
+  info:
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 14:01:28.171582
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:02:03.490024
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix qudt: <http://qudt.org/schema/qudt/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix stk: <https://data.semper-ki.org/resources/> .\n@prefix stp: <https://data.semper-ki.org/properties/>\
+      \ .\n@prefix unit: <http://qudt.org/vocab/unit/> .\n\nstk:Industry_F340 a <https://purl.org/tema/051993>\
+      \ ;\n  schema:manufacturer stk:3DGence ;\n  stp:printMaterial stk:materials/ABS,\n\
+      \                     stk:materials/PLA,\n                     stk:materials/PA,\n\
+      \                     stk:materials/ASA,\n                     stk:materials/PP,\n\
+      \                     stk:materials/TPU,\n                     stk:materials/PA-CF,\n\
+      \                     stk:materials/PA-GF,\n                     stk:materials/PC,\n\
+      \                     stk:materials/PC-ABS,\n                     stk:materials/PC-ESD,\n\
+      \                     stk:materials/PC-CF,\n                     stk:materials/PEEK,\n\
+      \                     stk:materials/PEKK ;\n  stp:supportMaterial stk:materials/ESM-10,\n\
+      \                      stk:materials/HIPS,\n                      stk:materials/BVOH\
+      \ ;\n  schema:width [ a qudt:QuantityValue ;\n                 qudt:numericValue\
+      \ \"1200\"^^xsd:double ;\n                 qudt:unit unit:Millimeter],\n  schema:height\
+      \ [ a qudt:QuantityValue ;\n                   qudt:numericValue \"1100\"^^xsd:double\
+      \ ;\n                   qudt:unit unit:Millimeter],\n  schema:depth [ a qudt:QuantityValue\
+      \ ;\n                 qudt:numericValue \"800\"^^xsd:double ;\n            \
+      \     qudt:unit unit:Millimeter].\n\nstk:3DGence rdfs:label \"3DGence\" ."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.4590328238536708
+    normDiffRatio: 0.0
+    norm_f-measure: 0.0
+    norm_precision: 1.0
+    norm_recall: 0.0
+    parsableTripleRatio: 0.0
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 14:01:28.171577
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 43
+  - 414893
+  info:
+    parsableTriples: '_:ndbf991d2279c411dac1fa0c4821c608ab3 <http://qudt.org/schema/qudt#hasUnit>
+      <http://qudt.org/vocab/unit#Meter> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:ndbf991d2279c411dac1fa0c4821c608ab1 .
+
+      _:ndbf991d2279c411dac1fa0c4821c608ab1 <http://qudt.org/schema/qudt#numericValue>
+      "1.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:ndbf991d2279c411dac1fa0c4821c608ab2 .
+
+      _:ndbf991d2279c411dac1fa0c4821c608ab1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:ndbf991d2279c411dac1fa0c4821c608ab2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      _:ndbf991d2279c411dac1fa0c4821c608ab2 <http://qudt.org/schema/qudt#numericValue>
+      "0.8"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      _:ndbf991d2279c411dac1fa0c4821c608ab3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:ndbf991d2279c411dac1fa0c4821c608ab3 .
+
+      _:ndbf991d2279c411dac1fa0c4821c608ab1 <http://qudt.org/schema/qudt#hasUnit>
+      <http://qudt.org/vocab/unit#Meter> .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      _:ndbf991d2279c411dac1fa0c4821c608ab2 <http://qudt.org/schema/qudt#hasUnit>
+      <http://qudt.org/vocab/unit#Meter> .
+
+      _:ndbf991d2279c411dac1fa0c4821c608ab3 <http://qudt.org/schema/qudt#numericValue>
+      "1.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      '
+    parsableTriplesCount: 15
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 14:02:03.960359
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:02:47.375247
+    - "```turtle\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix schema: <http://schema.org/> .\n@prefix qudt: <http://qudt.org/schema/qudt#>\
+      \ .\n@prefix unit: <http://qudt.org/vocab/unit#> .\n@prefix tema: <https://purl.org/tema/>\
+      \ .\n@prefix soki: <https://data.semper-ki.org/resources/> .\n@prefix sokip:\
+      \ <https://data.semper-ki.org/properties/> .\n\nsoki:Industry_F340 a tema:051993\
+      \ ;\n    schema:manufacturer soki:3DGence ;\n    sokip:printMaterial soki:materials/ABS,\
+      \ soki:materials/PLA, soki:materials/PA, soki:materials/ASA, soki:materials/PP,\
+      \ soki:materials/TPU, soki:materials/PA_CF, soki:materials/PA_GF, soki:materials/PC,\
+      \ soki:materials/PC_ABS, soki:materials/PC_ESD, soki:materials/PC_CF, soki:materials/PEEK,\
+      \ soki:materials/PEKK ;\n    sokip:supportMaterial soki:materials/ESM_10, soki:materials/HIPS,\
+      \ soki:materials/BVOH, soki:materials/ABS ;\n    schema:height [a qudt:QuantityValue\
+      \ ; qudt:numericValue 1.1 ; qudt:hasUnit unit:Meter] ;\n    schema:width [a\
+      \ qudt:QuantityValue ; qudt:numericValue 0.8 ; qudt:hasUnit unit:Meter] ;\n\
+      \    schema:depth [a qudt:QuantityValue ; qudt:numericValue 1.2 ; qudt:hasUnit\
+      \ unit:Meter] .\n\nsoki:3DGence rdfs:label \"3DGence\" .\n```"
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.2950456684195959
+    normDiffRatio: 0.42360580595874714
+    norm_f-measure: 0.34146341463414637
+    norm_precision: 0.5833333333333334
+    norm_recall: 0.2413793103448276
+    parsableTripleRatio: 0.46875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 14:02:03.960354
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 36
+  - 340951
+  info:
+    parsableTriples: '_:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb1 <http://qudt.org/schema/qudt/unit>
+      <http://qudt.org/vocab/unit/MilliM> .
+
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb3 <http://qudt.org/schema/qudt/numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb2 <http://qudt.org/schema/qudt/unit> <http://qudt.org/vocab/unit/MilliM>
+      .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb1 .
+
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb3 .
+
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb2 <http://qudt.org/schema/qudt/numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb1 <http://qudt.org/schema/qudt/numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb3 <http://qudt.org/schema/qudt/unit> <http://qudt.org/vocab/unit/MilliM>
+      .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:n6eb7b3f1e4fb44d69ae4c3f2aeea31abb2 .
+
+      '
+    parsableTriplesCount: 15
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 14:02:47.489836
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:03:23.830782
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix schema: <http://schema.org/> .\n@prefix qudt: <http://qudt.org/schema/qudt/>\
+      \ .\n@prefix unit: <http://qudt.org/vocab/unit/> .\n@prefix sk: <https://data.semper-ki.org/resources/>\
+      \ .\n@prefix skp: <https://data.semper-ki.org/properties/> .\n\nsk:Industry_F340\
+      \ \n    rdf:type <https://purl.org/tema/051993> ;\n    schema:manufacturer sk:3DGence\
+      \ ;\n    skp:printMaterial sk:materials/ABS , sk:materials/PLA , sk:materials/PA\
+      \ , sk:materials/ASA , sk:materials/PP , sk:materials/TPU , sk:materials/PA-GF\
+      \ , sk:materials/PA-CF , sk:materials/PC , sk:materials/PC-CF , sk:materials/PC-ABS\
+      \ , sk:materials/PC-ESD , sk:materials/PEEK , sk:materials/PEKK ;\n    skp:supportMaterial\
+      \ sk:materials/ESM-10 , sk:materials/HIPS , sk:materials/BVOH ;\n\n    schema:width\
+      \ [\n        a qudt:QuantityValue ;\n        qudt:numericValue \"1200.0\"^^xsd:double\
+      \ ;\n        qudt:unit unit:MilliM\n    ] ;\n    \n    schema:height [\n   \
+      \     a qudt:QuantityValue ;\n        qudt:numericValue \"1100.0\"^^xsd:double\
+      \ ;\n        qudt:unit unit:MilliM\n    ] ;\n\n    schema:depth [\n        a\
+      \ qudt:QuantityValue ;\n        qudt:numericValue \"800.0\"^^xsd:double ;\n\
+      \        qudt:unit unit:MilliM\n    ] .\n\nsk:3DGence\n    rdfs:label \"3DGence\"\
+      \ ."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.3333333333333333
+    DimValues_precision: 0.3333333333333333
+    DimValues_recall: 0.3333333333333333
+    diffRatioRaw: 0.4145612605270307
+    normDiffRatio: 0.43443405230005727
+    norm_f-measure: 0.5365853658536586
+    norm_precision: 0.9166666666666666
+    norm_recall: 0.3793103448275862
+    parsableTripleRatio: 0.46875
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 14:02:47.489831
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 58
+  - 214308
+  info:
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 14:03:23.926883
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:04:22.141186
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix schema: <http://schema.org/> .\n@prefix qudt: <http://qudt.org/schema/qudt/>\
+      \ .\n@prefix qudt-unit: <http://qudt.org/vocab/unit/> .\n@prefix sk: <https://data.semper-ki.org/>\
+      \ .\n\nsk:resources/Industry_F340 a <https://purl.org/tema/051993> ;\n    schema:manufacturer\
+      \ sk:resources/3DGence ;\n    schema:depth sk:resources/Industry_F340/depth\
+      \ ;\n    schema:height sk:resources/Industry_F340/height ;\n    schema:width\
+      \ sk:resources/Industry_F340/width ;\n    sk:properties/printMaterial sk:resources/materials/ABS,\n\
+      \        sk:resources/materials/PLA,\n        sk:resources/materials/PA,\n \
+      \       sk:resources/materials/ASA,\n        sk:resources/materials/PP,\n  \
+      \      sk:resources/materials/TPU,\n        sk:resources/materials/PC,\n   \
+      \     sk:resources/materials/PC-ABS,\n        sk:resources/materials/PC-ESD,\n\
+      \        sk:resources/materials/PC-CF,\n        sk:resources/materials/PEEK,\n\
+      \        sk:resources/materials/PEKK;\n    sk:properties/supportMaterial sk:resources/materials/ESM-10,\n\
+      \        sk:resources/materials/HIPS,\n        sk:resources/materials/BVOH,\n\
+      \        sk:resources/materials/ABS.\n\nsk:resources/3DGence rdfs:label \"3DGence\"\
+      .\n\nsk:resources/Industry_F340/depth a qudt:QuantityValue;\n    qudt:numericValue\
+      \ \"800\"^^xsd:double;\n    qudt:hasUnit qudt-unit:MilliM.\n    \nsk:resources/Industry_F340/height\
+      \ a qudt:QuantityValue;\n    qudt:numericValue \"1100\"^^xsd:double;\n    qudt:hasUnit\
+      \ qudt-unit:MilliM.\n\nsk:resources/Industry_F340/width a qudt:QuantityValue;\n\
+      \    qudt:numericValue \"1200\"^^xsd:double;\n    qudt:hasUnit qudt-unit:MilliM.\n\
+      \nsk:resources/materials/ABS rdfs:label \"ABS\".\nsk:resources/materials/PLA\
+      \ rdfs:label \"PLA\".\nsk:resources/materials/PA rdfs:label \"PA\".\nsk:resources/materials/ASA\
+      \ rdfs:label \"ASA\".\nsk:resources/materials/PP rdfs:label \"PP\".\nsk:resources/materials/TPU\
+      \ rdfs:label \"TPU\".\nsk:resources/materials/PC rdfs:label \"PC\".\nsk:resources/materials/PC-ABS\
+      \ rdfs:label \"PC-ABS\".\nsk:resources/materials/PC-ESD rdfs:label \"PC-ESD\"\
+      .\nsk:resources/materials/PC-CF rdfs:label \"PC-CF\".\nsk:resources/materials/PEEK\
+      \ rdfs:label \"PEEK\".\nsk:resources/materials/PEKK rdfs:label \"PEKK\".\nsk:resources/materials/ESM-10\
+      \ rdfs:label \"ESM-10\".\nsk:resources/materials/HIPS rdfs:label \"HIPS\".\n\
+      sk:resources/materials/BVOH rdfs:label \"BVOH\".\nsk:resources/materials/ABS\
+      \ rdfs:label \"ABS\"."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.2744030163385002
+    normDiffRatio: 0.0
+    norm_f-measure: 0.0
+    norm_precision: 1.0
+    norm_recall: 0.0
+    parsableTripleRatio: 0.0
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 14:03:23.926878
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 36
+  - 63604
+  info:
+    parsableTriples: '<https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:n2d80fb5d00df4a188e40872d422e184cb3 <http://qudt.org/1.1/schema/qudt#numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:n2d80fb5d00df4a188e40872d422e184cb2 <http://qudt.org/1.1/schema/qudt#numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:n2d80fb5d00df4a188e40872d422e184cb3 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:n2d80fb5d00df4a188e40872d422e184cb2 .
+
+      _:n2d80fb5d00df4a188e40872d422e184cb1 <http://qudt.org/1.1/schema/qudt#hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      _:n2d80fb5d00df4a188e40872d422e184cb3 <http://qudt.org/1.1/schema/qudt#hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:n2d80fb5d00df4a188e40872d422e184cb1 .
+
+      _:n2d80fb5d00df4a188e40872d422e184cb1 <http://qudt.org/1.1/schema/qudt#numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:n2d80fb5d00df4a188e40872d422e184cb2 <http://qudt.org/1.1/schema/qudt#hasUnit>
+      <http://qudt.org/vocab/unit#MilliM> .
+
+      '
+    parsableTriplesCount: 12
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 14:04:22.738817
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:04:58.802415
+    - "```turtle\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix sk: <https://data.semper-ki.org/resources/> .\n@prefix qudt: <http://qudt.org/1.1/schema/qudt#>\
+      \ .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix units: <http://qudt.org/vocab/unit#>\
+      \ .\n@prefix pr: <https://data.semper-ki.org/properties/> .\n\nsk:Industry_F340\
+      \ rdf:type <https://purl.org/tema/051993> ;\n\nschema:manufacturer sk:3DGence\
+      \ ;\nrdfs:label \"3DGence\" ;\n\npr:printMaterial sk:materials/ABS, sk:materials/PLA,\
+      \ sk:materials/PA, sk:materials/ASA, sk:materials/PP, sk:materials/TPU, \nsk:materials/PA-CF,\
+      \ sk:materials/PA-GF, sk:materials/PC, sk:materials/PC-ABS, sk:materials/PC-ESD,\
+      \ sk:materials/PC-CF, \nsk:materials/PEEK, sk:materials/PEKK ;\n\npr:supportMaterial\
+      \ sk:materials/ESM-10, sk:materials/HIPS, sk:materials/BVOH, sk:materials/ABS\
+      \ ;\n\nschema:width [ qudt:numericValue \"1200.0\"^^xsd:double ; qudt:hasUnit\
+      \ units:MilliM ] ;\nschema:depth [ qudt:numericValue \"800.0\"^^xsd:double ;\
+      \ qudt:hasUnit units:MilliM ] ;\nschema:height [ qudt:numericValue \"1100.0\"\
+      ^^xsd:double ; qudt:hasUnit units:MilliM ] .\n\n```\nThis is the final result.\
+      \ I've converted the given 3D printer specification into RDF turtle format.\
+      \ For each specification, I've created a triple that links the given printer\
+      \ to its corresponding specification. All prefixes used in this script are declared\
+      \ at the beginning. The printer (Industry F340) and manufacturer (3DGence) are\
+      \ both assigned unique resource identifiers. For print and support material,\
+      \ material resources have been created, and for dimensions, quantities have\
+      \ been created with appropriate units. The script is validated and follows the\
+      \ best practices of Linked Data."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.24799025578562728
+    normDiffRatio: 0.37560691396387647
+    norm_f-measure: 0.3
+    norm_precision: 0.5454545454545454
+    norm_recall: 0.20689655172413793
+    parsableTripleRatio: 0.375
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 14:04:22.738811
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 48
+  - 451377
+  info:
+    parsableTriples: '<https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb3 <http://qudt.org/schema/qudt/numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb2 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit/MM> .
+
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb1 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit/MM> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb1 .
+
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PLA> .
+
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PEEK> .
+
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt/QuantityValue> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/TPU> .
+
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb3 <http://qudt.org/schema/qudt/hasUnit>
+      <http://qudt.org/vocab/unit/MM> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC> .
+
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb2 <http://qudt.org/schema/qudt/numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb3 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PA> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb2 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/BVOH> .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PEKK> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      _:nfcc0b53f63f34f04a3a5b271cc0f544bb1 <http://qudt.org/schema/qudt/numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-ESD> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/ABS> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/HIPS> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/ESM-10> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PA-CF> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-ABS> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PA-GF> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/ASA> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PP> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-CF> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/ABS> .
+
+      '
+    parsableTriplesCount: 33
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 14:04:59.036162
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:05:47.487533
+    - "```turtle\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix qudt: <http://qudt.org/schema/qudt/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix semper-ki: <https://data.semper-ki.org/resources/> .\n@prefix semper-ki-prop:\
+      \ <https://data.semper-ki.org/properties/> .\n@prefix tema: <https://purl.org/tema/>\
+      \ .\n@prefix materials: <https://data.semper-ki.org/resources/materials/> .\n\
+      \nsemper-ki:Industry_F340 rdf:type tema:051993 ;\n    schema:manufacturer semper-ki:3DGence\
+      \ ;\n    semper-ki-prop:printMaterial materials:ABS, materials:PLA, materials:PA,\
+      \ materials:ASA, materials:PP, materials:TPU, materials:PA-CF, materials:PA-GF,\
+      \ materials:PC, materials:PC-ABS, materials:PC-ESD, materials:PC-CF, materials:PEEK,\
+      \ materials:PEKK ;\n    semper-ki-prop:supportMaterial materials:ESM-10, materials:HIPS,\
+      \ materials:BVOH, materials:ABS ;\n    schema:width [\n        a qudt:QuantityValue\
+      \ ;\n        qudt:numericValue \"800\"^^xsd:double ;\n        qudt:hasUnit <http://qudt.org/vocab/unit/MM>\n\
+      \    ] ;\n    schema:height [\n        a qudt:QuantityValue ;\n        qudt:numericValue\
+      \ \"1100\"^^xsd:double ;\n        qudt:hasUnit <http://qudt.org/vocab/unit/MM>\n\
+      \    ] ;\n    schema:depth [\n        a qudt:QuantityValue ;\n        qudt:numericValue\
+      \ \"1200\"^^xsd:double ;\n        qudt:hasUnit <http://qudt.org/vocab/unit/MM>\n\
+      \    ] .\n\nsemper-ki:3DGence rdfs:label \"3DGence\" .\n```\nNote: I've ignored\
+      \ xmlns:<http://www.w3.org/2001/XMLSchema#> double, because this is not actually\
+      \ a valid RDF property. It's a datatype and should be used as follows: \"800\"\
+      ^^xsd:double.\n\n\n"
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 0.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 0.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.3779171894604768
+    normDiffRatio: 0.9721203228173148
+    norm_f-measure: 0.9491525423728815
+    norm_precision: 0.9333333333333333
+    norm_recall: 0.9655172413793104
+    parsableTripleRatio: 1.03125
+    printMat_f-measure: 0.962962962962963
+    printMat_precision: 0.9285714285714286
+    printMat_recall: 1.0
+    supportMat_f-measure: 1.0
+    supportMat_precision: 1.0
+    supportMat_recall: 1.0
+  startTime: 2023-07-03 14:04:59.036156
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 34
+  - 946065
+  info:
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 14:05:47.635027
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:06:22.581086
+    - '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+      @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+      @prefix schema: <http://schema.org/> .
+
+      @prefix sk: <https://data.semper-ki.org/> .
+
+      @prefix qudt: <http://qudt.org/schema/qudt/> .
+
+      @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+      @prefix units: <http://qudt.org/vocab/unit/> .
+
+
+      sk:resources/Industry_F340 rdf:type <https://purl.org/tema/051993> ;
+
+      schema:manufacturer sk:resources/3DGence ;
+
+      sk:properties/printMaterial sk:resources/materials/ABS, sk:resources/materials/PLA,
+      sk:resources/materials/PA, sk:resources/materials/ASA, sk:resources/materials/PP,
+      sk:resources/materials/TPU, sk:resources/materials/PC, sk:resources/materials/PC-ABS,
+      sk:resources/materials/PC-ESD, sk:resources/materials/PC-CF, sk:resources/materials/PEEK,
+      sk:resources/materials/PEKK ;
+
+      sk:properties/supportMaterial sk:resources/materials/ESM-10, sk:resources/materials/HIPS,
+      sk:resources/materials/BVOH, sk:resources/materials/ABS ;
+
+      schema:width [ a qudt:QuantityValue ; qudt:numericValue "800.0"^^xsd:double
+      ; qudt:unit units:MilliM ] ;
+
+      schema:length [ a qudt:QuantityValue ; qudt:numericValue "1200.0"^^xsd:double
+      ; qudt:unit units:MilliM ] ;
+
+      schema:height [ a qudt:QuantityValue ; qudt:numericValue "1100.0"^^xsd:double
+      ; qudt:unit units:MilliM ] .
+
+
+      sk:resources/3DGence rdfs:label "3DGence" .'
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.3472335786317798
+    normDiffRatio: 0.0
+    norm_f-measure: 0.0
+    norm_precision: 1.0
+    norm_recall: 0.0
+    parsableTripleRatio: 0.0
+    printMat_f-measure: 0.0
+    printMat_precision: 1.0
+    printMat_recall: 0.0
+    supportMat_f-measure: 0.0
+    supportMat_precision: 1.0
+    supportMat_recall: 0.0
+  startTime: 2023-07-03 14:05:47.635021
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 29
+  - 560990
+  info:
+    parsableTriples: '_:na4ddde5f867f40c3bc82e885f14d04c7b3 <http://qudt.org/schema/qudt#unit>
+      <http://qudt.org/vocab/unit/MilliM> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <https://purl.org/tema/051993> .
+
+      _:na4ddde5f867f40c3bc82e885f14d04c7b3 <http://qudt.org/schema/qudt#numericValue>
+      "1200.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PLA> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PEEK> .
+
+      _:na4ddde5f867f40c3bc82e885f14d04c7b2 <http://qudt.org/schema/qudt#numericValue>
+      "800.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/TPU> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PA> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/BVOH> .
+
+      _:na4ddde5f867f40c3bc82e885f14d04c7b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      _:na4ddde5f867f40c3bc82e885f14d04c7b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      _:na4ddde5f867f40c3bc82e885f14d04c7b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://qudt.org/schema/qudt#QuantityValue> .
+
+      _:na4ddde5f867f40c3bc82e885f14d04c7b1 <http://qudt.org/schema/qudt#unit> <http://qudt.org/vocab/unit/MilliM>
+      .
+
+      _:na4ddde5f867f40c3bc82e885f14d04c7b2 <http://qudt.org/schema/qudt#unit> <http://qudt.org/vocab/unit/MilliM>
+      .
+
+      <https://data.semper-ki.org/resources/3DGence> <http://www.w3.org/2000/01/rdf-schema#label>
+      "3DGence" .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PEKK> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/manufacturer>
+      <https://data.semper-ki.org/resources/3DGence> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/width>
+      _:na4ddde5f867f40c3bc82e885f14d04c7b2 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-ESD> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/height>
+      _:na4ddde5f867f40c3bc82e885f14d04c7b1 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/HIPS> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/supportMaterial>
+      <https://data.semper-ki.org/resources/materials/ESM-10> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <http://schema.org/depth>
+      _:na4ddde5f867f40c3bc82e885f14d04c7b3 .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PA-CF> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-ABS> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PA-GF> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/ASA> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PP> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/PC-CF> .
+
+      _:na4ddde5f867f40c3bc82e885f14d04c7b1 <http://qudt.org/schema/qudt#numericValue>
+      "1100.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+      <https://data.semper-ki.org/resources/Industry_F340> <https://data.semper-ki.org/properties/printMaterial>
+      <https://data.semper-ki.org/resources/materials/ABS> .
+
+      '
+    parsableTriplesCount: 32
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-03 14:06:22.749379
+    - "As a Linked Data expert and knowledge engineer please convert the 3d printer\
+      \ specification given in the bottom into an RDF turtle formatted Knowledge Graph.\n\
+      The main subject in this Knowledge Graph should be the Printer itself using\
+      \ the https://data.semper-ki.org/resources/$encoded_label$ whereas $encoded_label$\
+      \  label refers to the name of the printer in which whitespaces have been replaced\
+      \ with underscores. Step by step attach the following statements to that node.\
+      \ \n1) Attach https://purl.org/tema/051993 as rdf:type \n2) Attach the manufacturer\
+      \ via an object property using the schema.org vocabulary. For the subject identifier\
+      \ of the manufacturer use the same approach as for the printer subject and assign\
+      \ it the rdfs:label without a language tag.\n3) Attach all printable material\
+      \ as well all support materials the printer can use via object properties. For\
+      \ the property identifiers use https://data.semper-ki.org/properties/printMaterial\
+      \  respectively https://data.semper-ki.org/properties/supportMaterial and for\
+      \ material identifiers use the https://data.semper-ki.org/resources/materials/\
+      \ namespace. \n4) Attach the dimensions of the printer as 3 separate values\
+      \ using the schema.org vocabulary for the property identifiers of the dimensions,\
+      \ but for the values use qudt:QuantityValue objects from the QUDT ontologies\
+      \ family to have the numerical value ( via qudt:numericValue property and typed\
+      \ as xsd:double) and the appropriate QUDT unit of measurement identifier (via\
+      \ qudt:hasUnit property) separately. Do not convert the dimensions into another\
+      \ unit.\nFollow best practices of Linked Data and common standard vocabularies\
+      \ as basis for the modeling unless specified differently in the requirements\
+      \ above.\nDo not extract any other properties or values from the specification\
+      \ than the ones I mentioned but validate your output step by step, to check\
+      \ whether all used prefixes are included and the given requirements as well\
+      \ as the grammar of the RDF turtle serialization were respected. \nOnly return\
+      \ the turtle format, no additional text.\n\nPrinter name:   Industry F340\n\
+      Company: 3DGence\n\nSpecification \n\nPRINTING ENVIRONMENT\nPrint technology:\
+      \  FFF Working temperature:  15-32\xB0C\nBuild volume: 260 \xD7 300 \xD7 340\
+      \ mm (26\_520 cm3) Storage temperature:  0-32\xB0C\nMin. layer height: 40 \u03BC\
+      m\nNumber of printheads: 2 per module\nNozzle diameter: 0.4/0.4 mm or 0.6/0.6\
+      \ mm\nFilament diameter: 1.75 mm\nPOWER\nPrinthead temperature: 500\xB0C\nBuildplate\
+      \ temperature: 160\xB0C Power requirements:  230V AC\nChamber temperature: \
+      \ 85\xB0C (active heating) Max power draw:  2700 W\nFilament chamber temperature:\
+      \  70\xB0C Communication:  USB drive, SD card\nDIMENSIONS AND MASS SOFTWARE\n\
+      External dimensions:  1200 \xD7 800 \xD7 1100 mm Slicing software:  3DGence\
+      \ SLICER 4.0\nMass:  200 kg\nSAFETY\nCONSTRUCTION\nFiltration:  filtration unit\n\
+      Chassis:   powder coated steel  UPS device:  yes, optional\nBuild surface: heated\
+      \ ceramic plate Others:  software access overdrive - remote \nPositioning resolution\
+      \ XY:  0.006 mm shut down\nPositioning resolution Z:  0.0004 mm\n\nNEW PAGE\n\
+      \nVersatility\nand best printing\nIINNDDUUSSTTRRYY\nresults\nFF334400\nwith\
+      \ job-specific printing \nmodules and developed \nprinting profiles\nMMOODDUULLEESS\n\
+      TEMPERATURE:\nPRO\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\n\
+      ABS, PLA, PA, ASA, PP, TPU\nSUPPORT MATERIAL:\nESM-10, HIPS, BVOH\nTEMPERATURE:\n\
+      HF\nup to 265\xB0C\nNOZZLE DIAMETER:\n0,6 mm/0,6 mm\nMODEL MATERIAL:\nABS, ASA,\
+      \ PA-CF, PA-GF, PA, PP\nSUPPORT MATERIAL:\nESM-10, HIPS\nTEMPERATURE:\nHT\n\
+      up to 340\xB0C\nNOZZLE DIAMETER:\n0,4 mm/0,4 mm\nMODEL MATERIAL:\nPC, PC-ABS,\
+      \ PC-ESD, PC-CF\nSUPPORT MATERIAL:\nABS, ESM-10\nTEMPERATURE:\nHT\nup to 500\xB0\
+      C\nNOZZLE DIAMETER:\nmax 0,4 mm/0,4 mm\nMODEL MATERIAL:\nPEEK, PEKK\nSUPPORT\
+      \ MATERIAL:\nESM-10 \nrev.1/2020 www.3dgence.com\n\nNEW PAGE\n\n    "
+  - !!python/tuple
+    - response
+    - 2023-07-03 14:06:52.310364
+    - "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <http://schema.org/>\
+      \ .\n@prefix qudt: <http://qudt.org/schema/qudt#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\
+      \ .\n@prefix units: <http://qudt.org/vocab/unit/> .\n@prefix sk: <https://data.semper-ki.org/resources/>\
+      \ .\n@prefix pm: <https://data.semper-ki.org/properties/> .\n@prefix material:\
+      \ <https://data.semper-ki.org/resources/materials/> .\n\nsk:Industry_F340 rdf:type\
+      \ <https://purl.org/tema/051993> ;\n    schema:manufacturer sk:3DGence ;\n \
+      \   pm:printMaterial material:ABS, material:PLA, material:PA, material:ASA,\
+      \ material:PP, material:TPU, material:PA-CF, material:PA-GF, material:PC, material:PC-ABS,\
+      \ material:PC-ESD, material:PC-CF, material:PEEK, material:PEKK ;\n    pm:supportMaterial\
+      \ material:ESM-10, material:HIPS, material:BVOH ;\n    schema:height [ a qudt:QuantityValue\
+      \ ; qudt:numericValue 1100.0 ; qudt:unit units:MilliM ] ;\n    schema:width\
+      \ [ a qudt:QuantityValue ; qudt:numericValue 800.0 ; qudt:unit units:MilliM\
+      \ ] ;\n    schema:depth [ a qudt:QuantityValue ; qudt:numericValue 1200.0 ;\
+      \ qudt:unit units:MilliM ] .\n\nsk:3DGence rdfs:label \"3DGence\" ."
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    DimUnit_f-measure: 0.0
+    DimUnit_precision: 1.0
+    DimUnit_recall: 0.0
+    DimValues_f-measure: 0.0
+    DimValues_precision: 1.0
+    DimValues_recall: 0.0
+    diffRatioRaw: 0.34136660051034873
+    normDiffRatio: 0.9665752057869793
+    norm_f-measure: 0.7931034482758621
+    norm_precision: 0.7931034482758621
+    norm_recall: 0.7931034482758621
+    parsableTripleRatio: 1.0
+    printMat_f-measure: 0.962962962962963
+    printMat_precision: 0.9285714285714286
+    printMat_recall: 1.0
+    supportMat_f-measure: 0.8571428571428571
+    supportMat_precision: 1.0
+    supportMat_recall: 0.75
+  startTime: 2023-07-03 14:06:22.749374
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: FactExtractStatic
+    version: '1.0'
