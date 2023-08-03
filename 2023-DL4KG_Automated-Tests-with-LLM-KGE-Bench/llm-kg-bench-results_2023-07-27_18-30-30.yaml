@@ -1,0 +1,1741 @@
+---
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 688142
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:30.309421
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:31.997557
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:30.309415
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 162635
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:32.013337
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:33.175968
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:32.013333
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 494732
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:33.190702
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:34.685431
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:33.190699
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 977936
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:34.701310
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:36.679241
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:34.701305
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 806130
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:36.694146
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:38.500272
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:36.694142
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 690662
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:38.518755
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:40.209411
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:38.518749
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 0
+  - 996093
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:40.225872
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:41.221961
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:40.225868
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 0
+  - 927761
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:41.249887
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:42.177643
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:41.249882
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 26085
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:42.192207
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:43.218289
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:42.192204
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 713999
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:43.236223
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:44.950218
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:43.236219
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 0
+  - 962138
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:44.966786
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:45.928920
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:44.966782
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 557095
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:45.943659
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:48.500750
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:45.943655
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 3
+  - 816421
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:48.523971
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:30:52.340386
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:48.523965
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 11
+  - 435671
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:30:52.355696
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:31:03.791363
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:30:52.355692
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 111550
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:31:03.807915
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:31:04.919461
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:31:03.807911
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 6
+  - 269692
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:31:04.966628
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:31:11.236313
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:31:04.966621
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 5
+  - 721272
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:31:11.252222
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:31:16.973490
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:31:11.252218
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 4
+  - 779199
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:31:16.988638
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:31:21.767833
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:31:16.988634
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 10
+  - 631801
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:31:21.795394
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:31:32.427189
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:31:21.795388
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 485485
+  info:
+    answerPersonCount: 1
+    graphSizeChar: 3773
+    persons: 36
+    personsInAnswer:
+    - '4'
+    specialFriendsInAnswer: 0
+    specialNode: http://example.org/people/person-00000004
+    triples: 111
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 18:31:32.442142
+    - "Please name the person which is known by the most persons according to the\
+      \ following RDF graph in turtle syntax. Give just the IRI of this person with\
+      \ most incomming links as answer, without abbreviation or explanation.@prefix\
+      \ ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/>\
+      \ .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n\
+      \        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005\
+      \ .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n\
+      \        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n\
+      \        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a\
+      \ .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n\
+      \        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a\
+      \ a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c\
+      \ .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n\
+      \        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f\
+      \ .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n\
+      \        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000010,\n        ex:person-00000011 .\n\nex:person-00000010 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000011,\n        ex:person-00000012\
+      \ .\n\nex:person-00000011 a foaf:Person ;\n    foaf:knows ex:person-00000012,\n\
+      \        ex:person-00000013 .\n\nex:person-00000012 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000013,\n        ex:person-00000014 .\n\nex:person-00000013 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000014,\n        ex:person-00000015\
+      \ .\n\nex:person-00000014 a foaf:Person ;\n    foaf:knows ex:person-00000015,\n\
+      \        ex:person-00000016 .\n\nex:person-00000015 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000016,\n        ex:person-00000017 .\n\nex:person-00000016 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000017,\n        ex:person-00000018\
+      \ .\n\nex:person-00000017 a foaf:Person ;\n    foaf:knows ex:person-00000018,\n\
+      \        ex:person-00000019 .\n\nex:person-00000018 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000019,\n        ex:person-0000001a .\n\nex:person-00000019 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001a,\n        ex:person-0000001b\
+      \ .\n\nex:person-0000001a a foaf:Person ;\n    foaf:knows ex:person-0000001b,\n\
+      \        ex:person-0000001c .\n\nex:person-0000001b a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001c,\n        ex:person-0000001d .\n\nex:person-0000001c a\
+      \ foaf:Person ;\n    foaf:knows ex:person-0000001d,\n        ex:person-0000001e\
+      \ .\n\nex:person-0000001d a foaf:Person ;\n    foaf:knows ex:person-0000001e,\n\
+      \        ex:person-0000001f .\n\nex:person-0000001e a foaf:Person ;\n    foaf:knows\
+      \ ex:person-0000001f,\n        ex:person-00000020 .\n\nex:person-0000001f a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000020,\n        ex:person-00000021\
+      \ .\n\nex:person-00000020 a foaf:Person ;\n    foaf:knows ex:person-00000021,\n\
+      \        ex:person-00000022 .\n\nex:person-00000021 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000022,\n        ex:person-00000023 .\n\nex:person-00000022 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000023,\n        ex:person-00000024\
+      \ .\n\nex:person-00000023 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n\
+      \        ex:person-00000024 .\n\nex:person-00000024 a foaf:Person ;\n    foaf:knows\
+      \ ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a\
+      \ foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006\
+      \ .\n\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 18:31:33.927623
+    - http://example.org/people/person-00000004
+  modelId: GPT--gpt-4--gpt-4-0613
+  scores:
+    brevity: 1
+    f1: 1.0
+    noSpecialFriends: 1.0
+    precision: 1.0
+    recall: 1
+  startTime: 2023-07-27 18:31:32.442138
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleFriendCount
+    version: '2.0'

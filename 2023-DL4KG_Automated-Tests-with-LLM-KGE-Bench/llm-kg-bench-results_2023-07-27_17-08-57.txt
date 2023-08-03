@@ -1,0 +1,1580 @@
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 8, 57, 983679),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=408786),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 8, 57, 983691),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 1, 392465),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 1, 399534),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=512389),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 1, 399540),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 4, 911923),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 4, 919638),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=316393),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 4, 919644),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 8, 236031),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 8, 242726),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=935674),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 8, 242730),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 12, 178400),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 12, 186705),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=4, microseconds=257034),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 12, 186712),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 16, 443739),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 16, 449957),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=534507),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 16, 449961),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 19, 984464),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 19, 992751),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=312375),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 19, 992756),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 23, 305126),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 23, 311361),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=912467),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 23, 311365),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 27, 223828),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 27, 230515),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=949167),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 27, 230520),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 31, 179682),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 31, 187795),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=4, microseconds=138718),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 31, 187799),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 35, 326513),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 35, 334249),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=2, microseconds=955679),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 35, 334255),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 38, 289928),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 38, 310628),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=433923),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 38, 310635),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 41, 744551),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 41, 753738),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=317129),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 41, 753744),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 45, 70867),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 45, 78639),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=96658),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 45, 78644),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 48, 175297),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 48, 181674),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=823874),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 48, 181679),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 52, 5548),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 52, 12048),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=4, microseconds=44722),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 52, 12054),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 9, 56, 56770),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 9, 56, 63461),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 0.8000000000000002,
+                     'listPrecision': 0.8,
+                     'listRecall': 0.8,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 4,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=968783),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 9, 56, 63466),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 10, 0, 32244),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep  \n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 10, 0, 39683),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=7, microseconds=173447),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 10, 0, 39688),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 10, 7, 213130),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 10, 7, 221515),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 0.8000000000000002,
+                     'listPrecision': 0.8,
+                     'listRecall': 0.8,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 4,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=254751),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 10, 7, 221521),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 10, 10, 476266),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep  \n'
+                            'https://abc.def/ghi/bob')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 17, 10, 10, 483477),
+             modelId='Claude--claude-2--claude-2.0',
+             taskInfo=TaskInfo(taskId='TurtleConnectionExplainStatic',
+                               version='1.0',
+                               gitCommit='6f92916a6002aa9ce7fb23f55aca90e02fd7ebeb'),
+             scores={'lineBrevity': 1.0,
+                     'listF1': 1.0,
+                     'listPrecision': 1.0,
+                     'listRecall': 1.0,
+                     'listTrimF1': 1.0,
+                     'listTrimPrecision': 1.0,
+                     'listTrimRecall': 1.0,
+                     'textHttpF1': 1.0,
+                     'textHttpPrecision': 1.0,
+                     'textHttpRecall': 1.0,
+                     'textShortF1': 1.0,
+                     'textShortPrecision': 1.0,
+                     'textShortRecall': 1.0},
+             info={'lineCount': 5,
+                   'listCorrectCount': 5,
+                   'listLineCount': 5,
+                   'listTrimCorrectCount': 5,
+                   'textHttpCount': 5,
+                   'textHttpCountCorrect': 5,
+                   'textShortCount': 5,
+                   'textShortCountCorrect': 5},
+             duration=datetime.timedelta(seconds=3, microseconds=152814),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 17, 10, 10, 483482),
+                            'For the following turtle find the shortest non '
+                            'trivial connection from Anne to Bob. Please '
+                            'summarize the connection with just a list of '
+                            'resource IRIs, one per line, starting with '
+                            'https://abc.def/ghi/anne and ending with '
+                            'https://abc.def/ghi/bob . Please leave out '
+                            'rdf:type infos, leave out explanatory text and '
+                            'answer with just the IRI lines.\n'
+                            '\n'
+                            'PREFIX : <https://abc.def/ghi/>\n'
+                            'PREFIX rdfs: '
+                            '<http://www.w3.org/2000/01/rdf-schema#>\n'
+                            'PREFIX owl: <http://www.w3.org/2002/07/owl#>\n'
+                            'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                            'PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n'
+                            'PREFIX org: <http://www.w3.org/ns/org#>\n'
+                            '\n'
+                            ':anne a foaf:Person ; foaf:firstName "Anne" ; '
+                            'foaf:surname "Miller" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "UK" ] .\n'
+                            ':bob a foaf:Person ; foaf:firstName "Bob" ; '
+                            'foaf:surname "Tanner" ;\n'
+                            '  vcard:hasAddress [ a vcard:Home ; '
+                            'vcard:country-name "US" ] .\n'
+                            '\n'
+                            ':wonderOrg a org:Organization .\n'
+                            ':researchDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Research Department" .\n'
+                            ':marketingDep a org:OrganizationalUnit ; '
+                            'org:unitOf :wonderOrg ;\n'
+                            '  rdfs:label "Marketing Department" .\n'
+                            '\n'
+                            ':chiefResearchOfficer a org:Role . '
+                            ':marketingManager a org:Role .\n'
+                            '\n'
+                            '[ a org:Membership ; org:member :anne ; '
+                            'org:organization :researchDep ;\n'
+                            '  org:role :chiefResearchOfficer ] .\n'
+                            '[ a org:Membership ; org:member :bob  ; '
+                            'org:organization :marketingDep ;\n'
+                            '  org:role :marketingManager ] .\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 17, 10, 13, 636291),
+                            ' https://abc.def/ghi/anne\n'
+                            'https://abc.def/ghi/researchDep\n'
+                            'https://abc.def/ghi/wonderOrg\n'
+                            'https://abc.def/ghi/marketingDep\n'
+                            'https://abc.def/ghi/bob')])

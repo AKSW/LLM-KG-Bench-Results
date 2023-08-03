@@ -1,0 +1,33 @@
+[
+  {
+    "startTime": "2023-07-27T21:07:08.013102",
+    "modelId": "GPT--gpt-3.5-turbo--gpt-3.5-turbo-0613",
+    "taskInfo": {
+      "taskId": "SyntheticDatasetGeneration",
+      "version": "1.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "parsable": 1.0,
+      "persons_relative_error": -0.9,
+      "min_friends_ok": 1,
+      "max_friends_ok": 1
+    },
+    "info": {
+      "n_persons": 70
+    },
+    "duration": "0:00:09.349552",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T21:07:08.013108",
+        "Create a knowledge graph in turtle format that consists of 70 different objects of type foaf:person. Each should have at least 2 and at most 69 connections to other persons via foaf:knows. Give no extra text."
+      ],
+      [
+        "response",
+        "2023-07-27T21:07:17.362654",
+        "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n  \n<http://example.org/person1> a foaf:Person ;\n    foaf:knows <http://example.org/person2> ,\n                <http://example.org/person3> .\n<http://example.org/person2> a foaf:Person ;\n    foaf:knows <http://example.org/person4> ,\n                <http://example.org/person5> .\n<http://example.org/person3> a foaf:Person ;\n    foaf:knows <http://example.org/person6> ,\n                <http://example.org/person7> .\n<http://example.org/person4> a foaf:Person ;\n    foaf:knows <http://example.org/person8> ,\n                <http://example.org/person9> .\n<http://example.org/person5> a foaf:Person ;\n    foaf:knows <http://example.org/person10> ,\n                <http://example.org/person11> .\n<http://example.org/person6> a foaf:Person ;\n    foaf:knows <http://example.org/person12> ,\n                <http://example.org/person13> .\n<http://example.org/person7> a foaf:Person ;\n    foaf:knows <http://example.org/person14> ,\n                <http://example.org/person15> .\n\n... (continued)"
+      ]
+    ]
+  }
+]

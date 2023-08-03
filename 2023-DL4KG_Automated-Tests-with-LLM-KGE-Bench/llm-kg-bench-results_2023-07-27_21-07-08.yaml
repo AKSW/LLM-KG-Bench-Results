@@ -1,0 +1,41 @@
+---
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 9
+  - 349552
+  info:
+    n_persons: 70
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 21:07:08.013108
+    - Create a knowledge graph in turtle format that consists of 70 different objects
+      of type foaf:person. Each should have at least 2 and at most 69 connections
+      to other persons via foaf:knows. Give no extra text.
+  - !!python/tuple
+    - response
+    - 2023-07-27 21:07:17.362654
+    - "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n  \n<http://example.org/person1>\
+      \ a foaf:Person ;\n    foaf:knows <http://example.org/person2> ,\n         \
+      \       <http://example.org/person3> .\n<http://example.org/person2> a foaf:Person\
+      \ ;\n    foaf:knows <http://example.org/person4> ,\n                <http://example.org/person5>\
+      \ .\n<http://example.org/person3> a foaf:Person ;\n    foaf:knows <http://example.org/person6>\
+      \ ,\n                <http://example.org/person7> .\n<http://example.org/person4>\
+      \ a foaf:Person ;\n    foaf:knows <http://example.org/person8> ,\n         \
+      \       <http://example.org/person9> .\n<http://example.org/person5> a foaf:Person\
+      \ ;\n    foaf:knows <http://example.org/person10> ,\n                <http://example.org/person11>\
+      \ .\n<http://example.org/person6> a foaf:Person ;\n    foaf:knows <http://example.org/person12>\
+      \ ,\n                <http://example.org/person13> .\n<http://example.org/person7>\
+      \ a foaf:Person ;\n    foaf:knows <http://example.org/person14> ,\n        \
+      \        <http://example.org/person15> .\n\n... (continued)"
+  modelId: GPT--gpt-3.5-turbo--gpt-3.5-turbo-0613
+  scores:
+    max_friends_ok: 1
+    min_friends_ok: 1
+    parsable: 1.0
+    persons_relative_error: -0.9
+  startTime: 2023-07-27 21:07:08.013102
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: SyntheticDatasetGeneration
+    version: '1.0'

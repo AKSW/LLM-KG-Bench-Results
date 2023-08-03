@@ -1,0 +1,3080 @@
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 18, 59, 52, 25715),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=897164),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 18, 59, 52, 25719),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 18, 59, 53, 922879),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 18, 59, 53, 930438),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=234290),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 18, 59, 53, 930444),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 18, 59, 55, 164728),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 18, 59, 55, 173995),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=519103),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 18, 59, 55, 173999),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 18, 59, 56, 693098),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 18, 59, 56, 700233),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=429629),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 18, 59, 56, 700237),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 18, 59, 58, 129862),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 18, 59, 58, 136163),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=164419),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 18, 59, 58, 136168),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 18, 59, 59, 300582),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 18, 59, 59, 311523),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=737849),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 18, 59, 59, 311529),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 1, 49372),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 1, 55867),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=803232),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 1, 55872),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 2, 859099),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 2, 867342),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=619399),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 2, 867346),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 4, 486741),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 4, 494268),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=764531),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 4, 494272),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 6, 258799),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 6, 265368),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=517308),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 6, 265373),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 7, 782676),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 7, 794658),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=141561),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 7, 794662),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 8, 936219),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 8, 948785),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=113696),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 8, 948791),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 10, 62481),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 10, 69293),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=539561),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 10, 69298),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 11, 608854),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 11, 617205),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=522231),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 11, 617210),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 13, 139436),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 13, 145797),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=730386),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 13, 145802),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 14, 876183),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 14, 884100),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=91517),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 14, 884104),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 15, 975617),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 15, 982812),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(microseconds=950843),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 15, 982816),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 16, 933655),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 16, 941071),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=192496),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 16, 941076),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 18, 133567),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 18, 141709),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(seconds=1, microseconds=30873),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 18, 141712),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 19, 172582),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 19, 189018),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 0,
+                     'recall': 0},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 717,
+                   'persons': 6,
+                   'personsInAnswer': ['1'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 19},
+             duration=datetime.timedelta(microseconds=999834),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 19, 189024),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 20, 188852),
+                            'http://example.org/people/person-00000001')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 20, 197158),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=2, microseconds=664732),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 20, 197163),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 22, 861890),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 22, 873025),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=785449),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 22, 873029),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 24, 658474),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 24, 667877),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(microseconds=989482),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 24, 667881),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 25, 657359),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 25, 666617),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(microseconds=915577),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 25, 666621),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 26, 582194),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 26, 592958),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=766255),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 26, 592975),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 28, 359213),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 28, 370230),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=2, microseconds=512579),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 28, 370233),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 30, 882809),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 30, 893193),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=23111),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 30, 893197),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 31, 916304),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 31, 925784),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(microseconds=978316),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 31, 925788),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 32, 904100),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 32, 913517),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=456091),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 32, 913521),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 34, 369608),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 34, 395876),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=14091),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 34, 395882),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 35, 409967),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 35, 419119),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=651164),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 35, 419123),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 37, 70283),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 37, 81057),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(microseconds=970264),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 37, 81062),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 38, 51321),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 38, 61310),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(microseconds=924852),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 38, 61314),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 38, 986162),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 38, 996389),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(microseconds=956838),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 38, 996393),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 39, 953227),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 39, 963747),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=237759),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 39, 963760),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 41, 201506),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 41, 210616),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=378941),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 41, 210620),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 42, 589557),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 42, 604022),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=61198),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 42, 604028),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 43, 665220),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 43, 678026),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=326455),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 43, 678030),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 45, 4481),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 45, 15605),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=571570),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 45, 15609),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 46, 587175),
+                            'http://example.org/people/person-00000004')])
+TaskExecInfo(startTime=datetime.datetime(2023, 7, 27, 19, 0, 46, 595849),
+             modelId='GPT--gpt-4--gpt-4-0613',
+             taskInfo=TaskInfo(taskId='TurtleFriendCount',
+                               version='2.0',
+                               gitCommit='dd716f229c6d9c627544a513aa00d953882a1f45'),
+             scores={'brevity': 1,
+                     'f1': 1.0,
+                     'noSpecialFriends': 1.0,
+                     'precision': 1.0,
+                     'recall': 1},
+             info={'answerPersonCount': 1,
+                   'graphSizeChar': 1773,
+                   'persons': 16,
+                   'personsInAnswer': ['4'],
+                   'specialFriendsInAnswer': 0,
+                   'specialNode': 'http://example.org/people/person-00000004',
+                   'triples': 51},
+             duration=datetime.timedelta(seconds=1, microseconds=200742),
+             interactions=[('prompt',
+                            datetime.datetime(2023, 7, 27, 19, 0, 46, 595854),
+                            'Please name the person which is known by the most '
+                            'persons according to the following RDF graph in '
+                            'turtle syntax. Give just the IRI of this person '
+                            'with most incomming links as answer, without '
+                            'abbreviation or explanation.@prefix ex: '
+                            '<http://example.org/people/> .\n'
+                            '@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n'
+                            '\n'
+                            'ex:person-00000001 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000002,\n'
+                            '        ex:person-00000003 .\n'
+                            '\n'
+                            'ex:person-00000002 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000003,\n'
+                            '        ex:person-00000004 .\n'
+                            '\n'
+                            'ex:person-00000003 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000005 .\n'
+                            '\n'
+                            'ex:person-00000005 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000006,\n'
+                            '        ex:person-00000007 .\n'
+                            '\n'
+                            'ex:person-00000006 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000007,\n'
+                            '        ex:person-00000008 .\n'
+                            '\n'
+                            'ex:person-00000007 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000008,\n'
+                            '        ex:person-00000009 .\n'
+                            '\n'
+                            'ex:person-00000008 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-00000009,\n'
+                            '        ex:person-0000000a .\n'
+                            '\n'
+                            'ex:person-00000009 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000004,\n'
+                            '        ex:person-0000000a,\n'
+                            '        ex:person-0000000b .\n'
+                            '\n'
+                            'ex:person-0000000a a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000b,\n'
+                            '        ex:person-0000000c .\n'
+                            '\n'
+                            'ex:person-0000000b a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000c,\n'
+                            '        ex:person-0000000d .\n'
+                            '\n'
+                            'ex:person-0000000c a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000d,\n'
+                            '        ex:person-0000000e .\n'
+                            '\n'
+                            'ex:person-0000000d a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000e,\n'
+                            '        ex:person-0000000f .\n'
+                            '\n'
+                            'ex:person-0000000e a foaf:Person ;\n'
+                            '    foaf:knows ex:person-0000000f,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-0000000f a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000010 .\n'
+                            '\n'
+                            'ex:person-00000010 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000001,\n'
+                            '        ex:person-00000002 .\n'
+                            '\n'
+                            'ex:person-00000004 a foaf:Person ;\n'
+                            '    foaf:knows ex:person-00000005,\n'
+                            '        ex:person-00000006 .\n'
+                            '\n'),
+                           ('response',
+                            datetime.datetime(2023, 7, 27, 19, 0, 47, 796591),
+                            'http://example.org/people/person-00000004')])

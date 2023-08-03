@@ -1,0 +1,2998 @@
+---
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 13
+  - 105908
+  info:
+    diff: "--- optimal\n\n+++ answer\n\n@@ -5,20 +5,43 @@\n\n PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n\
+      \ PREFIX org: <http://www.w3.org/ns/org#>\n \n-:anne a foaf:Person ; foaf:firstName\
+      \ \"Anne\" ; foaf:surname \"Miller\" ;\n-  vcard:hasAddress [ a vcard:Home ;\
+      \ vcard:country-name \"UK\" ] .\n-:bob a foaf:Person ; foaf:firstName \"Bob\"\
+      \ ; foaf:surname \"Tanner\" ;\n-  vcard:hasAddress [ a vcard:Home ; vcard:country-name\
+      \ \"US\" ] .\n+:anne a foaf:Person ; \n+     foaf:firstName \"Anne\" ;\n+  \
+      \   foaf:surname \"Miller\" ;\n+     vcard:hasAddress [ \n+         a vcard:Home\
+      \ ;\n+         vcard:country-name \"UK\" \n+     ] .\n+\n+:bob a foaf:Person\
+      \ ;\n+    foaf:firstName \"Bob\" ; \n+    foaf:surname \"Tanner\" ;\n+    vcard:hasAddress\
+      \ [\n+        a vcard:Home ;\n+        vcard:country-name \"US\"  \n+    ] .\n\
+      \ \n :wonderOrg a org:Organization .\n-:researchDep a org:OrganizationalUnit\
+      \ ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Research Department\" .\n-:marketingDep\
+      \ a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Marketing\
+      \ Department\" .\n \n-:chiefResearchOfficer a org:Role . :marketingManager a\
+      \ org:Role .\n+:researchDep a org:OrganizationalUnit ;\n+    org:unitOf :wonderOrg\
+      \ ;\n+    rdfs:label \"Research Department\" .\n \n-[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n-  org:role :chiefResearchOfficer\
+      \ ] .\n-[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n-  org:role :marketingManager ] .\n+:marketingDep a org:OrganizationalUnit\
+      \ ; \n+    org:unitOf :wonderOrg ;\n+    rdfs:label \"Marketing Department\"\
+      \ . \n+\n+:chiefResearchOfficer a org:Role .\n+:marketingManager a org:Role\
+      \ .\n+\n+[ a org:Membership ; \n+  org:member :anne ;\n+  org:organization :researchDep\
+      \ ;\n+  org:role :chiefResearchOfficer \n+] .\n+\n+[ a org:Membership ;\n+ \
+      \ org:member :bob ; \n+  org:organization :marketingDep ;\n+  org:role :marketingManager\n\
+      +] ."
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 28
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 28
+    normAnswerMissingCount: 0
+    normOptimalCount: 28
+    parsableTriples: '<https://abc.def/ghi/anne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b3 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/researchDep> .
+
+      <https://abc.def/ghi/wonderOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Organization> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/surname> "Miller" .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/surname> "Tanner" .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b3 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/chiefResearchOfficer>
+      .
+
+      <https://abc.def/ghi/anne> <http://www.w3.org/2006/vcard/ns#hasAddress> _:nfa2ee0c8d48849f994184d850430e0c2b1
+      .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/2006/vcard/ns#hasAddress> _:nfa2ee0c8d48849f994184d850430e0c2b2
+      .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b1 <http://www.w3.org/2006/vcard/ns#country-name>
+      "UK" .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/firstName> "Anne" .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Marketing Department" .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/firstName> "Bob" .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b3 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/anne>
+      .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b4 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/bob>
+      .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b4 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/marketingManager>
+      .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b4 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/marketingDep> .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Research Department" .
+
+      <https://abc.def/ghi/marketingManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      _:nfa2ee0c8d48849f994184d850430e0c2b2 <http://www.w3.org/2006/vcard/ns#country-name>
+      "US" .
+
+      <https://abc.def/ghi/chiefResearchOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      '
+    parsableTriplesCount: 29
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 13:59:53.552866
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:00:06.658769
+    - " Here is the corrected turtle:\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\
+      PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n\
+      PREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; \n     foaf:firstName\
+      \ \"Anne\" ;\n     foaf:surname \"Miller\" ;\n     vcard:hasAddress [ \n   \
+      \      a vcard:Home ;\n         vcard:country-name \"UK\" \n     ] .\n\n:bob\
+      \ a foaf:Person ;\n    foaf:firstName \"Bob\" ; \n    foaf:surname \"Tanner\"\
+      \ ;\n    vcard:hasAddress [\n        a vcard:Home ;\n        vcard:country-name\
+      \ \"US\"  \n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n \
+      \   rdfs:label \"Marketing Department\" . \n\n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role .\n\n[ a org:Membership ; \n  org:member :anne\
+      \ ;\n  org:organization :researchDep ;\n  org:role :chiefResearchOfficer \n\
+      ] .\n\n[ a org:Membership ;\n  org:member :bob ; \n  org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager\n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -27.233363719234028
+    diffRatioRaw: 0.918869644484959
+    normAnswerF1Score: 1.0
+    normAnswerPrecision: 1.0
+    normAnswerRecall: 1.0
+    normDiffRatio: 1.0
+    onlyTurtle: 0.03333333333333333
+    parsableTripleRatio: 1.0
+  startTime: 2023-07-26 13:59:53.552861
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 14
+  - 764720
+  info:
+    diff: '--- optimal
+
+
+      +++ answer
+
+
+      @@ -1,24 +0,0 @@
+
+
+      -PREFIX : <https://abc.def/ghi/>
+
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+      -PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+      -PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+      -PREFIX org: <http://www.w3.org/ns/org#>
+
+      -
+
+      -:anne a foaf:Person ; foaf:firstName "Anne" ; foaf:surname "Miller" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "UK" ] .
+
+      -:bob a foaf:Person ; foaf:firstName "Bob" ; foaf:surname "Tanner" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "US" ] .
+
+      -
+
+      -:wonderOrg a org:Organization .
+
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Research Department" .
+
+      -:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Marketing Department" .
+
+      -
+
+      -:chiefResearchOfficer a org:Role . :marketingManager a org:Role .
+
+      -
+
+      -[ a org:Membership ; org:member :anne ; org:organization :researchDep ;
+
+      -  org:role :chiefResearchOfficer ] .
+
+      -[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;
+
+      -  org:role :marketingManager ] .'
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 0
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 0
+    normAnswerMissingCount: 28
+    normOptimalCount: 28
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:00:06.697749
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:00:21.462464
+    - " Here is the corrected Turtle:\n\n@prefix : <https://abc.def/ghi/> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#>\
+      \ . \n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix vcard: <http://www.w3.org/2006/vcard/ns#>\
+      \ .\n@prefix org: <http://www.w3.org/ns/org#> .\n\n:anne a foaf:Person ; \n\
+      \     foaf:firstName \"Anne\" ;\n     foaf:surname \"Miller\" ;\n     vcard:hasAddress\
+      \ [ \n        a vcard:Home ;\n        vcard:country-name \"UK\"  \n     ] .\n\
+      \n:bob a foaf:Person ;\n    foaf:firstName \"Bob\" ; \n    foaf:surname \"Tanner\"\
+      \ ;\n    vcard:hasAddress [\n       a vcard:Home ;\n       vcard:country-name\
+      \ \"US\"\n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n \
+      \   rdfs:label \"Marketing Department\" .  \n\n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role .\n\n[ \n    a org:Membership ;\n    org:member\
+      \ :anne ;\n    org:organization :researchDep ; \n    org:role :chiefResearchOfficer\n\
+      ] .\n\n[\n   a org:Membership ;\n   org:member :bob ;  \n   org:organization\
+      \ :marketingDep ;\n   org:role :marketingManager\n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -346.99999999999704
+    diffRatioRaw: 0.0
+    normAnswerF1Score: 0
+    normAnswerPrecision: 0
+    normAnswerRecall: 0.0
+    normDiffRatio: 0.0
+    onlyTurtle: 0.0008613264427217916
+    parsableTripleRatio: 0.0
+  startTime: 2023-07-26 14:00:06.697744
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 14
+  - 712241
+  info:
+    diff: "--- optimal\n\n+++ answer\n\n@@ -1,24 +1,49 @@\n\n-PREFIX : <https://abc.def/ghi/>\n\
+      +PREFIX : <https://abc.def/ghi/> \n PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>\n+PREFIX owl: <http://www.w3.org/2002/ow#>\n\
+      \ PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n\
+      \ PREFIX org: <http://www.w3.org/ns/org#>\n \n-:anne a foaf:Person ; foaf:firstName\
+      \ \"Anne\" ; foaf:surname \"Miller\" ;\n-  vcard:hasAddress [ a vcard:Home ;\
+      \ vcard:country-name \"UK\" ] .\n-:bob a foaf:Person ; foaf:firstName \"Bob\"\
+      \ ; foaf:surname \"Tanner\" ;\n-  vcard:hasAddress [ a vcard:Home ; vcard:country-name\
+      \ \"US\" ] .\n+:anne a foaf:Person ; \n+     foaf:firstName \"Anne\" ;\n+  \
+      \   foaf:surname \"Miller\" ;\n+     vcard:hasAddress [ \n+         a vcard:Home\
+      \ ;\n+         vcard:country-name \"UK\" \n+     ] .\n+\n+:bob a foaf:Person\
+      \ ;\n+    foaf:firstName \"Bob\" ;\n+    foaf:surname \"Tanner\" ; \n+    vcard:hasAddress\
+      \ [\n+        a vcard:Home ;\n+        vcard:country-name \"US\"  \n+    ] .\n\
+      \ \n :wonderOrg a org:Organization .\n-:researchDep a org:OrganizationalUnit\
+      \ ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Research Department\" .\n-:marketingDep\
+      \ a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Marketing\
+      \ Department\" .\n \n-:chiefResearchOfficer a org:Role . :marketingManager a\
+      \ org:Role .\n+:researchDep a org:OrganizationalUnit ;\n+    org:unitOf :wonderOrg\
+      \ ;\n+    rdfs:label \"Research Department\" .\n+    \n+:marketingDep a org:OrganizationalUnit\
+      \ ; \n+    org:unitOf :wonderOrg ;\n+    rdfs:label \"Marketing Department\"\
+      \ .\n \n-[ a org:Membership ; org:member :anne ; org:organization :researchDep\
+      \ ;\n-  org:role :chiefResearchOfficer ] .\n-[ a org:Membership ; org:member\
+      \ :bob  ; org:organization :marketingDep ;\n-  org:role :marketingManager ]\
+      \ .\n+:chiefResearchOfficer a org:Role .\n+:marketingManager a org:Role . \n\
+      +\n+[ \n+    a org:Membership ;\n+    org:member :anne ;\n+    org:organization\
+      \ :researchDep ;\n+    org:role :chiefResearchOfficer \n+] .\n+\n+[\n+    a\
+      \ org:Membership ;\n+    org:member :bob ; \n+    org:organization :marketingDep\
+      \ ;\n+    org:role :marketingManager\n+] ."
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 28
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 28
+    normAnswerMissingCount: 0
+    normOptimalCount: 28
+    parsableTriples: '<https://abc.def/ghi/anne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:n5731210001b748fba7a75d28516d37d5b4 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/marketingDep> .
+
+      <https://abc.def/ghi/wonderOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Organization> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/surname> "Miller" .
+
+      _:n5731210001b748fba7a75d28516d37d5b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      _:n5731210001b748fba7a75d28516d37d5b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/surname> "Tanner" .
+
+      _:n5731210001b748fba7a75d28516d37d5b2 <http://www.w3.org/2006/vcard/ns#country-name>
+      "US" .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/firstName> "Anne" .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:n5731210001b748fba7a75d28516d37d5b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/anne> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n5731210001b748fba7a75d28516d37d5b1
+      .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Marketing Department" .
+
+      _:n5731210001b748fba7a75d28516d37d5b3 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/chiefResearchOfficer>
+      .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      _:n5731210001b748fba7a75d28516d37d5b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/firstName> "Bob" .
+
+      _:n5731210001b748fba7a75d28516d37d5b3 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/anne>
+      .
+
+      _:n5731210001b748fba7a75d28516d37d5b4 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/bob>
+      .
+
+      _:n5731210001b748fba7a75d28516d37d5b4 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/marketingManager>
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Research Department" .
+
+      <https://abc.def/ghi/marketingManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      _:n5731210001b748fba7a75d28516d37d5b1 <http://www.w3.org/2006/vcard/ns#country-name>
+      "UK" .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      _:n5731210001b748fba7a75d28516d37d5b3 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/researchDep> .
+
+      <https://abc.def/ghi/chiefResearchOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n5731210001b748fba7a75d28516d37d5b2
+      .
+
+      '
+    parsableTriplesCount: 29
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:00:21.478065
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:00:36.190302
+    - " ```turtle\nPREFIX : <https://abc.def/ghi/> \nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/ow#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; \n     foaf:firstName \"Anne\" ;\n     foaf:surname\
+      \ \"Miller\" ;\n     vcard:hasAddress [ \n         a vcard:Home ;\n        \
+      \ vcard:country-name \"UK\" \n     ] .\n\n:bob a foaf:Person ;\n    foaf:firstName\
+      \ \"Bob\" ;\n    foaf:surname \"Tanner\" ; \n    vcard:hasAddress [\n      \
+      \  a vcard:Home ;\n        vcard:country-name \"US\"  \n    ] .\n\n:wonderOrg\
+      \ a org:Organization .\n\n:researchDep a org:OrganizationalUnit ;\n    org:unitOf\
+      \ :wonderOrg ;\n    rdfs:label \"Research Department\" .\n    \n:marketingDep\
+      \ a org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n    rdfs:label \"\
+      Marketing Department\" .\n\n:chiefResearchOfficer a org:Role .\n:marketingManager\
+      \ a org:Role . \n\n[ \n    a org:Membership ;\n    org:member :anne ;\n    org:organization\
+      \ :researchDep ;\n    org:role :chiefResearchOfficer \n] .\n\n[\n    a org:Membership\
+      \ ;\n    org:member :bob ; \n    org:organization :marketingDep ;\n    org:role\
+      \ :marketingManager\n] .\n```"
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -32.77878103837443
+    diffRatioRaw: 0.9029345372460497
+    normAnswerF1Score: 1.0
+    normAnswerPrecision: 1.0
+    normAnswerRecall: 1.0
+    normDiffRatio: 1.0
+    onlyTurtle: 0.1
+    parsableTripleRatio: 1.0
+  startTime: 2023-07-26 14:00:21.478061
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 14
+  - 529345
+  info:
+    diff: "--- optimal\n\n+++ answer\n\n@@ -1,24 +1,48 @@\n\n PREFIX : <https://abc.def/ghi/>\n\
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\
+      \ \n PREFIX owl: <http://www.w3.org/2002/07/owl#>\n PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      \ PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n PREFIX org: <http://www.w3.org/ns/org#>\n\
+      \ \n-:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\"\
+      \ ;\n-  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n-:bob\
+      \ a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n-  vcard:hasAddress\
+      \ [ a vcard:Home ; vcard:country-name \"US\" ] .\n+:anne a foaf:Person ; \n\
+      +     foaf:firstName \"Anne\" ;\n+     foaf:surname \"Miller\" ;\n+     vcard:hasAddress\
+      \ [ \n+         a vcard:Home ;\n+         vcard:country-name \"UK\" \n+    \
+      \ ] .\n+\n+:bob a foaf:Person ;\n+    foaf:firstName \"Bob\" ;\n+    foaf:surname\
+      \ \"Tanner\" ; \n+    vcard:hasAddress [\n+        a vcard:Home ;\n+       \
+      \ vcard:country-name \"US\"  \n+    ] .\n \n :wonderOrg a org:Organization .\n\
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n-  rdfs:label\
+      \ \"Research Department\" .\n-:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n-  rdfs:label \"Marketing Department\" .\n \n-:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n+:researchDep a org:OrganizationalUnit\
+      \ ;\n+    org:unitOf :wonderOrg ;\n+    rdfs:label \"Research Department\" .\n\
+      \ \n-[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n\
+      -  org:role :chiefResearchOfficer ] .\n-[ a org:Membership ; org:member :bob\
+      \  ; org:organization :marketingDep ;\n-  org:role :marketingManager ] .\n+:marketingDep\
+      \ a org:OrganizationalUnit , org:unitOf :wonderOrg ; \n+    rdfs:label \"Marketing\
+      \ Department\" . \n+\n+:chiefResearchOfficer a org:Role .\n+:marketingManager\
+      \ a org:Role .\n+\n+[ \n+    a org:Membership ;\n+    org:member :anne ;\n+\
+      \    org:organization :researchDep ;\n+    org:role :chiefResearchOfficer \n\
+      +] .\n+\n+[\n+    a org:Membership ;\n+    org:member :bob ;\n+    org:organization\
+      \ :marketingDep ;\n+    org:role :marketingManager\n+] ."
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 25
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 25
+    normAnswerMissingCount: 3
+    normOptimalCount: 28
+    parsableTriples: '<https://abc.def/ghi/anne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      <https://abc.def/ghi/wonderOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Organization> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/surname> "Miller" .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/surname> "Tanner" .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb1 <http://www.w3.org/2006/vcard/ns#country-name>
+      "UK" .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb3 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/researchDep> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/firstName> "Anne" .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb3 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/anne>
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb4 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/marketingManager>
+      .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      <https://abc.def/ghi/anne> <http://www.w3.org/2006/vcard/ns#hasAddress> _:na0c27ad36249454388a4bf1e1f24adffb1
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/2006/vcard/ns#hasAddress> _:na0c27ad36249454388a4bf1e1f24adffb2
+      .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb2 <http://www.w3.org/2006/vcard/ns#country-name>
+      "US" .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb4 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/marketingDep> .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/firstName> "Bob" .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb4 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/bob>
+      .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Research Department" .
+
+      <https://abc.def/ghi/marketingManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb3 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/chiefResearchOfficer>
+      .
+
+      _:na0c27ad36249454388a4bf1e1f24adffb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/chiefResearchOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      '
+    parsableTriplesCount: 26
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:00:36.225610
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:00:50.754950
+    - " ```turtle\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\
+      \ \nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; \n     foaf:firstName \"Anne\" ;\n     foaf:surname\
+      \ \"Miller\" ;\n     vcard:hasAddress [ \n         a vcard:Home ;\n        \
+      \ vcard:country-name \"UK\" \n     ] .\n\n:bob a foaf:Person ;\n    foaf:firstName\
+      \ \"Bob\" ;\n    foaf:surname \"Tanner\" ; \n    vcard:hasAddress [\n      \
+      \  a vcard:Home ;\n        vcard:country-name \"US\"  \n    ] .\n\n:wonderOrg\
+      \ a org:Organization .\n\n:researchDep a org:OrganizationalUnit ;\n    org:unitOf\
+      \ :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\n:marketingDep a\
+      \ org:OrganizationalUnit , org:unitOf :wonderOrg ; \n    rdfs:label \"Marketing\
+      \ Department\" . \n\n:chiefResearchOfficer a org:Role .\n:marketingManager a\
+      \ org:Role .\n\n[ \n    a org:Membership ;\n    org:member :anne ;\n    org:organization\
+      \ :researchDep ;\n    org:role :chiefResearchOfficer \n] .\n\n[\n    a org:Membership\
+      \ ;\n    org:member :bob ;\n    org:organization :marketingDep ;\n    org:role\
+      \ :marketingManager\n] .\n```"
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -30.808144796379825
+    diffRatioRaw: 0.9085972850678733
+    normAnswerF1Score: 0.9433962264150945
+    normAnswerPrecision: 1.0
+    normAnswerRecall: 0.8928571428571429
+    normDiffRatio: 0.8221375576498897
+    onlyTurtle: 0.1
+    parsableTripleRatio: 0.896551724137931
+  startTime: 2023-07-26 14:00:36.225605
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 14
+  - 342238
+  info:
+    diff: "--- optimal\n\n+++ answer\n\n@@ -1,24 +1,47 @@\n\n PREFIX : <https://abc.def/ghi/>\n\
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\
+      \ \n PREFIX owl: <http://www.w3.org/2002/07/owl#>\n PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      \ PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n PREFIX org: <http://www.w3.org/ns/org#>\n\
+      \ \n-:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\"\
+      \ ;\n-  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n-:bob\
+      \ a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n-  vcard:hasAddress\
+      \ [ a vcard:Home ; vcard:country-name \"US\" ] .\n+:anne a foaf:Person ; \n\
+      +      foaf:firstName \"Anne\" ;\n+      foaf:surname \"Miller\" ;\n+      vcard:hasAddress\
+      \ [ \n+         a vcard:Home ;\n+         vcard:country-name \"UK\" \n+    \
+      \  ] .\n+\n+:bob a foaf:Person ;\n+    foaf:firstName \"Bob\" ; \n+    foaf:surname\
+      \ \"Tanner\" ;\n+    vcard:hasAddress [\n+       a vcard:Home ;\n+       vcard:country-name\
+      \ \"US\"\n+    ] .\n \n :wonderOrg a org:Organization .\n-:researchDep a org:OrganizationalUnit\
+      \ ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Research Department\" .\n-:marketingDep\
+      \ a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Marketing\
+      \ Department\" .\n \n-:chiefResearchOfficer a org:Role . :marketingManager a\
+      \ org:Role .\n+:researchDep a org:OrganizationalUnit ;\n+    org:unitOf :wonderOrg\
+      \ ;\n+    rdfs:label \"Research Department\" .\n \n-[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n-  org:role :chiefResearchOfficer\
+      \ ] .\n-[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n-  org:role :marketingManager ] .\n+:marketingDep a org:OrganizationalUnit\
+      \ ; \n+    org:unitOf :wonderOrg ;\n+    rdfs:label \"Marketing Department\"\
+      \ . \n+\n+:chiefResearchOfficer a org:Role .\n+:marketingManager a org:Role\
+      \ .\n+\n+[ a org:Membership ;\n+  org:member :anne ;\n+  org:organization :researchDep\
+      \ ;\n+  org:role :chiefResearchOfficer \n+] .\n+\n+[ a org:Membership ;\n+ \
+      \ org:member :bob ;\n+  org:organization :marketingDep ;\n+  org:role :marketingManager\n\
+      +] ."
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 28
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 28
+    normAnswerMissingCount: 0
+    normOptimalCount: 28
+    parsableTriples: '<https://abc.def/ghi/anne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b4 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/bob>
+      .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b3 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/anne>
+      .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/surname> "Miller" .
+
+      <https://abc.def/ghi/wonderOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Organization> .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b1 <http://www.w3.org/2006/vcard/ns#country-name>
+      "UK" .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/surname> "Tanner" .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/firstName> "Anne" .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/2006/vcard/ns#hasAddress> _:ndd22367cd1d244cdbde7492fe75430e7b2
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      <https://abc.def/ghi/anne> <http://www.w3.org/2006/vcard/ns#hasAddress> _:ndd22367cd1d244cdbde7492fe75430e7b1
+      .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b3 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/researchDep> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Marketing Department" .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/firstName> "Bob" .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b3 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/chiefResearchOfficer>
+      .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b4 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/marketingDep> .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b2 <http://www.w3.org/2006/vcard/ns#country-name>
+      "US" .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Research Department" .
+
+      <https://abc.def/ghi/marketingManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      _:ndd22367cd1d244cdbde7492fe75430e7b4 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/marketingManager>
+      .
+
+      <https://abc.def/ghi/chiefResearchOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      '
+    parsableTriplesCount: 29
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:00:50.810907
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:01:05.153141
+    - " ```turtle\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\
+      \ \nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; \n      foaf:firstName \"Anne\" ;\n      foaf:surname\
+      \ \"Miller\" ;\n      vcard:hasAddress [ \n         a vcard:Home ;\n       \
+      \  vcard:country-name \"UK\" \n      ] .\n\n:bob a foaf:Person ;\n    foaf:firstName\
+      \ \"Bob\" ; \n    foaf:surname \"Tanner\" ;\n    vcard:hasAddress [\n      \
+      \ a vcard:Home ;\n       vcard:country-name \"US\"\n    ] .\n\n:wonderOrg a\
+      \ org:Organization .\n\n:researchDep a org:OrganizationalUnit ;\n    org:unitOf\
+      \ :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\n:marketingDep a\
+      \ org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n    rdfs:label \"\
+      Marketing Department\" . \n\n:chiefResearchOfficer a org:Role .\n:marketingManager\
+      \ a org:Role .\n\n[ a org:Membership ;\n  org:member :anne ;\n  org:organization\
+      \ :researchDep ;\n  org:role :chiefResearchOfficer \n] .\n\n[ a org:Membership\
+      \ ;\n  org:member :bob ;\n  org:organization :marketingDep ;\n  org:role :marketingManager\n\
+      ] .\n```"
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -27.40492476060169
+    diffRatioRaw: 0.9183766529867761
+    normAnswerF1Score: 1.0
+    normAnswerPrecision: 1.0
+    normAnswerRecall: 1.0
+    normDiffRatio: 1.0
+    onlyTurtle: 0.1
+    parsableTripleRatio: 1.0
+  startTime: 2023-07-26 14:00:50.810903
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 14
+  - 42498
+  info:
+    diff: "--- optimal\n\n+++ answer\n\n@@ -1,24 +1,47 @@\n\n PREFIX : <https://abc.def/ghi/>\n\
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\
+      \  \n PREFIX owl: <http://www.w3.org/2002/07/owl#>\n PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      \ PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n PREFIX org: <http://www.w3.org/ns/org#>\n\
+      \ \n-:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\"\
+      \ ;\n-  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n-:bob\
+      \ a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n-  vcard:hasAddress\
+      \ [ a vcard:Home ; vcard:country-name \"US\" ] .\n+:anne a foaf:Person ; \n\
+      +     foaf:firstName \"Anne\" ;\n+     foaf:surname \"Miller\" ;\n+     vcard:hasAddress\
+      \ [ \n+       a vcard:Home ;\n+       vcard:country-name \"UK\"  \n+     ] .\n\
+      +\n+:bob a foaf:Person ;  \n+    foaf:firstName \"Bob\" ;\n+    foaf:surname\
+      \ \"Tanner\" ; \n+    vcard:hasAddress [\n+      a vcard:Home ;\n+      vcard:country-name\
+      \ \"US\"   \n+    ] .\n \n :wonderOrg a org:Organization .\n-:researchDep a\
+      \ org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n+\n+:researchDep a org:OrganizationalUnit\
+      \ ;\n+  org:unitOf :wonderOrg ;\n   rdfs:label \"Research Department\" .\n-:marketingDep\
+      \ a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Marketing\
+      \ Department\" .\n \n-:chiefResearchOfficer a org:Role . :marketingManager a\
+      \ org:Role .\n+:marketingDep a org:OrganizationalUnit ;\n+  org:unitOf :wonderOrg\
+      \ ; \n+  rdfs:label \"Marketing Department\" . \n \n-[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n-  org:role :chiefResearchOfficer\
+      \ ] .\n-[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n-  org:role :marketingManager ] .\n+:chiefResearchOfficer a org:Role .\n\
+      +:marketingManager a org:Role .\n+\n+[ a org:Membership ;\n+  org:member :anne\
+      \ ;\n+  org:organization :researchDep ;\n+  org:role :chiefResearchOfficer \n\
+      +] .\n+\n+[ a org:Membership ;\n+  org:member :bob ;\n+  org:organization :marketingDep\
+      \ ;\n+  org:role :marketingManager\n+] ."
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 28
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 28
+    normAnswerMissingCount: 0
+    normOptimalCount: 28
+    parsableTriples: '<https://abc.def/ghi/anne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      <https://abc.def/ghi/anne> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n89395351c7474f80a16f1da55cb7acbbb1
+      .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb3 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/chiefResearchOfficer>
+      .
+
+      <https://abc.def/ghi/wonderOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Organization> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/surname> "Miller" .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/surname> "Tanner" .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb3 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/anne>
+      .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/firstName> "Anne" .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb1 <http://www.w3.org/2006/vcard/ns#country-name>
+      "UK" .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n89395351c7474f80a16f1da55cb7acbbb2
+      .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb3 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/researchDep> .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb4 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/marketingDep> .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb4 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/marketingManager>
+      .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb4 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/bob>
+      .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Marketing Department" .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb2 <http://www.w3.org/2006/vcard/ns#country-name>
+      "US" .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/firstName> "Bob" .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Research Department" .
+
+      <https://abc.def/ghi/marketingManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      _:n89395351c7474f80a16f1da55cb7acbbb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/chiefResearchOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      '
+    parsableTriplesCount: 29
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:01:05.186740
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:01:19.229234
+    - " ```turtle\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\
+      \  \nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; \n     foaf:firstName \"Anne\" ;\n     foaf:surname\
+      \ \"Miller\" ;\n     vcard:hasAddress [ \n       a vcard:Home ;\n       vcard:country-name\
+      \ \"UK\"  \n     ] .\n\n:bob a foaf:Person ;  \n    foaf:firstName \"Bob\" ;\n\
+      \    foaf:surname \"Tanner\" ; \n    vcard:hasAddress [\n      a vcard:Home\
+      \ ;\n      vcard:country-name \"US\"   \n    ] .\n\n:wonderOrg a org:Organization\
+      \ .\n\n:researchDep a org:OrganizationalUnit ;\n  org:unitOf :wonderOrg ;\n\
+      \  rdfs:label \"Research Department\" .\n\n:marketingDep a org:OrganizationalUnit\
+      \ ;\n  org:unitOf :wonderOrg ; \n  rdfs:label \"Marketing Department\" . \n\n\
+      :chiefResearchOfficer a org:Role .\n:marketingManager a org:Role .\n\n[ a org:Membership\
+      \ ;\n  org:member :anne ;\n  org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ \n] .\n\n[ a org:Membership ;\n  org:member :bob ;\n  org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager\n] .\n```"
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -26.112740604949348
+    diffRatioRaw: 0.922089825847846
+    normAnswerF1Score: 1.0
+    normAnswerPrecision: 1.0
+    normAnswerRecall: 1.0
+    normDiffRatio: 1.0
+    onlyTurtle: 0.1
+    parsableTripleRatio: 1.0
+  startTime: 2023-07-26 14:01:05.186736
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 13
+  - 524629
+  info:
+    diff: '--- optimal
+
+
+      +++ answer
+
+
+      @@ -1,24 +0,0 @@
+
+
+      -PREFIX : <https://abc.def/ghi/>
+
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+      -PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+      -PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+      -PREFIX org: <http://www.w3.org/ns/org#>
+
+      -
+
+      -:anne a foaf:Person ; foaf:firstName "Anne" ; foaf:surname "Miller" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "UK" ] .
+
+      -:bob a foaf:Person ; foaf:firstName "Bob" ; foaf:surname "Tanner" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "US" ] .
+
+      -
+
+      -:wonderOrg a org:Organization .
+
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Research Department" .
+
+      -:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Marketing Department" .
+
+      -
+
+      -:chiefResearchOfficer a org:Role . :marketingManager a org:Role .
+
+      -
+
+      -[ a org:Membership ; org:member :anne ; org:organization :researchDep ;
+
+      -  org:role :chiefResearchOfficer ] .
+
+      -[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;
+
+      -  org:role :marketingManager ] .'
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 0
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 0
+    normAnswerMissingCount: 28
+    normOptimalCount: 28
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:01:19.263227
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:01:32.787852
+    - " Here is the corrected Turtle:\n\n@prefix : <https://abc.def/ghi/> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#>\
+      \ .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .  \n@prefix vcard: <http://www.w3.org/2006/vcard/ns#>\
+      \ .\n@prefix org: <http://www.w3.org/ns/org#> .\n\n:anne a foaf:Person ; \n\
+      \      foaf:firstName \"Anne\" ;\n      foaf:surname \"Miller\" ;\n      vcard:hasAddress\
+      \ [ \n         a vcard:Home ;\n         vcard:country-name \"UK\" \n      ]\
+      \ .\n\n:bob a foaf:Person ;\n    foaf:firstName \"Bob\" ;\n    foaf:surname\
+      \ \"Tanner\" ; \n    vcard:hasAddress [\n        a vcard:Home ;\n        vcard:country-name\
+      \ \"US\"\n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n \
+      \   rdfs:label \"Marketing Department\" .  \n\n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role .\n\n[ \n    a org:Membership ;\n    org:member\
+      \ :anne ;\n    org:organization :researchDep ;\n    org:role :chiefResearchOfficer\
+      \ \n] .\n\n[\n    a org:Membership ;\n    org:member :bob ; \n    org:organization\
+      \ :marketingDep ;\n    org:role :marketingManager\n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -346.99999999999704
+    diffRatioRaw: 0.0
+    normAnswerF1Score: 0
+    normAnswerPrecision: 0
+    normAnswerRecall: 0.0
+    normDiffRatio: 0.0
+    onlyTurtle: 0.0008532423208191126
+    parsableTripleRatio: 0.0
+  startTime: 2023-07-26 14:01:19.263223
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 15
+  - 462174
+  info:
+    diff: '--- optimal
+
+
+      +++ answer
+
+
+      @@ -1,24 +0,0 @@
+
+
+      -PREFIX : <https://abc.def/ghi/>
+
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+      -PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+      -PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+      -PREFIX org: <http://www.w3.org/ns/org#>
+
+      -
+
+      -:anne a foaf:Person ; foaf:firstName "Anne" ; foaf:surname "Miller" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "UK" ] .
+
+      -:bob a foaf:Person ; foaf:firstName "Bob" ; foaf:surname "Tanner" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "US" ] .
+
+      -
+
+      -:wonderOrg a org:Organization .
+
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Research Department" .
+
+      -:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Marketing Department" .
+
+      -
+
+      -:chiefResearchOfficer a org:Role . :marketingManager a org:Role .
+
+      -
+
+      -[ a org:Membership ; org:member :anne ; org:organization :researchDep ;
+
+      -  org:role :chiefResearchOfficer ] .
+
+      -[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;
+
+      -  org:role :marketingManager ] .'
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 0
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 0
+    normAnswerMissingCount: 28
+    normOptimalCount: 28
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:01:32.803644
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:01:48.265814
+    - " Here is the corrected Turtle:\n\n@prefix : <https://abc.def/ghi/> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#>\
+      \ .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .  \n@prefix vcard: <http://www.w3.org/2006/vcard/ns#>\
+      \ .\n@prefix org: <http://www.w3.org/ns/org#> .\n\n:anne a foaf:Person ; \n\
+      \    foaf:firstName \"Anne\" ;\n    foaf:surname \"Miller\" ;\n    vcard:hasAddress\
+      \ [ \n        a vcard:Home ;\n        vcard:country-name \"UK\" \n    ] .\n\n\
+      :bob a foaf:Person ;\n    foaf:firstName \"Bob\" ; \n    foaf:surname \"Tanner\"\
+      \ ;\n    vcard:hasAddress [ \n        a vcard:Home ;\n        vcard:country-name\
+      \ \"US\" \n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \    \n:marketingDep a org:OrganizationalUnit ;\n    org:unitOf :wonderOrg ;\
+      \ \n    rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role . \n\n[ \n    a org:Membership ;\n    org:member\
+      \ :anne ;\n    org:organization :researchDep ;\n    org:role :chiefResearchOfficer\
+      \ \n] .\n\n[\n    a org:Membership ;\n    org:member :bob ; \n    org:organization\
+      \ :marketingDep ;\n    org:role :marketingManager\n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -346.99999999999704
+    diffRatioRaw: 0.0
+    normAnswerF1Score: 0
+    normAnswerPrecision: 0
+    normAnswerRecall: 0.0
+    normDiffRatio: 0.0
+    onlyTurtle: 0.000856898029134533
+    parsableTripleRatio: 0.0
+  startTime: 2023-07-26 14:01:32.803640
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 14
+  - 141387
+  info:
+    diff: '--- optimal
+
+
+      +++ answer
+
+
+      @@ -1,24 +0,0 @@
+
+
+      -PREFIX : <https://abc.def/ghi/>
+
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+      -PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+      -PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+      -PREFIX org: <http://www.w3.org/ns/org#>
+
+      -
+
+      -:anne a foaf:Person ; foaf:firstName "Anne" ; foaf:surname "Miller" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "UK" ] .
+
+      -:bob a foaf:Person ; foaf:firstName "Bob" ; foaf:surname "Tanner" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "US" ] .
+
+      -
+
+      -:wonderOrg a org:Organization .
+
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Research Department" .
+
+      -:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Marketing Department" .
+
+      -
+
+      -:chiefResearchOfficer a org:Role . :marketingManager a org:Role .
+
+      -
+
+      -[ a org:Membership ; org:member :anne ; org:organization :researchDep ;
+
+      -  org:role :chiefResearchOfficer ] .
+
+      -[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;
+
+      -  org:role :marketingManager ] .'
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 0
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 0
+    normAnswerMissingCount: 28
+    normOptimalCount: 28
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:01:48.281239
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:02:02.422622
+    - " Here is the corrected Turtle:\n\n@prefix : <https://abc.def/ghi/> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#>\
+      \ .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix vcard: <http://www.w3.org/2006/vcard/ns#>\
+      \ .\n@prefix org: <http://www.w3.org/ns/org#> .\n\n:anne a foaf:Person ; \n\
+      \     foaf:firstName \"Anne\" ;\n     foaf:surname \"Miller\" ;\n     vcard:hasAddress\
+      \ [ \n         a vcard:Home ;\n         vcard:country-name \"UK\" \n     ] .\n\
+      \n:bob a foaf:Person ;\n    foaf:firstName \"Bob\" ; \n    foaf:surname \"Tanner\"\
+      \ ;\n    vcard:hasAddress [\n        a vcard:Home ;\n        vcard:country-name\
+      \ \"US\"\n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit , org:unitOf :wonderOrg ; \n    rdfs:label\
+      \ \"Marketing Department\" . \n\n:chiefResearchOfficer a org:Role .\n:marketingManager\
+      \ a org:Role .\n\n[ \n    a org:Membership ;\n    org:member :anne ;\n    org:organization\
+      \ :researchDep ; \n    org:role :chiefResearchOfficer \n] .\n\n[\n    a org:Membership\
+      \ ;\n    org:member :bob ;\n    org:organization :marketingDep ;\n    org:role\
+      \ :marketingManager  \n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -346.99999999999704
+    diffRatioRaw: 0.0
+    normAnswerF1Score: 0
+    normAnswerPrecision: 0
+    normAnswerRecall: 0.0
+    normDiffRatio: 0.0
+    onlyTurtle: 0.000859106529209622
+    parsableTripleRatio: 0.0
+  startTime: 2023-07-26 14:01:48.281235
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 14
+  - 23052
+  info:
+    diff: '--- optimal
+
+
+      +++ answer
+
+
+      @@ -1,24 +0,0 @@
+
+
+      -PREFIX : <https://abc.def/ghi/>
+
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+      -PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+      -PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+      -PREFIX org: <http://www.w3.org/ns/org#>
+
+      -
+
+      -:anne a foaf:Person ; foaf:firstName "Anne" ; foaf:surname "Miller" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "UK" ] .
+
+      -:bob a foaf:Person ; foaf:firstName "Bob" ; foaf:surname "Tanner" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "US" ] .
+
+      -
+
+      -:wonderOrg a org:Organization .
+
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Research Department" .
+
+      -:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Marketing Department" .
+
+      -
+
+      -:chiefResearchOfficer a org:Role . :marketingManager a org:Role .
+
+      -
+
+      -[ a org:Membership ; org:member :anne ; org:organization :researchDep ;
+
+      -  org:role :chiefResearchOfficer ] .
+
+      -[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;
+
+      -  org:role :marketingManager ] .'
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 0
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 0
+    normAnswerMissingCount: 28
+    normOptimalCount: 28
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:02:02.440327
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:02:16.463375
+    - " Here is the corrected turtle:\n\n@prefix : <https://abc.def/ghi/> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#>\
+      \ .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix vcard: <http://www.w3.org/2006/vcard/ns#>\
+      \ .\n@prefix org: <http://www.w3.org/ns/org#> .\n\n:anne a foaf:Person ; \n\
+      \     foaf:firstName \"Anne\" ;\n     foaf:surname \"Miller\" ;\n     vcard:hasAddress\
+      \ [ \n         a vcard:Home ;\n         vcard:country-name \"UK\" \n     ] .\n\
+      \n:bob a foaf:Person ;\n    foaf:firstName \"Bob\" ;\n    foaf:surname \"Tanner\"\
+      \ ; \n    vcard:hasAddress [\n        a vcard:Home ;\n        vcard:country-name\
+      \ \"US\"\n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit ;\n    org:unitOf :wonderOrg ;\n  \
+      \  rdfs:label \"Marketing Department\" . \n\n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role .\n\n[ \n    a org:Membership ;\n    org:member\
+      \ :anne ;\n    org:organization :researchDep ;\n    org:role :chiefResearchOfficer\
+      \ \n] .\n\n[\n    a org:Membership ;\n    org:member :bob ; \n    org:organization\
+      \ :marketingDep ;\n    org:role :marketingManager\n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -346.99999999999704
+    diffRatioRaw: 0.0
+    normAnswerF1Score: 0
+    normAnswerPrecision: 0
+    normAnswerRecall: 0.0
+    normDiffRatio: 0.0
+    onlyTurtle: 0.000859106529209622
+    parsableTripleRatio: 0.0
+  startTime: 2023-07-26 14:02:02.440323
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 16
+  - 176062
+  info:
+    diff: '--- optimal
+
+
+      +++ answer
+
+
+      @@ -1,24 +0,0 @@
+
+
+      -PREFIX : <https://abc.def/ghi/>
+
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+      -PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+      -PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+      -PREFIX org: <http://www.w3.org/ns/org#>
+
+      -
+
+      -:anne a foaf:Person ; foaf:firstName "Anne" ; foaf:surname "Miller" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "UK" ] .
+
+      -:bob a foaf:Person ; foaf:firstName "Bob" ; foaf:surname "Tanner" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "US" ] .
+
+      -
+
+      -:wonderOrg a org:Organization .
+
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Research Department" .
+
+      -:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Marketing Department" .
+
+      -
+
+      -:chiefResearchOfficer a org:Role . :marketingManager a org:Role .
+
+      -
+
+      -[ a org:Membership ; org:member :anne ; org:organization :researchDep ;
+
+      -  org:role :chiefResearchOfficer ] .
+
+      -[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;
+
+      -  org:role :marketingManager ] .'
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 0
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 0
+    normAnswerMissingCount: 28
+    normOptimalCount: 28
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:02:16.479649
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:02:32.655706
+    - " Here is the corrected Turtle:\n\n@prefix : <https://abc.def/ghi/> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#>\
+      \ .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .  \n@prefix vcard: <http://www.w3.org/2006/vcard/ns#>\
+      \ .\n@prefix org: <http://www.w3.org/ns/org#> .\n\n:anne a foaf:Person ; \n\
+      \      foaf:firstName \"Anne\" ;\n      foaf:surname \"Miller\" ;\n      vcard:hasAddress\
+      \ [ \n          a vcard:Home ;\n          vcard:country-name \"UK\" \n     \
+      \ ] .\n      \n:bob a foaf:Person ;\n    foaf:firstName \"Bob\" ;\n    foaf:surname\
+      \ \"Tanner\" ; \n    vcard:hasAddress [\n        a vcard:Home ;\n        vcard:country-name\
+      \ \"US\"  \n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit ;\n    org:unitOf :wonderOrg ; \n \
+      \   rdfs:label \"Marketing Department\" .\n    \n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role .\n\n[ \n    a org:Membership ;\n    org:member\
+      \ :anne ;\n    org:organization :researchDep ;\n    org:role :chiefResearchOfficer\
+      \ \n] .\n\n[\n    a org:Membership ;\n    org:member :bob ;\n    org:organization\
+      \ :marketingDep ;\n    org:role :marketingManager\n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -346.99999999999704
+    diffRatioRaw: 0.0
+    normAnswerF1Score: 0
+    normAnswerPrecision: 0
+    normAnswerRecall: 0.0
+    normDiffRatio: 0.0
+    onlyTurtle: 0.0008453085376162299
+    parsableTripleRatio: 0.0
+  startTime: 2023-07-26 14:02:16.479644
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 13
+  - 798162
+  info:
+    diff: '--- optimal
+
+
+      +++ answer
+
+
+      @@ -1,24 +0,0 @@
+
+
+      -PREFIX : <https://abc.def/ghi/>
+
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+      -PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+      -PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+      -PREFIX org: <http://www.w3.org/ns/org#>
+
+      -
+
+      -:anne a foaf:Person ; foaf:firstName "Anne" ; foaf:surname "Miller" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "UK" ] .
+
+      -:bob a foaf:Person ; foaf:firstName "Bob" ; foaf:surname "Tanner" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "US" ] .
+
+      -
+
+      -:wonderOrg a org:Organization .
+
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Research Department" .
+
+      -:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Marketing Department" .
+
+      -
+
+      -:chiefResearchOfficer a org:Role . :marketingManager a org:Role .
+
+      -
+
+      -[ a org:Membership ; org:member :anne ; org:organization :researchDep ;
+
+      -  org:role :chiefResearchOfficer ] .
+
+      -[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;
+
+      -  org:role :marketingManager ] .'
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 0
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 0
+    normAnswerMissingCount: 28
+    normOptimalCount: 28
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:02:32.672473
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:02:46.470631
+    - " Here is the corrected Turtle:\n\n@prefix : <https://abc.def/ghi/> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#>\
+      \ .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .  \n@prefix vcard: <http://www.w3.org/2006/vcard/ns#>\
+      \ .\n@prefix org: <http://www.w3.org/ns/org#> .\n\n:anne a foaf:Person ; \n\
+      \    foaf:firstName \"Anne\" ;\n    foaf:surname \"Miller\" ;\n    vcard:hasAddress\
+      \ [ \n        a vcard:Home ;\n        vcard:country-name \"UK\" \n    ] .\n\n\
+      :bob a foaf:Person ;\n    foaf:firstName \"Bob\" ; \n    foaf:surname \"Tanner\"\
+      \ ;\n    vcard:hasAddress [ \n        a vcard:Home ;\n        vcard:country-name\
+      \ \"US\"  \n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n \
+      \   rdfs:label \"Marketing Department\" .  \n\n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role .\n\n[ \n    a org:Membership ;\n    org:member\
+      \ :anne ;\n    org:organization :researchDep ; \n    org:role :chiefResearchOfficer\n\
+      ] .\n\n[\n    a org:Membership ;\n    org:member :bob ;\n    org:organization\
+      \ :marketingDep ;\n    org:role :marketingManager  \n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -346.99999999999704
+    diffRatioRaw: 0.0
+    normAnswerF1Score: 0
+    normAnswerPrecision: 0
+    normAnswerRecall: 0.0
+    normDiffRatio: 0.0
+    onlyTurtle: 0.0008576329331046312
+    parsableTripleRatio: 0.0
+  startTime: 2023-07-26 14:02:32.672469
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 16
+  - 627744
+  info:
+    diff: "--- optimal\n\n+++ answer\n\n@@ -1,24 +1,47 @@\n\n PREFIX : <https://abc.def/ghi/>\n\
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\
+      \ \n PREFIX owl: <http://www.w3.org/2002/07/owl#>\n PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      \ PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n PREFIX org: <http://www.w3.org/ns/org#>\n\
+      \ \n-:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\"\
+      \ ;\n-  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n-:bob\
+      \ a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n-  vcard:hasAddress\
+      \ [ a vcard:Home ; vcard:country-name \"US\" ] .\n+:anne a foaf:Person ; \n\
+      +     foaf:firstName \"Anne\" ;\n+     foaf:surname \"Miller\" ;\n+     vcard:hasAddress\
+      \ [ \n+         a vcard:Home ;\n+         vcard:country-name \"UK\" \n+    \
+      \ ] .\n+\n+:bob a foaf:Person ;\n+    foaf:firstName \"Bob\" ; \n+    foaf:surname\
+      \ \"Tanner\" ;\n+    vcard:hasAddress [\n+        a vcard:Home ;\n+        vcard:country-name\
+      \ \"US\" \n+    ] .\n \n :wonderOrg a org:Organization .\n-:researchDep a org:OrganizationalUnit\
+      \ ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Research Department\" .\n-:marketingDep\
+      \ a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Marketing\
+      \ Department\" .\n \n-:chiefResearchOfficer a org:Role . :marketingManager a\
+      \ org:Role .\n+:researchDep a org:OrganizationalUnit ;\n+    org:unitOf :wonderOrg\
+      \ ;\n+    rdfs:label \"Research Department\" .\n \n-[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n-  org:role :chiefResearchOfficer\
+      \ ] .\n-[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n-  org:role :marketingManager ] .\n+:marketingDep a org:OrganizationalUnit\
+      \ ; \n+    org:unitOf :wonderOrg ;\n+    rdfs:label \"Marketing Department\"\
+      \ .  \n+\n+:chiefResearchOfficer a org:Role .\n+:marketingManager a org:Role\
+      \ .\n+\n+[ a org:Membership ; \n+  org:member :anne ;\n+  org:organization :researchDep\
+      \ ;\n+  org:role :chiefResearchOfficer \n+] .\n+\n+[ a org:Membership ;\n+ \
+      \ org:member :bob ; \n+  org:organization :marketingDep ;\n+  org:role :marketingManager\n\
+      +] ."
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 28
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 28
+    normAnswerMissingCount: 0
+    normOptimalCount: 28
+    parsableTriples: '<https://abc.def/ghi/anne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:n4401baa6d98f444594e67f32f4df857bb4 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/marketingManager>
+      .
+
+      <https://abc.def/ghi/anne> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n4401baa6d98f444594e67f32f4df857bb1
+      .
+
+      <https://abc.def/ghi/wonderOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Organization> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/surname> "Miller" .
+
+      _:n4401baa6d98f444594e67f32f4df857bb3 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/researchDep> .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/surname> "Tanner" .
+
+      _:n4401baa6d98f444594e67f32f4df857bb3 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/anne>
+      .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/firstName> "Anne" .
+
+      _:n4401baa6d98f444594e67f32f4df857bb4 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/marketingDep> .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      _:n4401baa6d98f444594e67f32f4df857bb4 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/bob>
+      .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:n4401baa6d98f444594e67f32f4df857bb1 <http://www.w3.org/2006/vcard/ns#country-name>
+      "UK" .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Marketing Department" .
+
+      _:n4401baa6d98f444594e67f32f4df857bb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      _:n4401baa6d98f444594e67f32f4df857bb2 <http://www.w3.org/2006/vcard/ns#country-name>
+      "US" .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n4401baa6d98f444594e67f32f4df857bb2
+      .
+
+      _:n4401baa6d98f444594e67f32f4df857bb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/firstName> "Bob" .
+
+      _:n4401baa6d98f444594e67f32f4df857bb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      _:n4401baa6d98f444594e67f32f4df857bb3 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/chiefResearchOfficer>
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Research Department" .
+
+      <https://abc.def/ghi/marketingManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      _:n4401baa6d98f444594e67f32f4df857bb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      <https://abc.def/ghi/chiefResearchOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      '
+    parsableTriplesCount: 29
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:02:46.486897
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:03:03.114636
+    - " Here is the corrected Turtle:\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#> \nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\
+      PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n\
+      PREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; \n     foaf:firstName\
+      \ \"Anne\" ;\n     foaf:surname \"Miller\" ;\n     vcard:hasAddress [ \n   \
+      \      a vcard:Home ;\n         vcard:country-name \"UK\" \n     ] .\n\n:bob\
+      \ a foaf:Person ;\n    foaf:firstName \"Bob\" ; \n    foaf:surname \"Tanner\"\
+      \ ;\n    vcard:hasAddress [\n        a vcard:Home ;\n        vcard:country-name\
+      \ \"US\" \n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n \
+      \   rdfs:label \"Marketing Department\" .  \n\n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role .\n\n[ a org:Membership ; \n  org:member :anne\
+      \ ;\n  org:organization :researchDep ;\n  org:role :chiefResearchOfficer \n\
+      ] .\n\n[ a org:Membership ;\n  org:member :bob ; \n  org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager\n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -27.37904328018198
+    diffRatioRaw: 0.9184510250569476
+    normAnswerF1Score: 1.0
+    normAnswerPrecision: 1.0
+    normAnswerRecall: 1.0
+    normDiffRatio: 1.0
+    onlyTurtle: 0.03333333333333333
+    parsableTripleRatio: 1.0
+  startTime: 2023-07-26 14:02:46.486892
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 15
+  - 154352
+  info:
+    diff: '--- optimal
+
+
+      +++ answer
+
+
+      @@ -1,24 +0,0 @@
+
+
+      -PREFIX : <https://abc.def/ghi/>
+
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+      -PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+      -PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+      -PREFIX org: <http://www.w3.org/ns/org#>
+
+      -
+
+      -:anne a foaf:Person ; foaf:firstName "Anne" ; foaf:surname "Miller" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "UK" ] .
+
+      -:bob a foaf:Person ; foaf:firstName "Bob" ; foaf:surname "Tanner" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "US" ] .
+
+      -
+
+      -:wonderOrg a org:Organization .
+
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Research Department" .
+
+      -:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Marketing Department" .
+
+      -
+
+      -:chiefResearchOfficer a org:Role . :marketingManager a org:Role .
+
+      -
+
+      -[ a org:Membership ; org:member :anne ; org:organization :researchDep ;
+
+      -  org:role :chiefResearchOfficer ] .
+
+      -[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;
+
+      -  org:role :marketingManager ] .'
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 0
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 0
+    normAnswerMissingCount: 28
+    normOptimalCount: 28
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:03:03.149731
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:03:18.304079
+    - " Here is the corrected Turtle:\n\n@prefix : <https://abc.def/ghi/> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#>\
+      \ .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .  \n@prefix vcard: <http://www.w3.org/2006/vcard/ns#>\
+      \ .\n@prefix org: <http://www.w3.org/ns/org#> .\n\n:anne a foaf:Person ; \n\
+      \     foaf:firstName \"Anne\" ;\n     foaf:surname \"Miller\" ;\n     vcard:hasAddress\
+      \ [ \n         a vcard:Home ;\n         vcard:country-name \"UK\" \n     ] .\n\
+      \n:bob a foaf:Person ;\n    foaf:firstName \"Bob\" ; \n    foaf:surname \"Tanner\"\
+      \ ;\n    vcard:hasAddress [\n        a vcard:Home ;\n        vcard:country-name\
+      \ \"US\"\n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n \
+      \   rdfs:label \"Marketing Department\" .  \n\n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role .\n\n[ \n    a org:Membership ;\n    org:member\
+      \ :anne ; \n    org:organization :researchDep ;\n    org:role :chiefResearchOfficer\
+      \ \n] .\n\n[\n    a org:Membership ;\n    org:member :bob ;\n    org:organization\
+      \ :marketingDep ; \n    org:role :marketingManager\n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -346.99999999999704
+    diffRatioRaw: 0.0
+    normAnswerF1Score: 0
+    normAnswerPrecision: 0
+    normAnswerRecall: 0.0
+    normDiffRatio: 0.0
+    onlyTurtle: 0.000855431993156544
+    parsableTripleRatio: 0.0
+  startTime: 2023-07-26 14:03:03.149727
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 13
+  - 976363
+  info:
+    diff: "--- optimal\n\n+++ answer\n\n@@ -1,24 +1,46 @@\n\n-PREFIX : <https://abc.def/ghi/>\n\
+      +PREFIX : <https://abc.def/ghi/> \n PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      \ PREFIX owl: <http://www.w3.org/2002/07/owl#>\n PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      \ PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n PREFIX org: <http://www.w3.org/ns/org#>\n\
+      \ \n-:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\"\
+      \ ;\n-  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n-:bob\
+      \ a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n-  vcard:hasAddress\
+      \ [ a vcard:Home ; vcard:country-name \"US\" ] .\n+:anne a foaf:Person ; \n\
+      +      foaf:firstName \"Anne\" ;\n+      foaf:surname \"Miller\" ;\n+      vcard:hasAddress\
+      \ [ \n+         a vcard:Home ;\n+         vcard:country-name \"UK\" \n+    \
+      \  ] .\n+\n+:bob a foaf:Person ;\n+    foaf:firstName \"Bob\" ; \n+    foaf:surname\
+      \ \"Tanner\" ;\n+    vcard:hasAddress [ \n+       a vcard:Home ;\n+       vcard:country-name\
+      \ \"US\"\n+    ] .\n \n :wonderOrg a org:Organization .\n-:researchDep a org:OrganizationalUnit\
+      \ ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Research Department\" .\n-:marketingDep\
+      \ a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Marketing\
+      \ Department\" .\n \n-:chiefResearchOfficer a org:Role . :marketingManager a\
+      \ org:Role .\n+:researchDep a org:OrganizationalUnit ;\n+             org:unitOf\
+      \ :wonderOrg ;\n+             rdfs:label \"Research Department\" .\n \n-[ a\
+      \ org:Membership ; org:member :anne ; org:organization :researchDep ;\n-  org:role\
+      \ :chiefResearchOfficer ] .\n-[ a org:Membership ; org:member :bob  ; org:organization\
+      \ :marketingDep ;\n-  org:role :marketingManager ] .\n+:marketingDep a org:OrganizationalUnit\
+      \ , org:unitOf :wonderOrg ; \n+              rdfs:label \"Marketing Department\"\
+      \ . \n+\n+:chiefResearchOfficer a org:Role .\n+:marketingManager a org:Role\
+      \ .\n+\n+[ a org:Membership ; \n+  org:member :anne ;\n+  org:organization :researchDep\
+      \ ;\n+  org:role :chiefResearchOfficer \n+] .\n+\n+[ a org:Membership ;\n+ \
+      \ org:member :bob ; \n+  org:organization :marketingDep ;\n+  org:role :marketingManager\n\
+      +] ."
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 25
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 25
+    normAnswerMissingCount: 3
+    normOptimalCount: 28
+    parsableTriples: '<https://abc.def/ghi/anne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb1 <http://www.w3.org/2006/vcard/ns#country-name>
+      "UK" .
+
+      <https://abc.def/ghi/anne> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n6c4c2c56508b4d3094062b7880f230deb1
+      .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/wonderOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Organization> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/surname> "Miller" .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/surname> "Tanner" .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb4 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/marketingManager>
+      .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb4 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/marketingDep> .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb2 <http://www.w3.org/2006/vcard/ns#country-name>
+      "US" .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb4 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/bob>
+      .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/firstName> "Anne" .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n6c4c2c56508b4d3094062b7880f230deb2
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb3 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/chiefResearchOfficer>
+      .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb3 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/anne>
+      .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/firstName> "Bob" .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Research Department" .
+
+      <https://abc.def/ghi/marketingManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      _:n6c4c2c56508b4d3094062b7880f230deb3 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/researchDep> .
+
+      <https://abc.def/ghi/chiefResearchOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      '
+    parsableTriplesCount: 26
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:03:18.321177
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:03:32.297535
+    - " ```turtle\nPREFIX : <https://abc.def/ghi/> \nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; \n      foaf:firstName \"Anne\" ;\n      foaf:surname\
+      \ \"Miller\" ;\n      vcard:hasAddress [ \n         a vcard:Home ;\n       \
+      \  vcard:country-name \"UK\" \n      ] .\n\n:bob a foaf:Person ;\n    foaf:firstName\
+      \ \"Bob\" ; \n    foaf:surname \"Tanner\" ;\n    vcard:hasAddress [ \n     \
+      \  a vcard:Home ;\n       vcard:country-name \"US\"\n    ] .\n\n:wonderOrg a\
+      \ org:Organization .\n\n:researchDep a org:OrganizationalUnit ;\n          \
+      \   org:unitOf :wonderOrg ;\n             rdfs:label \"Research Department\"\
+      \ .\n\n:marketingDep a org:OrganizationalUnit , org:unitOf :wonderOrg ; \n \
+      \             rdfs:label \"Marketing Department\" . \n\n:chiefResearchOfficer\
+      \ a org:Role .\n:marketingManager a org:Role .\n\n[ a org:Membership ; \n  org:member\
+      \ :anne ;\n  org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ \n] .\n\n[ a org:Membership ;\n  org:member :bob ; \n  org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager\n] .\n```"
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -31.605405405405143
+    diffRatioRaw: 0.9063063063063063
+    normAnswerF1Score: 0.9433962264150945
+    normAnswerPrecision: 1.0
+    normAnswerRecall: 0.8928571428571429
+    normDiffRatio: 0.8221375576498897
+    onlyTurtle: 0.1
+    parsableTripleRatio: 0.896551724137931
+  startTime: 2023-07-26 14:03:18.321172
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 19
+  - 757088
+  info:
+    diff: "--- optimal\n\n+++ answer\n\n@@ -1,24 +1,49 @@\n\n PREFIX : <https://abc.def/ghi/>\n\
+      \ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n-PREFIX owl: <http://www.w3.org/2002/07/owl#>\n\
+      +PREFIX owl: <http://www.w3.org/2002/owl#>\n PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      \ PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n PREFIX org: <http://www.w3.org/ns/org#>\n\
+      \ \n-:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\"\
+      \ ;\n-  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n-:bob\
+      \ a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n-  vcard:hasAddress\
+      \ [ a vcard:Home ; vcard:country-name \"US\" ] .\n+:anne a foaf:Person ; \n\
+      +    foaf:firstName \"Anne\" ; \n+    foaf:surname \"Miller\" ;\n+    vcard:hasAddress\
+      \ [ \n+        a vcard:Home ;\n+        vcard:country-name \"UK\" \n+    ] .\n\
+      +\n+:bob a foaf:Person ; \n+    foaf:firstName \"Bob\" ; \n+    foaf:surname\
+      \ \"Tanner\" ;\n+    vcard:hasAddress [ \n+        a vcard:Home ;\n+       \
+      \ vcard:country-name \"US\"     \n+    ] .\n \n :wonderOrg a org:Organization\
+      \ .\n-:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n-  rdfs:label\
+      \ \"Research Department\" .\n-:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n-  rdfs:label \"Marketing Department\" .\n \n-:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n+:researchDep a org:OrganizationalUnit\
+      \ ; \n+    org:unitOf :wonderOrg ;\n+    rdfs:label \"Research Department\"\
+      \ .\n+    \n+:marketingDep a org:OrganizationalUnit ;\n+    org:unitOf :wonderOrg\
+      \ ; \n+    rdfs:label \"Marketing Department\" .\n \n-[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n-  org:role :chiefResearchOfficer\
+      \ ] .\n-[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n-  org:role :marketingManager ] .\n+:chiefResearchOfficer a org:Role .\n\
+      +:marketingManager a org:Role . \n+\n+[ \n+    a org:Membership ;\n+    org:member\
+      \ :anne ;\n+    org:organization :researchDep ; \n+    org:role :chiefResearchOfficer\
+      \  \n+] .\n+\n+[\n+    a org:Membership ;\n+    org:member :bob ; \n+    org:organization\
+      \ :marketingDep ;\n+    org:role :marketingManager\n+] ."
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 28
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 28
+    normAnswerMissingCount: 0
+    normOptimalCount: 28
+    parsableTriples: '<https://abc.def/ghi/anne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:n12e494fc89ba4980870862ac8abb249fb4 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/marketingManager>
+      .
+
+      _:n12e494fc89ba4980870862ac8abb249fb3 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/chiefResearchOfficer>
+      .
+
+      _:n12e494fc89ba4980870862ac8abb249fb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/wonderOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Organization> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/surname> "Miller" .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/surname> "Tanner" .
+
+      _:n12e494fc89ba4980870862ac8abb249fb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/firstName> "Anne" .
+
+      _:n12e494fc89ba4980870862ac8abb249fb2 <http://www.w3.org/2006/vcard/ns#country-name>
+      "US" .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Marketing Department" .
+
+      _:n12e494fc89ba4980870862ac8abb249fb3 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/anne>
+      .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/anne> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n12e494fc89ba4980870862ac8abb249fb1
+      .
+
+      _:n12e494fc89ba4980870862ac8abb249fb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/firstName> "Bob" .
+
+      _:n12e494fc89ba4980870862ac8abb249fb4 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/marketingDep> .
+
+      _:n12e494fc89ba4980870862ac8abb249fb4 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/bob>
+      .
+
+      _:n12e494fc89ba4980870862ac8abb249fb3 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/researchDep> .
+
+      _:n12e494fc89ba4980870862ac8abb249fb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Research Department" .
+
+      <https://abc.def/ghi/marketingManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n12e494fc89ba4980870862ac8abb249fb2
+      .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      _:n12e494fc89ba4980870862ac8abb249fb1 <http://www.w3.org/2006/vcard/ns#country-name>
+      "UK" .
+
+      <https://abc.def/ghi/chiefResearchOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      '
+    parsableTriplesCount: 29
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:03:32.354177
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:03:52.111260
+    - " ```turtle\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; \n    foaf:firstName \"Anne\" ; \n    foaf:surname \"\
+      Miller\" ;\n    vcard:hasAddress [ \n        a vcard:Home ;\n        vcard:country-name\
+      \ \"UK\" \n    ] .\n\n:bob a foaf:Person ; \n    foaf:firstName \"Bob\" ; \n\
+      \    foaf:surname \"Tanner\" ;\n    vcard:hasAddress [ \n        a vcard:Home\
+      \ ;\n        vcard:country-name \"US\"     \n    ] .\n\n:wonderOrg a org:Organization\
+      \ .\n\n:researchDep a org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n\
+      \    rdfs:label \"Research Department\" .\n    \n:marketingDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ; \n    rdfs:label \"Marketing Department\" .\n\
+      \n:chiefResearchOfficer a org:Role .\n:marketingManager a org:Role . \n\n[ \n\
+      \    a org:Membership ;\n    org:member :anne ;\n    org:organization :researchDep\
+      \ ; \n    org:role :chiefResearchOfficer  \n] .\n\n[\n    a org:Membership ;\n\
+      \    org:member :bob ; \n    org:organization :marketingDep ;\n    org:role\
+      \ :marketingManager\n] .\n```"
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -32.576194770062834
+    diffRatioRaw: 0.9035166816952209
+    normAnswerF1Score: 1.0
+    normAnswerPrecision: 1.0
+    normAnswerRecall: 1.0
+    normDiffRatio: 1.0
+    onlyTurtle: 0.1
+    parsableTripleRatio: 1.0
+  startTime: 2023-07-26 14:03:32.354172
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 14
+  - 112981
+  info:
+    diff: "--- optimal\n\n+++ answer\n\n@@ -5,20 +5,43 @@\n\n PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n\
+      \ PREFIX org: <http://www.w3.org/ns/org#>\n \n-:anne a foaf:Person ; foaf:firstName\
+      \ \"Anne\" ; foaf:surname \"Miller\" ;\n-  vcard:hasAddress [ a vcard:Home ;\
+      \ vcard:country-name \"UK\" ] .\n-:bob a foaf:Person ; foaf:firstName \"Bob\"\
+      \ ; foaf:surname \"Tanner\" ;\n-  vcard:hasAddress [ a vcard:Home ; vcard:country-name\
+      \ \"US\" ] .\n+:anne a foaf:Person ; \n+     foaf:firstName \"Anne\" ;\n+  \
+      \   foaf:surname \"Miller\" ;\n+     vcard:hasAddress [\n+         a vcard:Home\
+      \ ;\n+         vcard:country-name \"UK\" \n+     ] .\n+\n+:bob a foaf:Person\
+      \ ;\n+    foaf:firstName \"Bob\" ;\n+    foaf:surname \"Tanner\" ; \n+    vcard:hasAddress\
+      \ [\n+        a vcard:Home ;\n+        vcard:country-name \"US\"\n+    ] .\n\
+      \ \n :wonderOrg a org:Organization .\n-:researchDep a org:OrganizationalUnit\
+      \ ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Research Department\" .\n-:marketingDep\
+      \ a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Marketing\
+      \ Department\" .\n \n-:chiefResearchOfficer a org:Role . :marketingManager a\
+      \ org:Role .\n+:researchDep a org:OrganizationalUnit ;\n+    org:unitOf :wonderOrg\
+      \ ;\n+    rdfs:label \"Research Department\" .\n \n-[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n-  org:role :chiefResearchOfficer\
+      \ ] .\n-[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n-  org:role :marketingManager ] .\n+:marketingDep a org:OrganizationalUnit\
+      \ ; \n+    org:unitOf :wonderOrg ;\n+    rdfs:label \"Marketing Department\"\
+      \ . \n+\n+:chiefResearchOfficer a org:Role .\n+:marketingManager a org:Role\
+      \ .\n+\n+[ a org:Membership ;\n+  org:member :anne ;\n+  org:organization :researchDep\
+      \ ;\n+  org:role :chiefResearchOfficer \n+] .\n+\n+[ a org:Membership ;\n+ \
+      \ org:member :bob ;\n+  org:organization :marketingDep ;\n+  org:role :marketingManager\n\
+      +] ."
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 28
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 28
+    normAnswerMissingCount: 0
+    normOptimalCount: 28
+    parsableTriples: '<https://abc.def/ghi/anne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b2
+      .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b1 <http://www.w3.org/2006/vcard/ns#country-name>
+      "UK" .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/wonderOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Organization> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/surname> "Miller" .
+
+      <https://abc.def/ghi/anne> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b1
+      .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b4 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/bob>
+      .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/surname> "Tanner" .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/firstName> "Anne" .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b3 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/anne>
+      .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b2 <http://www.w3.org/2006/vcard/ns#country-name>
+      "US" .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b4 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/marketingManager>
+      .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b4 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/marketingDep> .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Marketing Department" .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b3 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/researchDep> .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/firstName> "Bob" .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Research Department" .
+
+      <https://abc.def/ghi/marketingManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      _:n1cefb7bb57ee4016a2e10cc5f6e1c3a3b3 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/chiefResearchOfficer>
+      .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      <https://abc.def/ghi/chiefResearchOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      '
+    parsableTriplesCount: 29
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:03:52.147802
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:04:06.260778
+    - " ```turtle\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; \n     foaf:firstName \"Anne\" ;\n     foaf:surname\
+      \ \"Miller\" ;\n     vcard:hasAddress [\n         a vcard:Home ;\n         vcard:country-name\
+      \ \"UK\" \n     ] .\n\n:bob a foaf:Person ;\n    foaf:firstName \"Bob\" ;\n\
+      \    foaf:surname \"Tanner\" ; \n    vcard:hasAddress [\n        a vcard:Home\
+      \ ;\n        vcard:country-name \"US\"\n    ] .\n\n:wonderOrg a org:Organization\
+      \ .\n\n:researchDep a org:OrganizationalUnit ;\n    org:unitOf :wonderOrg ;\n\
+      \    rdfs:label \"Research Department\" .\n\n:marketingDep a org:OrganizationalUnit\
+      \ ; \n    org:unitOf :wonderOrg ;\n    rdfs:label \"Marketing Department\" .\
+      \ \n\n:chiefResearchOfficer a org:Role .\n:marketingManager a org:Role .\n\n\
+      [ a org:Membership ;\n  org:member :anne ;\n  org:organization :researchDep\
+      \ ;\n  org:role :chiefResearchOfficer \n] .\n\n[ a org:Membership ;\n  org:member\
+      \ :bob ;\n  org:organization :marketingDep ;\n  org:role :marketingManager\n\
+      ] .\n```"
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -27.138876199177464
+    diffRatioRaw: 0.9191411603471905
+    normAnswerF1Score: 1.0
+    normAnswerPrecision: 1.0
+    normAnswerRecall: 1.0
+    normDiffRatio: 1.0
+    onlyTurtle: 0.1
+    parsableTripleRatio: 1.0
+  startTime: 2023-07-26 14:03:52.147797
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 16
+  - 883326
+  info:
+    diff: '--- optimal
+
+
+      +++ answer
+
+
+      @@ -1,24 +0,0 @@
+
+
+      -PREFIX : <https://abc.def/ghi/>
+
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+      -PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+      -PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+      -PREFIX org: <http://www.w3.org/ns/org#>
+
+      -
+
+      -:anne a foaf:Person ; foaf:firstName "Anne" ; foaf:surname "Miller" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "UK" ] .
+
+      -:bob a foaf:Person ; foaf:firstName "Bob" ; foaf:surname "Tanner" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "US" ] .
+
+      -
+
+      -:wonderOrg a org:Organization .
+
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Research Department" .
+
+      -:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Marketing Department" .
+
+      -
+
+      -:chiefResearchOfficer a org:Role . :marketingManager a org:Role .
+
+      -
+
+      -[ a org:Membership ; org:member :anne ; org:organization :researchDep ;
+
+      -  org:role :chiefResearchOfficer ] .
+
+      -[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;
+
+      -  org:role :marketingManager ] .'
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 0
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 0
+    normAnswerMissingCount: 28
+    normOptimalCount: 28
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:04:06.299075
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:04:23.182395
+    - " Here is the corrected turtle:\n\n@prefix : <https://abc.def/ghi/> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#>\
+      \ .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .  \n@prefix vcard: <http://www.w3.org/2006/vcard/ns#>\
+      \ .\n@prefix org: <http://www.w3.org/ns/org#> .\n\n:anne \n  a foaf:Person ;\n\
+      \  foaf:firstName \"Anne\" ;\n  foaf:surname \"Miller\" ;\n  vcard:hasAddress\
+      \ [ \n    a vcard:Home ;\n    vcard:country-name \"UK\"  \n  ] .\n  \n:bob\n\
+      \  a foaf:Person ;\n  foaf:firstName \"Bob\" ; \n  foaf:surname \"Tanner\" ;\n\
+      \  vcard:hasAddress [\n    a vcard:Home ;\n    vcard:country-name \"US\"  \n\
+      \  ] .\n  \n:wonderOrg \n  a org:Organization .\n\n:researchDep \n  a org:OrganizationalUnit\
+      \ ;\n  org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n  \n\
+      :marketingDep \n  a org:OrganizationalUnit , org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Marketing Department\" .  \n  \n:chiefResearchOfficer \n  a org:Role .\n\
+      \n:marketingManager \n  a org:Role .\n  \n[ \n  a org:Membership ;\n  org:member\
+      \ :anne ;\n  org:organization :researchDep ; \n  org:role :chiefResearchOfficer\
+      \ \n] .\n\n[\n  a org:Membership ;\n  org:member :bob ;\n  org:organization\
+      \ :marketingDep ;\n  org:role :marketingManager  \n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -346.99999999999704
+    diffRatioRaw: 0.0
+    normAnswerF1Score: 0
+    normAnswerPrecision: 0
+    normAnswerRecall: 0.0
+    normDiffRatio: 0.0
+    onlyTurtle: 0.0008841732979664014
+    parsableTripleRatio: 0.0
+  startTime: 2023-07-26 14:04:06.299069
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 14
+  - 591859
+  info:
+    diff: '--- optimal
+
+
+      +++ answer
+
+
+      @@ -1,24 +0,0 @@
+
+
+      -PREFIX : <https://abc.def/ghi/>
+
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      -PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+      -PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+      -PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+      -PREFIX org: <http://www.w3.org/ns/org#>
+
+      -
+
+      -:anne a foaf:Person ; foaf:firstName "Anne" ; foaf:surname "Miller" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "UK" ] .
+
+      -:bob a foaf:Person ; foaf:firstName "Bob" ; foaf:surname "Tanner" ;
+
+      -  vcard:hasAddress [ a vcard:Home ; vcard:country-name "US" ] .
+
+      -
+
+      -:wonderOrg a org:Organization .
+
+      -:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Research Department" .
+
+      -:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;
+
+      -  rdfs:label "Marketing Department" .
+
+      -
+
+      -:chiefResearchOfficer a org:Role . :marketingManager a org:Role .
+
+      -
+
+      -[ a org:Membership ; org:member :anne ; org:organization :researchDep ;
+
+      -  org:role :chiefResearchOfficer ] .
+
+      -[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;
+
+      -  org:role :marketingManager ] .'
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 0
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 0
+    normAnswerMissingCount: 28
+    normOptimalCount: 28
+    parsableTriples: ''
+    parsableTriplesCount: 0
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:04:23.198745
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:04:37.790599
+    - " Here is the corrected Turtle:\n\n@prefix : <https://abc.def/ghi/> .\n@prefix\
+      \ rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#>\
+      \ .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .  \n@prefix vcard: <http://www.w3.org/2006/vcard/ns#>\
+      \ .\n@prefix org: <http://www.w3.org/ns/org#> .\n\n:anne a foaf:Person ; \n\
+      \     foaf:firstName \"Anne\" ;\n     foaf:surname \"Miller\" ;\n     vcard:hasAddress\
+      \ [ \n        a vcard:Home ;\n        vcard:country-name \"UK\"  \n     ] .\n\
+      \n:bob a foaf:Person ;\n    foaf:firstName \"Bob\" ; \n    foaf:surname \"Tanner\"\
+      \ ;\n    vcard:hasAddress [\n       a vcard:Home ;\n       vcard:country-name\
+      \ \"US\"\n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n \
+      \   rdfs:label \"Marketing Department\" .  \n\n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role .\n\n[ \n    a org:Membership ;\n    org:member\
+      \ :anne ;\n    org:organization :researchDep ; \n    org:role :chiefResearchOfficer\
+      \  \n] .\n\n[\n  a org:Membership ;\n  org:member :bob ;\n  org:organization\
+      \ :marketingDep ;\n  org:role :marketingManager\n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -346.99999999999704
+    diffRatioRaw: 0.0
+    normAnswerF1Score: 0
+    normAnswerPrecision: 0
+    normAnswerRecall: 0.0
+    normDiffRatio: 0.0
+    onlyTurtle: 0.0008635578583765112
+    parsableTripleRatio: 0.0
+  startTime: 2023-07-26 14:04:23.198740
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 14
+  - 750099
+  info:
+    diff: "--- optimal\n\n+++ answer\n\n@@ -1,24 +1,47 @@\n\n PREFIX : <https://abc.def/ghi/>\n\
+      -PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\
+      \  \n PREFIX owl: <http://www.w3.org/2002/07/owl#>\n PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      \ PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n PREFIX org: <http://www.w3.org/ns/org#>\n\
+      \ \n-:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\"\
+      \ ;\n-  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n-:bob\
+      \ a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n-  vcard:hasAddress\
+      \ [ a vcard:Home ; vcard:country-name \"US\" ] .\n+:anne a foaf:Person ; \n\
+      +     foaf:firstName \"Anne\" ;\n+     foaf:surname \"Miller\" ;\n+     vcard:hasAddress\
+      \ [ \n+        a vcard:Home ;\n+        vcard:country-name \"UK\" \n+     ]\
+      \ .\n+\n+:bob a foaf:Person ;\n+    foaf:firstName \"Bob\" ; \n+    foaf:surname\
+      \ \"Tanner\" ;\n+    vcard:hasAddress [\n+       a vcard:Home ; \n+       vcard:country-name\
+      \ \"US\"\n+    ] .\n \n :wonderOrg a org:Organization .\n-:researchDep a org:OrganizationalUnit\
+      \ ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Research Department\" .\n-:marketingDep\
+      \ a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n-  rdfs:label \"Marketing\
+      \ Department\" .\n \n-:chiefResearchOfficer a org:Role . :marketingManager a\
+      \ org:Role .\n+:researchDep a org:OrganizationalUnit ;\n+    org:unitOf :wonderOrg\
+      \ ;\n+    rdfs:label \"Research Department\" .\n \n-[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n-  org:role :chiefResearchOfficer\
+      \ ] .\n-[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n-  org:role :marketingManager ] .\n+:marketingDep a org:OrganizationalUnit\
+      \ ; \n+    org:unitOf :wonderOrg ;\n+    rdfs:label \"Marketing Department\"\
+      \ . \n+\n+:chiefResearchOfficer a org:Role .\n+:marketingManager a org:Role\
+      \ .\n+\n+[ a org:Membership ; \n+  org:member :anne ;\n+  org:organization :researchDep\
+      \ ;\n+  org:role :chiefResearchOfficer \n+] .\n+\n+[ a org:Membership ;\n+ \
+      \ org:member :bob ; \n+  org:organization :marketingDep ;\n+  org:role :marketingManager\n\
+      +] ."
+    diffRatioEmpty: 0.0
+    diffRatioQuestion: 0.9971264367816092
+    normAnswerCount: 28
+    normAnswerFalseCount: 0
+    normAnswerHitCount: 28
+    normAnswerMissingCount: 0
+    normOptimalCount: 28
+    parsableTriples: '<https://abc.def/ghi/anne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      <https://abc.def/ghi/anne> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b1
+      .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b4 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/marketingManager>
+      .
+
+      <https://abc.def/ghi/wonderOrg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Organization> .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/surname> "Miller" .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b2 <http://www.w3.org/2006/vcard/ns#country-name>
+      "US" .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b4 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/bob>
+      .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/surname> "Tanner" .
+
+      <https://abc.def/ghi/anne> <http://xmlns.com/foaf/0.1/firstName> "Anne" .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://xmlns.com/foaf/0.1/Person> .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b3 <http://www.w3.org/ns/org#role> <https://abc.def/ghi/chiefResearchOfficer>
+      .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b3 <http://www.w3.org/ns/org#member> <https://abc.def/ghi/anne>
+      .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b4 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/marketingDep> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Marketing Department" .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/ns/org#unitOf> <https://abc.def/ghi/wonderOrg>
+      .
+
+      <https://abc.def/ghi/bob> <http://www.w3.org/2006/vcard/ns#hasAddress> _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b2
+      .
+
+      <https://abc.def/ghi/bob> <http://xmlns.com/foaf/0.1/firstName> "Bob" .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b1 <http://www.w3.org/2006/vcard/ns#country-name>
+      "UK" .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b3 <http://www.w3.org/ns/org#organization>
+      <https://abc.def/ghi/researchDep> .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/2006/vcard/ns#Home> .
+
+      <https://abc.def/ghi/researchDep> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Research Department" .
+
+      <https://abc.def/ghi/marketingManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      <https://abc.def/ghi/marketingDep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#OrganizationalUnit> .
+
+      _:n4ccf1ba3a85d4f259b6c5c61953ec3b7b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Membership> .
+
+      <https://abc.def/ghi/chiefResearchOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+      <http://www.w3.org/ns/org#Role> .
+
+      '
+    parsableTriplesCount: 29
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-26 14:04:37.807023
+    - "Please check the following rdf turtle file for errors and answer with no text\
+      \ but just the corrected turtle. Try to stick to the original formatting.\n\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] \n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] ."
+  - !!python/tuple
+    - response
+    - 2023-07-26 14:04:52.557117
+    - " Here is the corrected Turtle:\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs:\
+      \ <http://www.w3.org/2000/01/rdf-schema#>  \nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\
+      PREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n\
+      PREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; \n     foaf:firstName\
+      \ \"Anne\" ;\n     foaf:surname \"Miller\" ;\n     vcard:hasAddress [ \n   \
+      \     a vcard:Home ;\n        vcard:country-name \"UK\" \n     ] .\n\n:bob a\
+      \ foaf:Person ;\n    foaf:firstName \"Bob\" ; \n    foaf:surname \"Tanner\"\
+      \ ;\n    vcard:hasAddress [\n       a vcard:Home ; \n       vcard:country-name\
+      \ \"US\"\n    ] .\n\n:wonderOrg a org:Organization .\n\n:researchDep a org:OrganizationalUnit\
+      \ ;\n    org:unitOf :wonderOrg ;\n    rdfs:label \"Research Department\" .\n\
+      \n:marketingDep a org:OrganizationalUnit ; \n    org:unitOf :wonderOrg ;\n \
+      \   rdfs:label \"Marketing Department\" . \n\n:chiefResearchOfficer a org:Role\
+      \ .\n:marketingManager a org:Role .\n\n[ a org:Membership ; \n  org:member :anne\
+      \ ;\n  org:organization :researchDep ;\n  org:role :chiefResearchOfficer \n\
+      ] .\n\n[ a org:Membership ;\n  org:member :bob ; \n  org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager\n] ."
+  modelId: Claude--claude-2--claude-2.0
+  scores:
+    diffRatio: -26.795527156549298
+    diffRatioRaw: 0.9201277955271565
+    normAnswerF1Score: 1.0
+    normAnswerPrecision: 1.0
+    normAnswerRecall: 1.0
+    normDiffRatio: 1.0
+    onlyTurtle: 0.03333333333333333
+    parsableTripleRatio: 1.0
+  startTime: 2023-07-26 14:04:37.807018
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleErrorsStatic
+    version: '2.0'
