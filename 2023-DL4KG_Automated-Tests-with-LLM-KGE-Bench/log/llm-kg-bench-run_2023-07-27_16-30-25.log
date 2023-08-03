@@ -1,0 +1,287 @@
+2023-07-27 16:30:25,822 [DEBUG] config used: {'tests': ['TurtleConnectionExplainStatic'], 'models': [{'label': 'Claude-2', 'class': 'ModelClaude', 'params': [{'model': 'claude-2'}]}], 'sizes': [1000], 'iterations': 20}
+2023-07-27 16:30:25,824 [INFO] test configuration: tests:['TurtleConnectionExplainStatic']; iterations:20; sizes:[1000]; models:[{'label': 'Claude-2', 'class': 'ModelClaude', 'params': {'model': 'claude-2'}}]
+2023-07-27 16:30:25,826 [INFO] Start for task 'TurtleConnectionExplainStatic' version '1.0' at 2023-07-27 16:30:25.825968
+2023-07-27 16:30:25,826 [DEBUG] init model: class=ModelClaude; params={'model': 'claude-2'}.
+2023-07-27 16:30:25,827 [INFO]   model=Claude-claude-2 ...
+2023-07-27 16:30:25,828 [INFO]   size=1000
+2023-07-27 16:30:25,829 [INFO]   iteration=1/20 ...
+2023-07-27 16:30:25,830 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.830905; size=1000; i=1
+2023-07-27 16:30:25,831 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,832 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.832208; size=1000; i=1
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,839 [INFO]   iteration=2/20 ...
+2023-07-27 16:30:25,839 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.839854; size=1000; i=2
+2023-07-27 16:30:25,840 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,840 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.840498; size=1000; i=2
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,841 [INFO]   iteration=3/20 ...
+2023-07-27 16:30:25,841 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.841611; size=1000; i=3
+2023-07-27 16:30:25,841 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,842 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.842058; size=1000; i=3
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,842 [INFO]   iteration=4/20 ...
+2023-07-27 16:30:25,842 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.842459; size=1000; i=4
+2023-07-27 16:30:25,842 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,842 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.842685; size=1000; i=4
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,843 [INFO]   iteration=5/20 ...
+2023-07-27 16:30:25,843 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.843103; size=1000; i=5
+2023-07-27 16:30:25,843 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,843 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.843349; size=1000; i=5
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,844 [INFO]   iteration=6/20 ...
+2023-07-27 16:30:25,844 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.844256; size=1000; i=6
+2023-07-27 16:30:25,844 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,844 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.844488; size=1000; i=6
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,844 [INFO]   iteration=7/20 ...
+2023-07-27 16:30:25,844 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.844933; size=1000; i=7
+2023-07-27 16:30:25,845 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,845 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.845175; size=1000; i=7
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,845 [INFO]   iteration=8/20 ...
+2023-07-27 16:30:25,846 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.845998; size=1000; i=8
+2023-07-27 16:30:25,846 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,846 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.846238; size=1000; i=8
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,846 [INFO]   iteration=9/20 ...
+2023-07-27 16:30:25,846 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.846711; size=1000; i=9
+2023-07-27 16:30:25,846 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,846 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.846940; size=1000; i=9
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,847 [INFO]   iteration=10/20 ...
+2023-07-27 16:30:25,847 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.847380; size=1000; i=10
+2023-07-27 16:30:25,847 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,847 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.847614; size=1000; i=10
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,847 [INFO]   iteration=11/20 ...
+2023-07-27 16:30:25,848 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.848080; size=1000; i=11
+2023-07-27 16:30:25,848 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,848 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.848305; size=1000; i=11
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,849 [INFO]   iteration=12/20 ...
+2023-07-27 16:30:25,849 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.849189; size=1000; i=12
+2023-07-27 16:30:25,849 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,849 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.849422; size=1000; i=12
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,849 [INFO]   iteration=13/20 ...
+2023-07-27 16:30:25,849 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.849868; size=1000; i=13
+2023-07-27 16:30:25,850 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,850 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.850106; size=1000; i=13
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,850 [INFO]   iteration=14/20 ...
+2023-07-27 16:30:25,850 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.850530; size=1000; i=14
+2023-07-27 16:30:25,850 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,850 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.850754; size=1000; i=14
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,851 [INFO]   iteration=15/20 ...
+2023-07-27 16:30:25,851 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.851567; size=1000; i=15
+2023-07-27 16:30:25,851 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,851 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.851833; size=1000; i=15
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,852 [INFO]   iteration=16/20 ...
+2023-07-27 16:30:25,852 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.852312; size=1000; i=16
+2023-07-27 16:30:25,852 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,852 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.852958; size=1000; i=16
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,853 [INFO]   iteration=17/20 ...
+2023-07-27 16:30:25,853 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.853382; size=1000; i=17
+2023-07-27 16:30:25,853 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,853 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.853602; size=1000; i=17
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,854 [INFO]   iteration=18/20 ...
+2023-07-27 16:30:25,854 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.854969; size=1000; i=18
+2023-07-27 16:30:25,855 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,855 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.855283; size=1000; i=18
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,855 [INFO]   iteration=19/20 ...
+2023-07-27 16:30:25,855 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.855713; size=1000; i=19
+2023-07-27 16:30:25,855 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,855 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.855947; size=1000; i=19
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,856 [INFO]   iteration=20/20 ...
+2023-07-27 16:30:25,856 [INFO]     evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.856853; size=1000; i=20
+2023-07-27 16:30:25,857 [DEBUG]       sending to model "claude-2" message(~1391 chars): "For the following turtle find the shortest non trivial connection from Anne to Bob. Please summarize the connection with just a list of resource IRIs, one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob . Please leave out rdf:type infos, leave out explanatory text and answer with just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n"
+2023-07-27 16:30:25,857 [ERROR] exception while evaluating model=Claude-2--Claude-claude-2; time=2023-07-27 16:30:25.857086; size=1000; i=20
+Traceback (most recent call last):
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/run.py", line 116, in <module>
+    result = test_instance.evaluate_model(model, max_length=size)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/bench/TurtleConnectionExplainStatic/task.py", line 81, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 206, in generate_text
+    answerObject = self.chatCompletion(message, max_length)
+  File "/workspaces/LLM-KG-Bench/LlmKgBench/api/model.py", line 224, in chatCompletion
+    c = anthropic.Client(self.api_key)
+TypeError: Anthropic.__init__() takes 1 positional argument but 2 were given
+2023-07-27 16:30:25,857 [INFO] done, 2023-07-27 16:30:25.857776
