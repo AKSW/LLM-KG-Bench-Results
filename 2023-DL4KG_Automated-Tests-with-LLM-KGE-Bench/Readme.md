@@ -1,4 +1,4 @@
-# Results of LLM-KG-Bench runs SEMANTICS 2023 poster track
+# Results of LLM-KG-Bench runs for DL4KG@ISWC 2023
 
 Results and log of [LLM-KG-Bench](https://github.com/AKSW/LLM-KG-Bench) runs described in article for Submission "Benchmarking the Abilities of Large Language Models for RDF Knowledge Graph Creation and Comprehension: How Well Do LLMs Speak Turtle?", Frey et al. to [Workshop DL4KG@ISWC 2023](https://alammehwish.github.io/dl4kg2023/)
 
