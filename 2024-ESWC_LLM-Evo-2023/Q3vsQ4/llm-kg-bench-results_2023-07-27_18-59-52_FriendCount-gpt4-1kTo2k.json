@@ -1,0 +1,1602 @@
+[
+  {
+    "startTime": "2023-07-27T18:59:52.025715",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.897164",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T18:59:52.025719",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T18:59:53.922879",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T18:59:53.930438",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.234290",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T18:59:53.930444",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T18:59:55.164728",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T18:59:55.173995",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.519103",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T18:59:55.173999",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T18:59:56.693098",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T18:59:56.700233",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.429629",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T18:59:56.700237",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T18:59:58.129862",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T18:59:58.136163",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.164419",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T18:59:58.136168",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T18:59:59.300582",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T18:59:59.311523",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.737849",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T18:59:59.311529",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:01.049372",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:01.055867",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.803232",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:01.055872",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:02.859099",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:02.867342",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.619399",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:02.867346",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:04.486741",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:04.494268",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.764531",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:04.494272",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:06.258799",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:06.265368",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.517308",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:06.265373",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:07.782676",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:07.794658",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.141561",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:07.794662",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:08.936219",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:08.948785",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.113696",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:08.948791",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:10.062481",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:10.069293",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.539561",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:10.069298",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:11.608854",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:11.617205",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.522231",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:11.617210",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:13.139436",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:13.145797",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.730386",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:13.145802",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:14.876183",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:14.884100",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.091517",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:14.884104",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:15.975617",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:15.982812",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:00.950843",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:15.982816",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:16.933655",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:16.941071",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.192496",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:16.941076",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:18.133567",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:18.141709",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:01.030873",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:18.141712",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:19.172582",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:19.189018",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 0,
+      "brevity": 1,
+      "precision": 0,
+      "f1": 0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 6,
+      "triples": 19,
+      "graphSizeChar": 717,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "1"
+      ]
+    },
+    "duration": "0:00:00.999834",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:19.189024",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000006 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:20.188852",
+        "http://example.org/people/person-00000001"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:20.197158",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:02.664732",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:20.197163",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:22.861890",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:22.873025",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.785449",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:22.873029",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:24.658474",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:24.667877",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:00.989482",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:24.667881",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:25.657359",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:25.666617",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:00.915577",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:25.666621",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:26.582194",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:26.592958",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.766255",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:26.592975",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:28.359213",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:28.370230",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:02.512579",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:28.370233",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:30.882809",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:30.893193",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.023111",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:30.893197",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:31.916304",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:31.925784",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:00.978316",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:31.925788",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:32.904100",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:32.913517",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.456091",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:32.913521",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:34.369608",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:34.395876",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.014091",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:34.395882",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:35.409967",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:35.419119",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.651164",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:35.419123",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:37.070283",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:37.081057",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:00.970264",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:37.081062",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:38.051321",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:38.061310",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:00.924852",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:38.061314",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:38.986162",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:38.996389",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:00.956838",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:38.996393",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:39.953227",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:39.963747",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.237759",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:39.963760",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:41.201506",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:41.210616",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.378941",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:41.210620",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:42.589557",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:42.604022",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.061198",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:42.604028",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:43.665220",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:43.678026",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.326455",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:43.678030",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:45.004481",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:45.015605",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.571570",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:45.015609",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:46.587175",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  },
+  {
+    "startTime": "2023-07-27T19:00:46.595849",
+    "modelId": "GPT--gpt-4--gpt-4-0613",
+    "taskInfo": {
+      "taskId": "TurtleFriendCount",
+      "version": "2.0",
+      "gitCommit": "dd716f229c6d9c627544a513aa00d953882a1f45"
+    },
+    "scores": {
+      "recall": 1,
+      "brevity": 1,
+      "precision": 1.0,
+      "f1": 1.0,
+      "noSpecialFriends": 1.0
+    },
+    "info": {
+      "persons": 16,
+      "triples": 51,
+      "graphSizeChar": 1773,
+      "specialNode": "http://example.org/people/person-00000004",
+      "answerPersonCount": 1,
+      "specialFriendsInAnswer": 0,
+      "personsInAnswer": [
+        "4"
+      ]
+    },
+    "duration": "0:00:01.200742",
+    "interactions": [
+      [
+        "prompt",
+        "2023-07-27T19:00:46.595854",
+        "Please name the person which is known by the most persons according to the following RDF graph in turtle syntax. Give just the IRI of this person with most incomming links as answer, without abbreviation or explanation.@prefix ex: <http://example.org/people/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\nex:person-00000001 a foaf:Person ;\n    foaf:knows ex:person-00000002,\n        ex:person-00000003 .\n\nex:person-00000002 a foaf:Person ;\n    foaf:knows ex:person-00000003,\n        ex:person-00000004 .\n\nex:person-00000003 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000005 .\n\nex:person-00000005 a foaf:Person ;\n    foaf:knows ex:person-00000006,\n        ex:person-00000007 .\n\nex:person-00000006 a foaf:Person ;\n    foaf:knows ex:person-00000007,\n        ex:person-00000008 .\n\nex:person-00000007 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000008,\n        ex:person-00000009 .\n\nex:person-00000008 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-00000009,\n        ex:person-0000000a .\n\nex:person-00000009 a foaf:Person ;\n    foaf:knows ex:person-00000004,\n        ex:person-0000000a,\n        ex:person-0000000b .\n\nex:person-0000000a a foaf:Person ;\n    foaf:knows ex:person-0000000b,\n        ex:person-0000000c .\n\nex:person-0000000b a foaf:Person ;\n    foaf:knows ex:person-0000000c,\n        ex:person-0000000d .\n\nex:person-0000000c a foaf:Person ;\n    foaf:knows ex:person-0000000d,\n        ex:person-0000000e .\n\nex:person-0000000d a foaf:Person ;\n    foaf:knows ex:person-0000000e,\n        ex:person-0000000f .\n\nex:person-0000000e a foaf:Person ;\n    foaf:knows ex:person-0000000f,\n        ex:person-00000010 .\n\nex:person-0000000f a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000010 .\n\nex:person-00000010 a foaf:Person ;\n    foaf:knows ex:person-00000001,\n        ex:person-00000002 .\n\nex:person-00000004 a foaf:Person ;\n    foaf:knows ex:person-00000005,\n        ex:person-00000006 .\n\n"
+      ],
+      [
+        "response",
+        "2023-07-27T19:00:47.796591",
+        "http://example.org/people/person-00000004"
+      ]
+    ]
+  }
+]

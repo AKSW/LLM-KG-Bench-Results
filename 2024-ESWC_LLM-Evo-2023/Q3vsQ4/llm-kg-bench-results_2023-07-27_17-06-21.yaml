@@ -1,0 +1,1221 @@
+---
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 788583
+  info:
+    lineCount: 4
+    listCorrectCount: 4
+    listLineCount: 4
+    listTrimCorrectCount: 4
+    textHttpCount: 4
+    textHttpCountCorrect: 4
+    textShortCount: 4
+    textShortCountCorrect: 4
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:21.047081
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:23.835659
+    - ' https://abc.def/ghi/anne
+
+      https://abc.def/ghi/wonderOrg
+
+      https://abc.def/ghi/marketingDep
+
+      https://abc.def/ghi/bob'
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.888888888888889
+    listPrecision: 1.0
+    listRecall: 0.8
+    listTrimF1: 0.888888888888889
+    listTrimPrecision: 1.0
+    listTrimRecall: 0.8
+    textHttpF1: 0.888888888888889
+    textHttpPrecision: 1.0
+    textHttpRecall: 0.8
+    textShortF1: 0.888888888888889
+    textShortPrecision: 1.0
+    textShortRecall: 0.8
+  startTime: 2023-07-27 17:06:21.047076
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 897792
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:23.844483
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:26.742268
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep \nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:06:23.844476
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 3
+  - 73022
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:26.749229
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:29.822245
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep\nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep \nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:06:26.749223
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 3
+  - 142838
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:29.833144
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:32.975977
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep\nhttps://abc.def/ghi/wonderOrg\
+      \  \nhttps://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:06:29.833139
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 3
+  - 92016
+  info:
+    lineCount: 6
+    listCorrectCount: 5
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:32.984174
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:36.076186
+    - " \nhttps://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep\nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 0.8333333333333334
+    listF1: 0.9090909090909091
+    listPrecision: 0.8333333333333334
+    listRecall: 1.0
+    listTrimF1: 0.9090909090909091
+    listTrimPrecision: 0.8333333333333334
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:06:32.984170
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 3
+  - 179625
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:36.083210
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:39.262831
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep \nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:06:36.083206
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 3
+  - 466070
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:39.271200
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:42.737265
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep \nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:06:39.271195
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 3
+  - 342742
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:42.749943
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:46.092679
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep\nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep \nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:06:42.749937
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 706919
+  info:
+    lineCount: 3
+    listCorrectCount: 3
+    listLineCount: 3
+    listTrimCorrectCount: 3
+    textHttpCount: 3
+    textHttpCountCorrect: 3
+    textShortCount: 3
+    textShortCountCorrect: 3
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:46.099149
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:48.806063
+    - ' https://abc.def/ghi/anne
+
+      https://abc.def/ghi/wonderOrg
+
+      https://abc.def/ghi/bob'
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.7499999999999999
+    listPrecision: 1.0
+    listRecall: 0.6
+    listTrimF1: 0.7499999999999999
+    listTrimPrecision: 1.0
+    listTrimRecall: 0.6
+    textHttpF1: 0.7499999999999999
+    textHttpPrecision: 1.0
+    textHttpRecall: 0.6
+    textShortF1: 0.7499999999999999
+    textShortPrecision: 1.0
+    textShortRecall: 0.6
+  startTime: 2023-07-27 17:06:46.099144
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 501049
+  info:
+    lineCount: 4
+    listCorrectCount: 3
+    listLineCount: 4
+    listTrimCorrectCount: 4
+    textHttpCount: 4
+    textHttpCountCorrect: 4
+    textShortCount: 4
+    textShortCountCorrect: 4
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:48.813475
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:51.314519
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep \nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.6666666666666665
+    listPrecision: 0.75
+    listRecall: 0.6
+    listTrimF1: 0.888888888888889
+    listTrimPrecision: 1.0
+    listTrimRecall: 0.8
+    textHttpF1: 0.888888888888889
+    textHttpPrecision: 1.0
+    textHttpRecall: 0.8
+    textShortF1: 0.888888888888889
+    textShortPrecision: 1.0
+    textShortRecall: 0.8
+  startTime: 2023-07-27 17:06:48.813470
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 3
+  - 312985
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:51.321205
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:54.634184
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep  \nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:06:51.321199
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 755946
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:54.653404
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:06:57.409345
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep \nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:06:54.653399
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 938308
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:06:57.417551
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:07:00.355854
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep \nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:06:57.417546
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 439739
+  info:
+    lineCount: 4
+    listCorrectCount: 4
+    listLineCount: 4
+    listTrimCorrectCount: 4
+    textHttpCount: 4
+    textHttpCountCorrect: 4
+    textShortCount: 4
+    textShortCountCorrect: 4
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:07:00.362246
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:07:02.801980
+    - ' https://abc.def/ghi/anne
+
+      https://abc.def/ghi/researchDep
+
+      https://abc.def/ghi/wonderOrg
+
+      https://abc.def/ghi/bob'
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.888888888888889
+    listPrecision: 1.0
+    listRecall: 0.8
+    listTrimF1: 0.888888888888889
+    listTrimPrecision: 1.0
+    listTrimRecall: 0.8
+    textHttpF1: 0.888888888888889
+    textHttpPrecision: 1.0
+    textHttpRecall: 0.8
+    textShortF1: 0.888888888888889
+    textShortPrecision: 1.0
+    textShortRecall: 0.8
+  startTime: 2023-07-27 17:07:00.362241
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 873348
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:07:02.809354
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:07:05.682696
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep \nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:07:02.809348
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 624087
+  info:
+    lineCount: 4
+    listCorrectCount: 3
+    listLineCount: 4
+    listTrimCorrectCount: 4
+    textHttpCount: 4
+    textHttpCountCorrect: 4
+    textShortCount: 4
+    textShortCountCorrect: 4
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:07:05.692906
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:07:08.316989
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/wonderOrg\nhttps://abc.def/ghi/marketingDep\
+      \  \nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.6666666666666665
+    listPrecision: 0.75
+    listRecall: 0.6
+    listTrimF1: 0.888888888888889
+    listTrimPrecision: 1.0
+    listTrimRecall: 0.8
+    textHttpF1: 0.888888888888889
+    textHttpPrecision: 1.0
+    textHttpRecall: 0.8
+    textShortF1: 0.888888888888889
+    textShortPrecision: 1.0
+    textShortRecall: 0.8
+  startTime: 2023-07-27 17:07:05.692902
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 895092
+  info:
+    lineCount: 5
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:07:08.324523
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:07:11.219610
+    - " https://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep \nhttps://abc.def/ghi/wonderOrg\n\
+      https://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.8000000000000002
+    listPrecision: 0.8
+    listRecall: 0.8
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:07:08.324518
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 893356
+  info:
+    lineCount: 4
+    listCorrectCount: 3
+    listLineCount: 4
+    listTrimCorrectCount: 4
+    textHttpCount: 4
+    textHttpCountCorrect: 4
+    textShortCount: 4
+    textShortCountCorrect: 4
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:07:11.226349
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:07:14.119701
+    - " https://abc.def/ghi/anne \nhttps://abc.def/ghi/wonderOrg\nhttps://abc.def/ghi/researchDep\n\
+      https://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 0.6666666666666665
+    listPrecision: 0.75
+    listRecall: 0.6
+    listTrimF1: 0.888888888888889
+    listTrimPrecision: 1.0
+    listTrimRecall: 0.8
+    textHttpF1: 0.888888888888889
+    textHttpPrecision: 1.0
+    textHttpRecall: 0.8
+    textShortF1: 0.888888888888889
+    textShortPrecision: 1.0
+    textShortRecall: 0.8
+  startTime: 2023-07-27 17:07:11.226345
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 835189
+  info:
+    lineCount: 5
+    listCorrectCount: 5
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:07:14.126077
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:07:16.961261
+    - ' https://abc.def/ghi/anne
+
+      https://abc.def/ghi/researchDep
+
+      https://abc.def/ghi/wonderOrg
+
+      https://abc.def/ghi/marketingDep
+
+      https://abc.def/ghi/bob'
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 1.0
+    listF1: 1.0
+    listPrecision: 1.0
+    listRecall: 1.0
+    listTrimF1: 1.0
+    listTrimPrecision: 1.0
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:07:14.126072
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 810789
+  info:
+    lineCount: 6
+    listCorrectCount: 4
+    listLineCount: 5
+    listTrimCorrectCount: 5
+    textHttpCount: 5
+    textHttpCountCorrect: 5
+    textShortCount: 5
+    textShortCountCorrect: 5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2023-07-27 17:07:16.969938
+    - "For the following turtle find the shortest non trivial connection from Anne\
+      \ to Bob. Please summarize the connection with just a list of resource IRIs,\
+      \ one per line, starting with https://abc.def/ghi/anne and ending with https://abc.def/ghi/bob\
+      \ . Please leave out rdf:type infos, leave out explanatory text and answer with\
+      \ just the IRI lines.\n\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n"
+  - !!python/tuple
+    - response
+    - 2023-07-27 17:07:19.780723
+    - " \nhttps://abc.def/ghi/anne\nhttps://abc.def/ghi/researchDep\nhttps://abc.def/ghi/wonderOrg\
+      \ \nhttps://abc.def/ghi/marketingDep\nhttps://abc.def/ghi/bob"
+  modelId: Claude--claude-1.3-100k--claude-1.3-100k
+  scores:
+    lineBrevity: 0.8333333333333334
+    listF1: 0.7272727272727272
+    listPrecision: 0.6666666666666666
+    listRecall: 0.8
+    listTrimF1: 0.9090909090909091
+    listTrimPrecision: 0.8333333333333334
+    listTrimRecall: 1.0
+    textHttpF1: 1.0
+    textHttpPrecision: 1.0
+    textHttpRecall: 1.0
+    textShortF1: 1.0
+    textShortPrecision: 1.0
+    textShortRecall: 1.0
+  startTime: 2023-07-27 17:07:16.969934
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    taskId: TurtleConnectionExplainStatic
+    version: '1.0'
