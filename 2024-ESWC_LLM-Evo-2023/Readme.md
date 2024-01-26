@@ -8,3 +8,5 @@ We collected data in multiple runs, each resulting in files with date and time o
 * full debug-log files (`.log`) containing debug log for runs
 
 Folder [Q3vsQ4](Q3vsQ4/) contains the result files used for the comparisson of Q3 and Q4 results.
+
+This dataset is published at zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10572907.svg)](https://doi.org/10.5281/zenodo.10572907)
