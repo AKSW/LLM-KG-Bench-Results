@@ -15,8 +15,7 @@ Folder [Q3vsQ4](Q3vsQ4/) contains the result files used for the comparison of Q3
 We evaluated whether we could replicate results from the DL4KG experiments obtained in the beginning of the third quarter 2023 (Q3) in the forth quarter of 2023 (early December - Q4).
 These experiments used version 1.1 of the LLM-KG bench code.
 
-Plots in \cref{fig:Q3vsQ4-measures-scalable-tests-claude,fig:Q3vsQ4-scalable-tests-gpt} show the Q3 and Q4 results together. Although we see some differences, the results remain in the same interval.
-
+Although we see some differences, the results remain in the same interval. As such this study verifys and reinforces the original research outcomes and the soundness of the benchmark setup and tasks used in LLM-KG bench. 
 
 ![friends-f1-claude-Q3VSQ4 (1)](https://github.com/AKSW/LLM-KG-Bench-Results/assets/2630603/dc31c701-0f6a-4145-82d2-8bbb55066fee)
 ![friends-f1-gpt-Q3VSQ4](https://github.com/AKSW/LLM-KG-Bench-Results/assets/2630603/91a6113a-5c96-4c0d-a3a3-3ed27821bcea)
