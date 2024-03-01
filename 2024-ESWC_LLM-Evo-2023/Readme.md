@@ -8,6 +8,8 @@ We collected data in multiple runs, each resulting in files with date and time o
 * model log files (`.jsonl`) containing details on LLM interaction
 * full debug-log files (`.log`) containing debug log for runs
 
+Re-evaluation is possible with LLM-KG-Bench using the --reeval parameter, thus allowing for repeated or modified evaluation (e.g. different metrics, parser libraries, scores, etc).
+
 This dataset is published at zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10572907.svg)](https://doi.org/10.5281/zenodo.10572907)
 
 ## FriendCount Graph Examples including "Tricky Case"
