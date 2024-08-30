@@ -1,0 +1,6 @@
+starting at 2024-05-09T13:23:10+02:00
+args: 'ModelGoogle' - 'Text2SparqlExecEvalListOrganizational' - '20' - --config LlmKgBench/configuration-2024-05-sparql.yml
+full command LlmKgBench/run-matrix.sh ModelGoogle Text2SparqlExecEvalListOrganizational 20 --config LlmKgBench/configuration-2024-05-sparql.yml
+2024-05-09T13:23:10+02:00 starting: ModelGoogle-Text2SparqlExecEvalListOrganizational-20x
+Do 9. Mai 13:29:56 CEST 2024
+Completed all matrix runs

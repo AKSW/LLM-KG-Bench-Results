@@ -1,0 +1,493 @@
+starting at 2024-05-13T10:36:24+02:00
+args: 'ModelGoogle' - 'Text2SparqlExecEvalListBeastiary' - '10' - --config configuration-2024-05-sparql.yml
+full command LlmKgBench/run-matrix.sh ModelGoogle Text2SparqlExecEvalListBeastiary 10 --config configuration-2024-05-sparql.yml
+2024-05-13T10:36:24+02:00 starting: ModelGoogle-Text2SparqlExecEvalListBeastiary-10x
+Mo 13. Mai 10:36:24 CEST 2024
+[INFO] benchmark configuration set: tasks:['Text2SparqlExecEvalListBeastiaryTurtleSubgraph', 'Text2SparqlExecEvalListBeastiaryTurtleSchema', 'Text2SparqlExecEvalListBeastiaryTurtleSubschema', 'Text2SparqlExecEvalListBeastiaryIris']; iterations:10; sizes:[1000]; models:['Gemini-1.0-Pro', 'Gemini-1.5-Pro']
+[INFO] Start for task 'Text2SparqlExecEvalListBeastiaryTurtleSubgraph' version '2.0' at 2024-05-13 10:36:25.959740. Task parameter: {'kgInfoType': 'subgraph', 'kgInfoFormat': 'turtle'}
+[INFO]   model=Google-gemini-1.0-pro ...
+[INFO]   size=None
+[INFO]   iteration=1/10, total=1/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:36:25.961541; size=None; i=1
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=2/10, total=2/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:36:40.965700; size=None; i=2
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=3/10, total=3/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:36:50.099876; size=None; i=3
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.34545454545454546, 'f1measure': 0.18181818181818182, 'precision': 0.1, 'recall': 1.0}}
+[INFO]   iteration=4/10, total=4/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:36:59.200165; size=None; i=4
+[INFO] Backing off _generateContent(...) for 0.8s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 1.4s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 0.3s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 6.3s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 11.9s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 31.1s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 51.4s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 50.0s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[ERROR] Giving up _generateContent(...) after 9 tries (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[ERROR] exception while evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:40:12.945596; size=None; i=3; exception=500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+Traceback (most recent call last):
+  File "/mnt/d/git/cpy/LLM-KG-Bench-4/LlmKgBench/run.py", line 305, in <module>
+    result = taskInstance.evaluate_model(model, max_length=size, **moreEvalArgs)
+  File "/mnt/d/git/cpy/LLM-KG-Bench-4/LlmKgBench/api/task.py", line 429, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/mnt/d/git/cpy/LLM-KG-Bench-4/LlmKgBench/api/model.py", line 323, in generate_text
+    answerObject = self._chatCompletion(messages, max_length)
+  File "/mnt/d/git/cpy/LLM-KG-Bench-4/LlmKgBench/api/model.py", line 355, in _chatCompletion
+    return self._generateContent(model, messages)
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/backoff/_sync.py", line 105, in retry
+    ret = target(*args, **kwargs)
+  File "/mnt/d/git/cpy/LLM-KG-Bench-4/LlmKgBench/api/model.py", line 362, in _generateContent
+    return model.generate_content(messages)
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/generativeai/generative_models.py", line 262, in generate_content
+    response = self._client.generate_content(
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 791, in generate_content
+    response = rpc(
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+[INFO]   iteration=5/10, total=5/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:40:12.983121; size=None; i=5
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=6/10, total=6/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:40:32.605595; size=None; i=6
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=7/10, total=7/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:41:12.792673; size=None; i=7
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=8/10, total=8/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:41:27.708027; size=None; i=8
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=9/10, total=9/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:41:40.434768; size=None; i=9
+[INFO] Backing off _generateContent(...) for 0.0s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 1.3s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 3.7s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 7.9s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 6.9s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 16.9s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 22.1s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 20.5s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 37.6s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[INFO] Backing off _generateContent(...) for 39.3s (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[ERROR] Giving up _generateContent(...) after 11 tries (google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting)
+[ERROR] exception while evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:44:59.164064; size=None; i=8; exception=500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+Traceback (most recent call last):
+  File "/mnt/d/git/cpy/LLM-KG-Bench-4/LlmKgBench/run.py", line 305, in <module>
+    result = taskInstance.evaluate_model(model, max_length=size, **moreEvalArgs)
+  File "/mnt/d/git/cpy/LLM-KG-Bench-4/LlmKgBench/api/task.py", line 429, in evaluate_model
+    answer = model.generate_text(inputs=self.prompt) # TODO: check if max_length should be used here as well
+  File "/mnt/d/git/cpy/LLM-KG-Bench-4/LlmKgBench/api/model.py", line 323, in generate_text
+    answerObject = self._chatCompletion(messages, max_length)
+  File "/mnt/d/git/cpy/LLM-KG-Bench-4/LlmKgBench/api/model.py", line 355, in _chatCompletion
+    return self._generateContent(model, messages)
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/backoff/_sync.py", line 105, in retry
+    ret = target(*args, **kwargs)
+  File "/mnt/d/git/cpy/LLM-KG-Bench-4/LlmKgBench/api/model.py", line 362, in _generateContent
+    return model.generate_content(messages)
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/generativeai/generative_models.py", line 262, in generate_content
+    response = self._client.generate_content(
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 791, in generate_content
+    response = rpc(
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/timeout.py", line 120, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/home/lpm/.cache/pypoetry/virtualenvs/llm-kg-bench-yZIGFtlI-py3.10/lib/python3.10/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InternalServerError: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+[INFO]   iteration=10/10, total=10/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:44:59.179615; size=None; i=10
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   model=Google-models/gemini-1.5-pro-latest ...
+[INFO]   size=None
+[INFO]   iteration=1/10, total=11/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:45:10.290160; size=None; i=1
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=2/10, total=12/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:45:24.781530; size=None; i=2
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=3/10, total=13/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:45:37.219551; size=None; i=3
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=4/10, total=14/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:45:47.332272; size=None; i=4
+[INFO] Backing off _generateContent(...) for 0.9s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.7333333333333334, 'f1measure': 0.6666666666666666, 'precision': 0.5, 'recall': 1.0}}
+[INFO]   iteration=5/10, total=15/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:46:08.081675; size=None; i=5
+[INFO] Backing off _generateContent(...) for 0.0s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.4s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=6/10, total=16/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:46:20.426803; size=None; i=6
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=7/10, total=17/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:46:34.093256; size=None; i=7
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=8/10, total=18/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:46:45.229399; size=None; i=8
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=9/10, total=19/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:46:56.039134; size=None; i=9
+[INFO] Backing off _generateContent(...) for 0.1s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.7333333333333334, 'f1measure': 0.6666666666666666, 'precision': 0.5, 'recall': 1.0}}
+[INFO]   iteration=10/10, total=20/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubgraph ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:47:17.590839; size=None; i=10
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO] Total bytes transfered(in+out) per model: {'Google-gemini-1.0-pro': 27484, 'Google-models/gemini-1.5-pro-latest': 458619}
+[INFO] done, 2024-05-13 10:47:28.836105
+[INFO] Start for task 'Text2SparqlExecEvalListBeastiaryTurtleSchema' version '2.0' at 2024-05-13 10:47:28.913655. Task parameter: {'kgInfoType': 'schema', 'kgInfoFormat': 'turtle'}
+[INFO]   model=Google-gemini-1.0-pro ...
+[INFO]   size=None
+[INFO]   iteration=1/10, total=21/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:47:28.916785; size=None; i=1
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 0.0, 'combined': 0.0}}
+[INFO]   iteration=2/10, total=22/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:47:49.246819; size=None; i=2
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=3/10, total=23/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:48:01.894056; size=None; i=3
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=4/10, total=24/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:48:22.773048; size=None; i=4
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.7333333333333334, 'f1measure': 0.6666666666666666, 'precision': 0.5, 'recall': 1.0}}
+[INFO]   iteration=5/10, total=25/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:48:35.718103; size=None; i=5
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=6/10, total=26/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:48:55.833798; size=None; i=6
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=7/10, total=27/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:49:23.030808; size=None; i=7
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=8/10, total=28/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:49:36.179083; size=None; i=8
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=9/10, total=29/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:49:57.996681; size=None; i=9
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.7333333333333334, 'f1measure': 0.6666666666666666, 'precision': 0.5, 'recall': 1.0}}
+[INFO]   iteration=10/10, total=30/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:50:10.997354; size=None; i=10
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   model=Google-models/gemini-1.5-pro-latest ...
+[INFO]   size=None
+[INFO]   iteration=1/10, total=31/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:50:31.821691; size=None; i=1
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=2/10, total=32/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:50:50.417629; size=None; i=2
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=3/10, total=33/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:51:04.935214; size=None; i=3
+[INFO]     starting next evaluation shot #2
+[INFO] Backing off _generateContent(...) for 0.7s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.9s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 2.9s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 7.7s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 4.7s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=4/10, total=34/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:51:47.560595; size=None; i=4
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.7333333333333334, 'f1measure': 0.6666666666666666, 'precision': 0.5, 'recall': 1.0}}
+[INFO]   iteration=5/10, total=35/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:52:02.342310; size=None; i=5
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 0.0, 'combined': 0.0}}
+[INFO]   iteration=6/10, total=36/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:52:25.408508; size=None; i=6
+[INFO] Backing off _generateContent(...) for 0.8s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.2s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.3s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 2.9s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #2
+[INFO] Backing off _generateContent(...) for 0.3s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.4s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.2s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 5.4s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 11.9s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 25.5s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 62.6s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=7/10, total=37/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:54:37.411531; size=None; i=7
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=8/10, total=38/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:54:50.778763; size=None; i=8
+[INFO]     starting next evaluation shot #2
+[INFO] Backing off _generateContent(...) for 0.9s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 0.0, 'combined': 0.0}}
+[INFO]   iteration=9/10, total=39/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:55:15.083858; size=None; i=9
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.7333333333333334, 'f1measure': 0.6666666666666666, 'precision': 0.5, 'recall': 1.0}}
+[INFO]   iteration=10/10, total=40/80, task=Text2SparqlExecEvalListBeastiaryTurtleSchema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:55:29.098055; size=None; i=10
+[INFO] Backing off _generateContent(...) for 0.1s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.0s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 2.6s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 4.6s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 11.0s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.6s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #2
+[INFO] Backing off _generateContent(...) for 0.7s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.1s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 0.0, 'combined': 0.0}}
+[INFO] Total bytes transfered(in+out) per model: {'Google-gemini-1.0-pro': 113790, 'Google-models/gemini-1.5-pro-latest': 542602}
+[INFO] done, 2024-05-13 10:56:13.892273
+[INFO] Start for task 'Text2SparqlExecEvalListBeastiaryTurtleSubschema' version '2.0' at 2024-05-13 10:56:14.065065. Task parameter: {'kgInfoType': 'subschema', 'kgInfoFormat': 'turtle'}
+[INFO]   model=Google-gemini-1.0-pro ...
+[INFO]   size=None
+[INFO]   iteration=1/10, total=41/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:56:14.071168; size=None; i=1
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=2/10, total=42/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:56:32.719909; size=None; i=2
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=3/10, total=43/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:56:44.254870; size=None; i=3
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=4/10, total=44/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:57:01.871393; size=None; i=4
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=5/10, total=45/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:57:12.799877; size=None; i=5
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=6/10, total=46/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:57:29.080679; size=None; i=6
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 0.0, 'combined': 0.0}}
+[INFO]   iteration=7/10, total=47/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:57:45.832647; size=None; i=7
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=8/10, total=48/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:57:57.610897; size=None; i=8
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=9/10, total=49/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:58:18.707517; size=None; i=9
+[INFO]     starting next evaluation shot #2
+[INFO]     scores (short): {'1': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=10/10, total=50/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 10:58:32.010924; size=None; i=10
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   model=Google-models/gemini-1.5-pro-latest ...
+[INFO]   size=None
+[INFO]   iteration=1/10, total=51/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:58:49.473058; size=None; i=1
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 0.0, 'combined': 0.0}}
+[INFO]   iteration=2/10, total=52/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:59:08.672451; size=None; i=2
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=3/10, total=53/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 10:59:21.283821; size=None; i=3
+[INFO] Backing off _generateContent(...) for 0.8s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.6s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.9s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 4.5s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=4/10, total=54/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:00:00.506005; size=None; i=4
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=5/10, total=55/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:00:14.989782; size=None; i=5
+[INFO] Backing off _generateContent(...) for 0.0s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.0s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.8s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 7.0s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #2
+[INFO] Backing off _generateContent(...) for 0.0s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.7333333333333334, 'f1measure': 0.6666666666666666, 'precision': 0.5, 'recall': 1.0}}
+[INFO]   iteration=6/10, total=56/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:00:46.006536; size=None; i=6
+[INFO] Backing off _generateContent(...) for 0.4s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #2
+[INFO] Backing off _generateContent(...) for 0.6s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.3s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.5s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 5.5s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 9.1s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 24.3s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=7/10, total=57/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:01:56.331041; size=None; i=7
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=8/10, total=58/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:02:10.046974; size=None; i=8
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=9/10, total=59/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:02:36.978045; size=None; i=9
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=10/10, total=60/80, task=Text2SparqlExecEvalListBeastiaryTurtleSubschema ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:02:50.273679; size=None; i=10
+[INFO] Backing off _generateContent(...) for 0.7s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.9s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 2.5s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.9s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.4s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 2.3s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 5.3s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 15.1s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 7.6s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 55.5s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO] Total bytes transfered(in+out) per model: {'Google-gemini-1.0-pro': 132244, 'Google-models/gemini-1.5-pro-latest': 563798}
+[INFO] done, 2024-05-13 11:04:41.504868
+[INFO] Start for task 'Text2SparqlExecEvalListBeastiaryIris' version '2.0' at 2024-05-13 11:04:41.569196. Task parameter: {'kgInfoType': 'iris'}
+[INFO]   model=Google-gemini-1.0-pro ...
+[INFO]   size=None
+[INFO]   iteration=1/10, total=61/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 11:04:41.571430; size=None; i=1
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.5969924812030074, 'f1measure': 0.4962406015037593, 'precision': 0.336734693877551, 'recall': 0.9428571428571428}}
+[INFO]   iteration=2/10, total=62/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 11:04:50.926014; size=None; i=2
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=3/10, total=63/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 11:05:00.806723; size=None; i=3
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=4/10, total=64/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 11:05:09.410461; size=None; i=4
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 0.0, 'recall': 0.0}}
+[INFO]   iteration=5/10, total=65/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 11:05:18.288149; size=None; i=5
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=6/10, total=66/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 11:05:32.183232; size=None; i=6
+[INFO]     starting next evaluation shot #2
+[INFO]     starting next evaluation shot #3
+[INFO]     scores (short): {'2': {'answerParse': 1.0, 'combined': 0.2, 'f1measure': 0.0, 'precision': 1.0, 'recall': 0.0}}
+[INFO]   iteration=7/10, total=67/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 11:05:46.623222; size=None; i=7
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=8/10, total=68/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 11:05:55.934580; size=None; i=8
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.34545454545454546, 'f1measure': 0.18181818181818182, 'precision': 0.1, 'recall': 1.0}}
+[INFO]   iteration=9/10, total=69/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 11:06:04.537687; size=None; i=9
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=10/10, total=70/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.0-Pro--Google-gemini-1.0-pro; time=2024-05-13 11:06:13.407988; size=None; i=10
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   model=Google-models/gemini-1.5-pro-latest ...
+[INFO]   size=None
+[INFO]   iteration=1/10, total=71/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:06:21.539602; size=None; i=1
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=2/10, total=72/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:06:30.723096; size=None; i=2
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=3/10, total=73/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:06:40.050924; size=None; i=3
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=4/10, total=74/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:06:48.952155; size=None; i=4
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.7333333333333334, 'f1measure': 0.6666666666666666, 'precision': 0.5, 'recall': 1.0}}
+[INFO]   iteration=5/10, total=75/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:06:58.222495; size=None; i=5
+[INFO] Backing off _generateContent(...) for 0.7s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.0s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.0s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=6/10, total=76/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:07:10.081251; size=None; i=6
+[INFO] Backing off _generateContent(...) for 0.7s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.7s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.4s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 3.7s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 9.5s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=7/10, total=77/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:07:36.007146; size=None; i=7
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=8/10, total=78/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:07:45.460610; size=None; i=8
+[INFO] Backing off _generateContent(...) for 0.6s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 1.6s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO]   iteration=9/10, total=79/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:07:57.230763; size=None; i=9
+[INFO] Backing off _generateContent(...) for 0.6s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 0.7333333333333334, 'f1measure': 0.6666666666666666, 'precision': 0.5, 'recall': 1.0}}
+[INFO]   iteration=10/10, total=80/80, task=Text2SparqlExecEvalListBeastiaryIris ...
+[INFO]     evaluating model=Gemini-1.5-Pro--Google-models/gemini-1.5-pro-latest; time=2024-05-13 11:08:07.235873; size=None; i=10
+[INFO] Backing off _generateContent(...) for 0.4s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 0.4s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 2.5s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 4.8s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO] Backing off _generateContent(...) for 5.2s (google.api_core.exceptions.ResourceExhausted: 429 Resource has been exhausted (e.g. check quota).)
+[INFO]     scores (short): {'0': {'answerParse': 1.0, 'combined': 1.0, 'f1measure': 1.0, 'precision': 1.0, 'recall': 1.0}}
+[INFO] Total bytes transfered(in+out) per model: {'Google-gemini-1.0-pro': 140903, 'Google-models/gemini-1.5-pro-latest': 569948}
+[INFO] done, 2024-05-13 11:08:29.909562
+
+real	32m6,337s
+user	12m15,306s
+sys	0m8,072s
+Completed ModelGoogle-Text2SparqlExecEvalListBeastiary-10x: Model - 1/1, Task - 1/1, Iteration - 1/1
+Mo 13. Mai 11:08:30 CEST 2024
+Completed all matrix runs

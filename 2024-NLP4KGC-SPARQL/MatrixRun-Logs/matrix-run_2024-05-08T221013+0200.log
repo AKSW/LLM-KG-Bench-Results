@@ -1,0 +1,29 @@
+starting at 2024-05-08T22:10:13+02:00
+args: 'ModelGoogle ModelClaude' - 'SparqlSyntaxFixingListLcQuad Text2SparqlExecEvalListLcQuad Text2SparqlExecEvalListOrganizational Text2SparqlExecEvalListOrgaNumerical' - '20 10 20' - --config LlmKgBench/configuration-2024-05-sparql.yml
+full command LlmKgBench/run-matrix.sh ModelGoogle ModelClaude SparqlSyntaxFixingListLcQuad Text2SparqlExecEvalListLcQuad Text2SparqlExecEvalListOrganizational Text2SparqlExecEvalListOrgaNumerical 20 10 20 --config LlmKgBench/configuration-2024-05-sparql.yml
+2024-05-08T22:10:13+02:00 starting: ModelGoogle-SparqlSyntaxFixingListLcQuad-20x
+2024-05-08T22:19:24+02:00 starting: ModelGoogle-Text2SparqlExecEvalListLcQuad-20x
+2024-05-08T22:46:52+02:00 starting: ModelGoogle-Text2SparqlExecEvalListOrganizational-20x
+2024-05-08T22:56:02+02:00 starting: ModelGoogle-Text2SparqlExecEvalListOrgaNumerical-20x
+2024-05-08T23:04:33+02:00 starting: ModelClaude-SparqlSyntaxFixingListLcQuad-20x
+2024-05-08T23:14:43+02:00 starting: ModelClaude-Text2SparqlExecEvalListLcQuad-20x
+2024-05-08T23:43:25+02:00 starting: ModelClaude-Text2SparqlExecEvalListOrganizational-20x
+2024-05-08T23:48:54+02:00 starting: ModelClaude-Text2SparqlExecEvalListOrgaNumerical-20x
+2024-05-08T23:56:15+02:00 starting: ModelGoogle-SparqlSyntaxFixingListLcQuad-10x
+2024-05-09T00:01:15+02:00 starting: ModelGoogle-Text2SparqlExecEvalListLcQuad-10x
+2024-05-09T00:14:14+02:00 starting: ModelGoogle-Text2SparqlExecEvalListOrganizational-10x
+2024-05-09T00:19:02+02:00 starting: ModelGoogle-Text2SparqlExecEvalListOrgaNumerical-10x
+2024-05-09T00:23:56+02:00 starting: ModelClaude-SparqlSyntaxFixingListLcQuad-10x
+2024-05-09T00:29:04+02:00 starting: ModelClaude-Text2SparqlExecEvalListLcQuad-10x
+2024-05-09T00:43:31+02:00 starting: ModelClaude-Text2SparqlExecEvalListOrganizational-10x
+2024-05-09T00:46:09+02:00 starting: ModelClaude-Text2SparqlExecEvalListOrgaNumerical-10x
+2024-05-09T00:50:19+02:00 starting: ModelGoogle-SparqlSyntaxFixingListLcQuad-20x
+2024-05-09T01:01:28+02:00 starting: ModelGoogle-Text2SparqlExecEvalListLcQuad-20x
+2024-05-09T01:26:41+02:00 starting: ModelGoogle-Text2SparqlExecEvalListOrganizational-20x
+2024-05-09T01:34:59+02:00 starting: ModelGoogle-Text2SparqlExecEvalListOrgaNumerical-20x
+2024-05-09T01:43:43+02:00 starting: ModelClaude-SparqlSyntaxFixingListLcQuad-20x
+2024-05-09T01:53:58+02:00 starting: ModelClaude-Text2SparqlExecEvalListLcQuad-20x
+2024-05-09T02:21:47+02:00 starting: ModelClaude-Text2SparqlExecEvalListOrganizational-20x
+2024-05-09T02:27:04+02:00 starting: ModelClaude-Text2SparqlExecEvalListOrgaNumerical-20x
+Do 9. Mai 02:34:57 CEST 2024
+Completed all matrix runs

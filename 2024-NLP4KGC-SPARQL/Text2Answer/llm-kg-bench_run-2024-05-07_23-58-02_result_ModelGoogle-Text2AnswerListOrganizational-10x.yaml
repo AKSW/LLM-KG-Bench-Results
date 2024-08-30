@@ -1,0 +1,3766 @@
+---
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 916135
+  info:
+    answerResultLength: 1
+    answerSet:
+    - :chiefResearchOfficer
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-1
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:03.331046
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What role does Anne Miller have in the Research Department?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:06.247171
+    - :chiefResearchOfficer
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:03.331036
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What role does Anne Miller have in the Research Department?
+    refResultSet:
+    - :chiefResearchOfficer
+    refSparql: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep
+      ; org:role ?role ] }
+    uid: vcard-org-data-big-1
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1594
+    estimatedSize: 1675
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 186793
+  info:
+    answerResultLength: 1
+    answerSet:
+    - :wonderOrg
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:06.298932
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: Which organization does the Research Department belong to?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:07.485710
+    - :wonderOrg
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:06.298917
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: Which organization does the Research Department belong to?
+    refResultSet:
+    - :wonderOrg
+    refSparql: SELECT ?organization WHERE { :researchDep org:unitOf ?organization
+      }
+    uid: vcard-org-data-big-5
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1582
+    estimatedSize: 1650
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 204852
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '2'
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-10
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:07.539238
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many Organizational Units are there in the Knowledge Graph?\n\n\
+      Graph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:09.744076
+    - '2'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:07.539224
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many Organizational Units are there in the Knowledge Graph?
+    refResultSet:
+    - '2'
+    refSparql: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit
+      }
+    uid: vcard-org-data-big-10
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1578
+    estimatedSize: 1674
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 9
+  - 58975
+  info:
+    answerResultLength: 2
+    answerSet:
+    - Bob
+    - Anne
+    answerSetSize: 2
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-19
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:09.801559
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What are the first names of the persons in the organization?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:18.860525
+    - 'Anne
+
+      Bob'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:09.801550
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What are the first names of the persons in the organization?
+    refResultSet:
+    - Anne
+    - Bob
+    refSparql: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role
+      ?role . ?person foaf:firstName ?firstName }
+    uid: vcard-org-data-big-19
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1582
+    estimatedSize: 1695
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 798220
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '1'
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-27
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:18.916186
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many people are members of the Marketing Department?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:20.714391
+    - '1'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:18.916171
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many people are members of the Marketing Department?
+    refResultSet:
+    - '1'
+    refSparql: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership
+      ; org:member ?person ; org:organization :marketingDep }
+    uid: vcard-org-data-big-27
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1571
+    estimatedSize: 1706
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 863279
+  info:
+    answerResultLength: 1
+    answerSet:
+    - :chiefResearchOfficer
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-1
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:20.767131
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What role does Anne Miller have in the Research Department?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:22.630397
+    - :chiefResearchOfficer
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:20.767118
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What role does Anne Miller have in the Research Department?
+    refResultSet:
+    - :chiefResearchOfficer
+    refSparql: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep
+      ; org:role ?role ] }
+    uid: vcard-org-data-big-1
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1594
+    estimatedSize: 1675
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 150946
+  info:
+    answerResultLength: 1
+    answerSet:
+    - :wonderOrg
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:22.702300
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: Which organization does the Research Department belong to?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:23.853232
+    - :wonderOrg
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:22.702286
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: Which organization does the Research Department belong to?
+    refResultSet:
+    - :wonderOrg
+    refSparql: SELECT ?organization WHERE { :researchDep org:unitOf ?organization
+      }
+    uid: vcard-org-data-big-5
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1582
+    estimatedSize: 1650
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 159900
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '2'
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-10
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:23.909850
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many Organizational Units are there in the Knowledge Graph?\n\n\
+      Graph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:25.069739
+    - '2'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:23.909839
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many Organizational Units are there in the Knowledge Graph?
+    refResultSet:
+    - '2'
+    refSparql: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit
+      }
+    uid: vcard-org-data-big-10
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1578
+    estimatedSize: 1674
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 503711
+  info:
+    answerResultLength: 2
+    answerSet:
+    - Bob
+    - Anne
+    answerSetSize: 2
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-19
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:25.124872
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What are the first names of the persons in the organization?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:26.628572
+    - 'Anne
+
+      Bob'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:25.124861
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What are the first names of the persons in the organization?
+    refResultSet:
+    - Anne
+    - Bob
+    refSparql: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role
+      ?role . ?person foaf:firstName ?firstName }
+    uid: vcard-org-data-big-19
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1582
+    estimatedSize: 1695
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 289843
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '1'
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-27
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:26.694541
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many people are members of the Marketing Department?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:27.984373
+    - '1'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:26.694530
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many people are members of the Marketing Department?
+    refResultSet:
+    - '1'
+    refSparql: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership
+      ; org:member ?person ; org:organization :marketingDep }
+    uid: vcard-org-data-big-27
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1571
+    estimatedSize: 1706
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 415295
+  info:
+    answerResultLength: 1
+    answerSet:
+    - ':chiefResearchOfficer '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-1
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:28.040724
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What role does Anne Miller have in the Research Department?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:29.456004
+    - ":chiefResearchOfficer \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:28.040709
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What role does Anne Miller have in the Research Department?
+    refResultSet:
+    - :chiefResearchOfficer
+    refSparql: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep
+      ; org:role ?role ] }
+    uid: vcard-org-data-big-1
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1596
+    estimatedSize: 1675
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 17
+  - 342214
+  info:
+    answerResultLength: 1
+    answerSet:
+    - ':wonderOrg '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:29.508266
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: Which organization does the Research Department belong to?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:46.850469
+    - ":wonderOrg \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:29.508255
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: Which organization does the Research Department belong to?
+    refResultSet:
+    - :wonderOrg
+    refSparql: SELECT ?organization WHERE { :researchDep org:unitOf ?organization
+      }
+    uid: vcard-org-data-big-5
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1584
+    estimatedSize: 1650
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 384746
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '2 '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-10
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:46.918097
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many Organizational Units are there in the Knowledge Graph?\n\n\
+      Graph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:48.302829
+    - "2 \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:46.918083
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many Organizational Units are there in the Knowledge Graph?
+    refResultSet:
+    - '2'
+    refSparql: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit
+      }
+    uid: vcard-org-data-big-10
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1580
+    estimatedSize: 1674
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 299420
+  info:
+    answerResultLength: 2
+    answerSet:
+    - 'Bob '
+    - Anne
+    answerSetSize: 2
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-19
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:48.362512
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What are the first names of the persons in the organization?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:49.661925
+    - "Anne\nBob \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.875
+    f1: 0.5
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.5
+    recall: 0.5
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:48.362505
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What are the first names of the persons in the organization?
+    refResultSet:
+    - Anne
+    - Bob
+    refSparql: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role
+      ?role . ?person foaf:firstName ?firstName }
+    uid: vcard-org-data-big-19
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1584
+    estimatedSize: 1695
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 252090
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '1 '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-27
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:49.730048
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many people are members of the Marketing Department?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-07 23:58:50.982123
+    - "1 \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:49.730033
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many people are members of the Marketing Department?
+    refResultSet:
+    - '1'
+    refSparql: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership
+      ; org:member ?person ; org:organization :marketingDep }
+    uid: vcard-org-data-big-27
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1573
+    estimatedSize: 1706
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 130
+  - 529949
+  info:
+    answerResultLength: 2
+    answerSet:
+    - ':chiefResearchOfficer '
+    - :Research Department
+    answerSetSize: 2
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-1
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-07 23:58:51.029541
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What role does Anne Miller have in the Research Department?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:01:01.559482
+    - ":chiefResearchOfficer \n:Research Department"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.3333333333333333
+    combinedF1: 0.5
+    f1: 0.0
+    fixedF1: 0.6666666666666666
+    fixedPrecision: 0.5
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 0.6666666666666666
+    relaxedPrecision: 0.5
+    relaxedRecall: 1.0
+    trimF1: 0.6666666666666666
+    trimPrecision: 0.5
+    trimRecall: 1.0
+  startTime: 2024-05-07 23:58:51.029533
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What role does Anne Miller have in the Research Department?
+    refResultSet:
+    - :chiefResearchOfficer
+    refSparql: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep
+      ; org:role ?role ] }
+    uid: vcard-org-data-big-1
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1616
+    estimatedSize: 1675
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 331566
+  info:
+    answerResultLength: 1
+    answerSet:
+    - ':wonderOrg '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:01:01.624352
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: Which organization does the Research Department belong to?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:01:02.955909
+    - ":wonderOrg \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:01:01.624343
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: Which organization does the Research Department belong to?
+    refResultSet:
+    - :wonderOrg
+    refSparql: SELECT ?organization WHERE { :researchDep org:unitOf ?organization
+      }
+    uid: vcard-org-data-big-5
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1584
+    estimatedSize: 1650
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 195361
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '2 '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-10
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:01:03.008293
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many Organizational Units are there in the Knowledge Graph?\n\n\
+      Graph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:01:04.203643
+    - "2 \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:01:03.008282
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many Organizational Units are there in the Knowledge Graph?
+    refResultSet:
+    - '2'
+    refSparql: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit
+      }
+    uid: vcard-org-data-big-10
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1580
+    estimatedSize: 1674
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 35
+  - 776283
+  info:
+    answerResultLength: 2
+    answerSet:
+    - 'Bob '
+    - Anne
+    answerSetSize: 2
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-19
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:01:04.276321
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What are the first names of the persons in the organization?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:01:40.052592
+    - "Anne\nBob \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.875
+    f1: 0.5
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.5
+    recall: 0.5
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:01:04.276309
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What are the first names of the persons in the organization?
+    refResultSet:
+    - Anne
+    - Bob
+    refSparql: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role
+      ?role . ?person foaf:firstName ?firstName }
+    uid: vcard-org-data-big-19
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1584
+    estimatedSize: 1695
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 46
+  - 354617
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '1 '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-27
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:01:40.117550
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many people are members of the Marketing Department?\n\nGraph:\n\
+      PREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\
+      PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\
+      \n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n\
+      \  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person\
+      \ ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [\
+      \ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization\
+      \ .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label\
+      \ \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf\
+      \ :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer\
+      \ a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member\
+      \ :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer\
+      \ ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep\
+      \ ;\n  org:role :marketingManager ] .\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:02:26.472159
+    - "1 \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:01:40.117542
+  taskData:
+    entityLabelMapping: null
+    graphFormat: turtle
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many people are members of the Marketing Department?
+    refResultSet:
+    - '1'
+    refSparql: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership
+      ; org:member ?person ; org:organization :marketingDep }
+    uid: vcard-org-data-big-27
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaTurtle
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 1573
+    estimatedSize: 1706
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 68481
+  info:
+    answerResultLength: 1
+    answerSet:
+    - :chiefResearchOfficer
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-1
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:02:26.576496
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What role does Anne Miller have in the Research Department?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:02:28.644969
+    - :chiefResearchOfficer
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:02:26.576488
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What role does Anne Miller have in the Research Department?
+    refResultSet:
+    - :chiefResearchOfficer
+    refSparql: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep
+      ; org:role ?role ] }
+    uid: vcard-org-data-big-1
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2382
+    estimatedSize: 2463
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 2
+  - 83702
+  info:
+    answerResultLength: 1
+    answerSet:
+    - 0:wonderOrg
+    answerSetSize: 1
+    errorF1Format: 1
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:02:28.698356
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: Which organization does the Research Department belong to?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:02:30.782050
+    - 0:wonderOrg
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 0.5
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 0.0
+    trimPrecision: 0.0
+    trimRecall: 0.0
+  startTime: 2024-05-08 00:02:28.698348
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: Which organization does the Research Department belong to?
+    refResultSet:
+    - :wonderOrg
+    refSparql: SELECT ?organization WHERE { :researchDep org:unitOf ?organization
+      }
+    uid: vcard-org-data-big-5
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2371
+    estimatedSize: 2438
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 0
+  - 978822
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '2'
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-10
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:02:30.844301
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many Organizational Units are there in the Knowledge Graph?\n\n\
+      Graph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\"\
+      : \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:02:31.823115
+    - '2'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:02:30.844293
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many Organizational Units are there in the Knowledge Graph?
+    refResultSet:
+    - '2'
+    refSparql: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit
+      }
+    uid: vcard-org-data-big-10
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2366
+    estimatedSize: 2462
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 978526
+  info:
+    answerResultLength: 2
+    answerSet:
+    - Bob
+    - Anne
+    answerSetSize: 2
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-19
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:02:31.873301
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What are the first names of the persons in the organization?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:02:33.851818
+    - 'Anne
+
+      Bob'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:02:31.873292
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What are the first names of the persons in the organization?
+    refResultSet:
+    - Anne
+    - Bob
+    refSparql: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role
+      ?role . ?person foaf:firstName ?firstName }
+    uid: vcard-org-data-big-19
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2370
+    estimatedSize: 2483
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 13
+  - 23693
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '1'
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-27
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:02:33.908632
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many people are members of the Marketing Department?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:02:46.932317
+    - '1'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:02:33.908624
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many people are members of the Marketing Department?
+    refResultSet:
+    - '1'
+    refSparql: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership
+      ; org:member ?person ; org:organization :marketingDep }
+    uid: vcard-org-data-big-27
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2359
+    estimatedSize: 2494
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 224382
+  info:
+    answerResultLength: 1
+    answerSet:
+    - :chiefResearchOfficer
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-1
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:02:46.998831
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What role does Anne Miller have in the Research Department?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:02:48.223205
+    - :chiefResearchOfficer
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:02:46.998823
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What role does Anne Miller have in the Research Department?
+    refResultSet:
+    - :chiefResearchOfficer
+    refSparql: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep
+      ; org:role ?role ] }
+    uid: vcard-org-data-big-1
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2382
+    estimatedSize: 2463
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 83531
+  info:
+    answerResultLength: 1
+    answerSet:
+    - 0:wonderOrg
+    answerSetSize: 1
+    errorF1Format: 1
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:02:48.275264
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: Which organization does the Research Department belong to?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:02:49.358784
+    - 0:wonderOrg
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 0.5
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 0.0
+    trimPrecision: 0.0
+    trimRecall: 0.0
+  startTime: 2024-05-08 00:02:48.275253
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: Which organization does the Research Department belong to?
+    refResultSet:
+    - :wonderOrg
+    refSparql: SELECT ?organization WHERE { :researchDep org:unitOf ?organization
+      }
+    uid: vcard-org-data-big-5
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2371
+    estimatedSize: 2438
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 6
+  - 159288
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '2'
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-10
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:02:49.423470
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many Organizational Units are there in the Knowledge Graph?\n\n\
+      Graph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\"\
+      : \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:02:55.582750
+    - '2'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:02:49.423462
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many Organizational Units are there in the Knowledge Graph?
+    refResultSet:
+    - '2'
+    refSparql: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit
+      }
+    uid: vcard-org-data-big-10
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2366
+    estimatedSize: 2462
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 6
+  - 230875
+  info:
+    answerResultLength: 2
+    answerSet:
+    - Bob
+    - Anne
+    answerSetSize: 2
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-19
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:02:55.630592
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What are the first names of the persons in the organization?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:03:01.861459
+    - 'Anne
+
+      Bob'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:02:55.630584
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What are the first names of the persons in the organization?
+    refResultSet:
+    - Anne
+    - Bob
+    refSparql: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role
+      ?role . ?person foaf:firstName ?firstName }
+    uid: vcard-org-data-big-19
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2370
+    estimatedSize: 2483
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 137547
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '1'
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 0
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-27
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:03:01.924357
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many people are members of the Marketing Department?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:03:03.061895
+    - '1'
+  modelId: Google--gemini-1.0-pro
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 1.0
+    combinedF1: 1.0
+    f1: 1.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 1.0
+    recall: 1.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:03:01.924348
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many people are members of the Marketing Department?
+    refResultSet:
+    - '1'
+    refSparql: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership
+      ; org:member ?person ; org:organization :marketingDep }
+    uid: vcard-org-data-big-27
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2359
+    estimatedSize: 2494
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 270030
+  info:
+    answerResultLength: 1
+    answerSet:
+    - ':chiefResearchOfficer '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-1
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:03:03.111343
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What role does Anne Miller have in the Research Department?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:03:04.381364
+    - ":chiefResearchOfficer \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:03:03.111334
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What role does Anne Miller have in the Research Department?
+    refResultSet:
+    - :chiefResearchOfficer
+    refSparql: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep
+      ; org:role ?role ] }
+    uid: vcard-org-data-big-1
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2384
+    estimatedSize: 2463
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 394932
+  info:
+    answerResultLength: 1
+    answerSet:
+    - ':wonderOrg '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:03:04.429664
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: Which organization does the Research Department belong to?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:03:05.824588
+    - ":wonderOrg \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:03:04.429656
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: Which organization does the Research Department belong to?
+    refResultSet:
+    - :wonderOrg
+    refSparql: SELECT ?organization WHERE { :researchDep org:unitOf ?organization
+      }
+    uid: vcard-org-data-big-5
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2372
+    estimatedSize: 2438
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 583219
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '2 '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-10
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:03:05.894389
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many Organizational Units are there in the Knowledge Graph?\n\n\
+      Graph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\"\
+      : \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:03:07.477600
+    - "2 \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:03:05.894381
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many Organizational Units are there in the Knowledge Graph?
+    refResultSet:
+    - '2'
+    refSparql: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit
+      }
+    uid: vcard-org-data-big-10
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2368
+    estimatedSize: 2462
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 53
+  - 222206
+  info:
+    answerResultLength: 2
+    answerSet:
+    - 'Bob '
+    - Anne
+    answerSetSize: 2
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-19
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:03:07.527424
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What are the first names of the persons in the organization?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:04:00.749621
+    - "Anne\nBob \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.875
+    f1: 0.5
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.5
+    recall: 0.5
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:03:07.527415
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What are the first names of the persons in the organization?
+    refResultSet:
+    - Anne
+    - Bob
+    refSparql: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role
+      ?role . ?person foaf:firstName ?firstName }
+    uid: vcard-org-data-big-19
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2372
+    estimatedSize: 2483
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 235118
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '1 '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-27
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:04:00.810626
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many people are members of the Marketing Department?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:04:02.045736
+    - "1 \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:04:00.810618
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many people are members of the Marketing Department?
+    refResultSet:
+    - '1'
+    refSparql: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership
+      ; org:member ?person ; org:organization :marketingDep }
+    uid: vcard-org-data-big-27
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2361
+    estimatedSize: 2494
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 263481
+  info:
+    answerResultLength: 1
+    answerSet:
+    - ':chiefResearchOfficer '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-1
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:04:02.093392
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What role does Anne Miller have in the Research Department?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:04:03.356865
+    - ':chiefResearchOfficer '
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:04:02.093384
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What role does Anne Miller have in the Research Department?
+    refResultSet:
+    - :chiefResearchOfficer
+    refSparql: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep
+      ; org:role ?role ] }
+    uid: vcard-org-data-big-1
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2383
+    estimatedSize: 2463
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 556847
+  info:
+    answerResultLength: 1
+    answerSet:
+    - ':wonderOrg '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-5
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:04:03.409173
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: Which organization does the Research Department belong to?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:04:04.966012
+    - ":wonderOrg \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:04:03.409165
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: Which organization does the Research Department belong to?
+    refResultSet:
+    - :wonderOrg
+    refSparql: SELECT ?organization WHERE { :researchDep org:unitOf ?organization
+      }
+    uid: vcard-org-data-big-5
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2372
+    estimatedSize: 2438
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 64
+  - 900063
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '2 '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-10
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:04:05.028934
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many Organizational Units are there in the Knowledge Graph?\n\n\
+      Graph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\"\
+      : \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:05:09.928988
+    - "2 \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:04:05.028925
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many Organizational Units are there in the Knowledge Graph?
+    refResultSet:
+    - '2'
+    refSparql: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit
+      }
+    uid: vcard-org-data-big-10
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2368
+    estimatedSize: 2462
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 324414
+  info:
+    answerResultLength: 2
+    answerSet:
+    - 'Bob '
+    - Anne
+    answerSetSize: 2
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-19
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:05:09.996868
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: What are the first names of the persons in the organization?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:05:11.321273
+    - "Anne\nBob \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.875
+    f1: 0.5
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.5
+    recall: 0.5
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:05:09.996859
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: What are the first names of the persons in the organization?
+    refResultSet:
+    - Anne
+    - Bob
+    refSparql: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role
+      ?role . ?person foaf:firstName ?firstName }
+    uid: vcard-org-data-big-19
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2372
+    estimatedSize: 2483
+    targetSize: null
+- !!python/object:LlmKgBench.api.task.TaskExecInfo
+  duration: !!python/object/apply:datetime.timedelta
+  - 0
+  - 1
+  - 489032
+  info:
+    answerResultLength: 1
+    answerSet:
+    - '1 '
+    answerSetSize: 1
+    errorF1Format: 0
+    errorF1Minor: 0
+    errorF1Spaces: 1
+    errorGreaterThan: 0
+    errorHttp: 0
+    errorNumber: 0
+    errorQuotationMark: 0
+    testUid: vcard-org-data-big-27
+  interactions:
+  - !!python/tuple
+    - prompt
+    - 2024-05-08 00:05:11.373420
+    - "Please generate the answer for the following question based on the given RDF\
+      \ graph in turtle format.\nTo support automated parsing, please answer with\
+      \ just the result, one entity or literal per line, no other text.\nPlease assume\
+      \ common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\n\
+      For e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal\
+      \ \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\n\
+      Question: How many people are members of the Marketing Department?\n\nGraph:\n\
+      {\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"\
+      http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\"\
+      ,\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\"\
+      ,\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n\
+      \      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\"\
+      : \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\"\
+      : {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"\
+      UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"\
+      foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\":\
+      \ \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\"\
+      ,\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"\
+      @id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n   \
+      \ {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\"\
+      ,\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n   \
+      \   \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"\
+      0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\"\
+      : {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing\
+      \ Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n\
+      \      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\"\
+      ,\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\"\
+      ,\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"\
+      org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"\
+      org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n\
+      \    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n    \
+      \    \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"\
+      @id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\"\
+      : \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+  - !!python/tuple
+    - response
+    - 2024-05-08 00:05:12.862443
+    - "1 \n"
+  modelId: Google--models/gemini-1.5-pro-latest
+  reevalInfo: {}
+  reevalOriginalTime: null
+  scores:
+    brevity: 0.5
+    combinedF1: 0.75
+    f1: 0.0
+    fixedF1: 1.0
+    fixedPrecision: 1.0
+    fixedRecall: 1.0
+    precision: 0.0
+    recall: 0.0
+    relaxedF1: 1.0
+    relaxedPrecision: 1.0
+    relaxedRecall: 1.0
+    trimF1: 1.0
+    trimPrecision: 1.0
+    trimRecall: 1.0
+  startTime: 2024-05-08 00:05:11.373411
+  taskData:
+    entityLabelMapping: null
+    graphFormat: json-ld
+    multishotLimit: 1
+    multishotResultLimit: 1
+    multishotSyntaxLimit: 1
+    question: How many people are members of the Marketing Department?
+    refResultSet:
+    - '1'
+    refSparql: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership
+      ; org:member ?person ; org:organization :marketingDep }
+    uid: vcard-org-data-big-27
+  taskInfo: !!python/object:LlmKgBench.api.task.TaskInfo
+    gitCommit: 1c783524f11e26999def6c300f3d27581769083a
+    taskId: Text2AnswerListOrganizational
+    taskLabel: Text2AnswerListOrgaJsonld
+    version: '2.0'
+  taskSizeInfo: !!python/object:LlmKgBench.api.task.TaskSizeInfo
+    actualSize: 2361
+    estimatedSize: 2494
+    targetSize: null

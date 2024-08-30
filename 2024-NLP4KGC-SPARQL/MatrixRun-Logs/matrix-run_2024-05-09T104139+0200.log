@@ -1,0 +1,13 @@
+starting at 2024-05-09T10:41:39+02:00
+args: 'ModelGpt' - 'SparqlSyntaxFixingListLcQuad Text2SparqlExecEvalListLcQuad Text2SparqlExecEvalListOrganizational Text2SparqlExecEvalListOrgaNumerical' - '10 20' - --config LlmKgBench/configuration-2024-05-sparql.yml
+full command LlmKgBench/run-matrix.sh ModelGpt SparqlSyntaxFixingListLcQuad Text2SparqlExecEvalListLcQuad Text2SparqlExecEvalListOrganizational Text2SparqlExecEvalListOrgaNumerical 10 20 --config LlmKgBench/configuration-2024-05-sparql.yml
+2024-05-09T10:41:39+02:00 starting: ModelGpt-SparqlSyntaxFixingListLcQuad-10x
+2024-05-09T10:47:05+02:00 starting: ModelGpt-Text2SparqlExecEvalListLcQuad-10x
+2024-05-09T10:58:12+02:00 starting: ModelGpt-Text2SparqlExecEvalListOrganizational-10x
+2024-05-09T11:00:06+02:00 starting: ModelGpt-Text2SparqlExecEvalListOrgaNumerical-10x
+2024-05-09T11:02:57+02:00 starting: ModelGpt-SparqlSyntaxFixingListLcQuad-20x
+2024-05-09T11:12:31+02:00 starting: ModelGpt-Text2SparqlExecEvalListLcQuad-20x
+2024-05-09T11:31:20+02:00 starting: ModelGpt-Text2SparqlExecEvalListOrganizational-20x
+2024-05-09T11:35:21+02:00 starting: ModelGpt-Text2SparqlExecEvalListOrgaNumerical-20x
+Do 9. Mai 11:39:37 CEST 2024
+Completed all matrix runs

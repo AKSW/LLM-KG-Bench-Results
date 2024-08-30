@@ -1,0 +1,2938 @@
+[
+  {
+    "startTime": "2024-05-08T00:05:14.936012",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1710,
+      "actualSize": 1629
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-1",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":chiefResearchOfficer"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-1",
+      "question": "What role does Anne Miller have in the Research Department?",
+      "refSparql": "SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }",
+      "refResultSet": [
+        ":chiefResearchOfficer"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:02.257706",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:14.936027",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:05:17.193718",
+        ":chiefResearchOfficer"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:05:17.248429",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1662,
+      "actualSize": 1594
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-5",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":wonderOrg"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-5",
+      "question": "Which organization does the Research Department belong to?",
+      "refSparql": "SELECT ?organization WHERE { :researchDep org:unitOf ?organization }",
+      "refResultSet": [
+        ":wonderOrg"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:01.621548",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:17.248441",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?organization WHERE { :researchDep org:unitOf ?organization }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:05:18.869977",
+        ":wonderOrg"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:05:18.936412",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1700,
+      "actualSize": 1604
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-10",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "2"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-10",
+      "question": "How many Organizational Units are there in the Knowledge Graph?",
+      "refSparql": "SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }",
+      "refResultSet": [
+        "2"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:08.903369",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:18.936425",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:05:27.839781",
+        "2"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:05:27.890843",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1748,
+      "actualSize": 1635
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-19",
+      "answerResultLength": 2,
+      "answerSetSize": 2,
+      "answerSet": [
+        "Anne",
+        "Bob"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-19",
+      "question": "What are the first names of the persons in the organization?",
+      "refSparql": "SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }",
+      "refResultSet": [
+        "Anne",
+        "Bob"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:01.065641",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:27.890851",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:05:28.956484",
+        "Anne\nBob"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:05:29.014669",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1778,
+      "actualSize": 1643
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 0.0,
+      "trimRecall": 0.0,
+      "trimF1": 0.0,
+      "fixedPrecision": 0.0,
+      "fixedRecall": 0.0,
+      "fixedF1": 0.0,
+      "relaxedPrecision": 0.0,
+      "relaxedRecall": 0.0,
+      "relaxedF1": 0.0,
+      "brevity": 1.0,
+      "combinedF1": 0.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-27",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "2"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-27",
+      "question": "How many people are members of the Marketing Department?",
+      "refSparql": "SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }",
+      "refResultSet": [
+        "1"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:05.904829",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:29.014680",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:05:34.919498",
+        "2"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:05:34.976010",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1710,
+      "actualSize": 1629
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-1",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":chiefResearchOfficer"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-1",
+      "question": "What role does Anne Miller have in the Research Department?",
+      "refSparql": "SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }",
+      "refResultSet": [
+        ":chiefResearchOfficer"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:01.268457",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:34.976020",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:05:36.244467",
+        ":chiefResearchOfficer"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:05:36.303424",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1662,
+      "actualSize": 1594
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-5",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":wonderOrg"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-5",
+      "question": "Which organization does the Research Department belong to?",
+      "refSparql": "SELECT ?organization WHERE { :researchDep org:unitOf ?organization }",
+      "refResultSet": [
+        ":wonderOrg"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:02.495918",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:36.303438",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?organization WHERE { :researchDep org:unitOf ?organization }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:05:38.799342",
+        ":wonderOrg"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:05:38.858161",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1700,
+      "actualSize": 1604
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 0.0,
+      "trimRecall": 0.0,
+      "trimF1": 0.0,
+      "fixedPrecision": 0.0,
+      "fixedRecall": 0.0,
+      "fixedF1": 0.0,
+      "relaxedPrecision": 0.0,
+      "relaxedRecall": 0.0,
+      "relaxedF1": 0.0,
+      "brevity": 1.0,
+      "combinedF1": 0.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-10",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "1"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-10",
+      "question": "How many Organizational Units are there in the Knowledge Graph?",
+      "refSparql": "SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }",
+      "refResultSet": [
+        "2"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:02.258375",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:38.858172",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:05:41.116536",
+        "1"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:05:41.180097",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1748,
+      "actualSize": 1635
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-19",
+      "answerResultLength": 2,
+      "answerSetSize": 2,
+      "answerSet": [
+        "Anne",
+        "Bob"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-19",
+      "question": "What are the first names of the persons in the organization?",
+      "refSparql": "SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }",
+      "refResultSet": [
+        "Anne",
+        "Bob"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:03.872871",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:41.180106",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:05:45.052968",
+        "Anne\nBob"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:05:45.112375",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1778,
+      "actualSize": 1643
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 0.0,
+      "trimRecall": 0.0,
+      "trimF1": 0.0,
+      "fixedPrecision": 0.0,
+      "fixedRecall": 0.0,
+      "fixedF1": 0.0,
+      "relaxedPrecision": 0.0,
+      "relaxedRecall": 0.0,
+      "relaxedF1": 0.0,
+      "brevity": 1.0,
+      "combinedF1": 0.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-27",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "2"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-27",
+      "question": "How many people are members of the Marketing Department?",
+      "refSparql": "SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }",
+      "refResultSet": [
+        "1"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:01.049936",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:45.112383",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:05:46.162311",
+        "2"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:05:46.236992",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1710,
+      "actualSize": 1631
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-1",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":chiefResearchOfficer "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-1",
+      "question": "What role does Anne Miller have in the Research Department?",
+      "refSparql": "SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }",
+      "refResultSet": [
+        ":chiefResearchOfficer"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:23.541747",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:05:46.237005",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:06:09.778739",
+        ":chiefResearchOfficer \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:06:09.850192",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1662,
+      "actualSize": 1596
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-5",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":wonderOrg "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-5",
+      "question": "Which organization does the Research Department belong to?",
+      "refSparql": "SELECT ?organization WHERE { :researchDep org:unitOf ?organization }",
+      "refResultSet": [
+        ":wonderOrg"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:01.479480",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:06:09.850203",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?organization WHERE { :researchDep org:unitOf ?organization }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:06:11.329672",
+        ":wonderOrg \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:06:11.381486",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1700,
+      "actualSize": 1606
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-10",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "2 "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-10",
+      "question": "How many Organizational Units are there in the Knowledge Graph?",
+      "refSparql": "SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }",
+      "refResultSet": [
+        "2"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:01.560466",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:06:11.381496",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:06:12.941952",
+        "2 \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:06:12.999383",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1748,
+      "actualSize": 1637
+    },
+    "scores": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.875
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-19",
+      "answerResultLength": 2,
+      "answerSetSize": 2,
+      "answerSet": [
+        "Anne",
+        "Bob "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-19",
+      "question": "What are the first names of the persons in the organization?",
+      "refSparql": "SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }",
+      "refResultSet": [
+        "Anne",
+        "Bob"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:01:32.890845",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:06:12.999391",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:07:45.890228",
+        "Anne\nBob \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:07:45.964026",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1778,
+      "actualSize": 1645
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-27",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "1 "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-27",
+      "question": "How many people are members of the Marketing Department?",
+      "refSparql": "SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }",
+      "refResultSet": [
+        "1"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:01.283539",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:07:45.964035",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:07:47.247565",
+        "1 \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:07:47.317977",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1710,
+      "actualSize": 1631
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-1",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":chiefResearchOfficer "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-1",
+      "question": "What role does Anne Miller have in the Research Department?",
+      "refSparql": "SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }",
+      "refResultSet": [
+        ":chiefResearchOfficer"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:01.755703",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:07:47.317991",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:07:49.073680",
+        ":chiefResearchOfficer \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:07:49.125350",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1662,
+      "actualSize": 1596
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-5",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":wonderOrg "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-5",
+      "question": "Which organization does the Research Department belong to?",
+      "refSparql": "SELECT ?organization WHERE { :researchDep org:unitOf ?organization }",
+      "refResultSet": [
+        ":wonderOrg"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:01:06.937043",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:07:49.125363",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?organization WHERE { :researchDep org:unitOf ?organization }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:08:56.062393",
+        ":wonderOrg \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:08:56.129269",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1700,
+      "actualSize": 1604
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-10",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "2"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-10",
+      "question": "How many Organizational Units are there in the Knowledge Graph?",
+      "refSparql": "SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }",
+      "refResultSet": [
+        "2"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:01.212827",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:08:56.129284",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:08:57.342096",
+        "2"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:08:57.392827",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1748,
+      "actualSize": 1637
+    },
+    "scores": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.875
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-19",
+      "answerResultLength": 2,
+      "answerSetSize": 2,
+      "answerSet": [
+        "Anne",
+        "Bob "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-19",
+      "question": "What are the first names of the persons in the organization?",
+      "refSparql": "SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }",
+      "refResultSet": [
+        "Anne",
+        "Bob"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:00:01.539254",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:08:57.392836",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:08:58.932081",
+        "Anne\nBob \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:08:59.004203",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaTurtle",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 1778,
+      "actualSize": 1645
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-27",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "1 "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-27",
+      "question": "How many people are members of the Marketing Department?",
+      "refSparql": "SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }",
+      "refResultSet": [
+        "1"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "turtle"
+    },
+    "duration": "0:01:07.484494",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:08:59.004211",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }\n\nGraph:\nPREFIX : <https://abc.def/ghi/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\nPREFIX org: <http://www.w3.org/ns/org#>\n\n:anne a foaf:Person ; foaf:firstName \"Anne\" ; foaf:surname \"Miller\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"UK\" ] .\n:bob a foaf:Person ; foaf:firstName \"Bob\" ; foaf:surname \"Tanner\" ;\n  vcard:hasAddress [ a vcard:Home ; vcard:country-name \"US\" ] .\n\n:wonderOrg a org:Organization .\n:researchDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Research Department\" .\n:marketingDep a org:OrganizationalUnit ; org:unitOf :wonderOrg ;\n  rdfs:label \"Marketing Department\" .\n\n:chiefResearchOfficer a org:Role . :marketingManager a org:Role .\n\n[ a org:Membership ; org:member :anne ; org:organization :researchDep ;\n  org:role :chiefResearchOfficer ] .\n[ a org:Membership ; org:member :bob  ; org:organization :marketingDep ;\n  org:role :marketingManager ] .\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:06.488697",
+        "1 \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:06.594478",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2498,
+      "actualSize": 2417
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-1",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":chiefResearchOfficer"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-1",
+      "question": "What role does Anne Miller have in the Research Department?",
+      "refSparql": "SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }",
+      "refResultSet": [
+        ":chiefResearchOfficer"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:02.906222",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:06.594487",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:09.500700",
+        ":chiefResearchOfficer"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:09.556538",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2450,
+      "actualSize": 2383
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 0.0,
+      "trimRecall": 0.0,
+      "trimF1": 0.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 0.5
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-5",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "0:wonderOrg"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 1,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-5",
+      "question": "Which organization does the Research Department belong to?",
+      "refSparql": "SELECT ?organization WHERE { :researchDep org:unitOf ?organization }",
+      "refResultSet": [
+        ":wonderOrg"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.062882",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:09.556551",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?organization WHERE { :researchDep org:unitOf ?organization }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:10.619420",
+        "0:wonderOrg"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:10.685578",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2488,
+      "actualSize": 2392
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-10",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "2"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-10",
+      "question": "How many Organizational Units are there in the Knowledge Graph?",
+      "refSparql": "SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }",
+      "refResultSet": [
+        "2"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.185857",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:10.685589",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:11.871435",
+        "2"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:11.931484",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2536,
+      "actualSize": 2423
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-19",
+      "answerResultLength": 2,
+      "answerSetSize": 2,
+      "answerSet": [
+        "Anne",
+        "Bob"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-19",
+      "question": "What are the first names of the persons in the organization?",
+      "refSparql": "SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }",
+      "refResultSet": [
+        "Anne",
+        "Bob"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.207569",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:11.931495",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:13.139053",
+        "Anne\nBob"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:13.189456",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2566,
+      "actualSize": 2431
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-27",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "1"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-27",
+      "question": "How many people are members of the Marketing Department?",
+      "refSparql": "SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }",
+      "refResultSet": [
+        "1"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.110779",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:13.189470",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:14.300235",
+        "1"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:14.377693",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2498,
+      "actualSize": 2417
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-1",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":chiefResearchOfficer"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-1",
+      "question": "What role does Anne Miller have in the Research Department?",
+      "refSparql": "SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }",
+      "refResultSet": [
+        ":chiefResearchOfficer"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.665316",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:14.377706",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:16.043009",
+        ":chiefResearchOfficer"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:16.099054",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2450,
+      "actualSize": 2382
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-5",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":wonderOrg"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-5",
+      "question": "Which organization does the Research Department belong to?",
+      "refSparql": "SELECT ?organization WHERE { :researchDep org:unitOf ?organization }",
+      "refResultSet": [
+        ":wonderOrg"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:02.688870",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:16.099068",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?organization WHERE { :researchDep org:unitOf ?organization }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:18.787924",
+        ":wonderOrg"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:18.853951",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2488,
+      "actualSize": 2392
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-10",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "2"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-10",
+      "question": "How many Organizational Units are there in the Knowledge Graph?",
+      "refSparql": "SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }",
+      "refResultSet": [
+        "2"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:02.357456",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:18.853961",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:21.211407",
+        "2"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:21.286450",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2536,
+      "actualSize": 2423
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-19",
+      "answerResultLength": 2,
+      "answerSetSize": 2,
+      "answerSet": [
+        "Anne",
+        "Bob"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-19",
+      "question": "What are the first names of the persons in the organization?",
+      "refSparql": "SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }",
+      "refResultSet": [
+        "Anne",
+        "Bob"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:07.545950",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:21.286459",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:28.832400",
+        "Anne\nBob"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:28.884871",
+    "reevalOriginalTime": null,
+    "modelId": "Google--gemini-1.0-pro",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2566,
+      "actualSize": 2431
+    },
+    "scores": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 1.0,
+      "combinedF1": 1.0
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-27",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "1"
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-27",
+      "question": "How many people are members of the Marketing Department?",
+      "refSparql": "SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }",
+      "refResultSet": [
+        "1"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.954552",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:28.884879",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:30.839423",
+        "1"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:30.916646",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2498,
+      "actualSize": 2419
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-1",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":chiefResearchOfficer "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-1",
+      "question": "What role does Anne Miller have in the Research Department?",
+      "refSparql": "SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }",
+      "refResultSet": [
+        ":chiefResearchOfficer"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.645036",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:30.916654",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:32.561682",
+        ":chiefResearchOfficer \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:32.613731",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2450,
+      "actualSize": 2384
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-5",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":wonderOrg "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-5",
+      "question": "Which organization does the Research Department belong to?",
+      "refSparql": "SELECT ?organization WHERE { :researchDep org:unitOf ?organization }",
+      "refResultSet": [
+        ":wonderOrg"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.273648",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:32.613739",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?organization WHERE { :researchDep org:unitOf ?organization }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:10:33.887379",
+        ":wonderOrg \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:10:33.949489",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2488,
+      "actualSize": 2394
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-10",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "2 "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-10",
+      "question": "How many Organizational Units are there in the Knowledge Graph?",
+      "refSparql": "SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }",
+      "refResultSet": [
+        "2"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:49.060090",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:10:33.949504",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:11:23.009579",
+        "2 \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:11:23.076850",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2536,
+      "actualSize": 2427
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 0.0,
+      "trimRecall": 0.0,
+      "trimF1": 0.0,
+      "fixedPrecision": 0.0,
+      "fixedRecall": 0.0,
+      "fixedF1": 0.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.25
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-19",
+      "answerResultLength": 2,
+      "answerSetSize": 2,
+      "answerSet": [
+        ":anne",
+        ":bob "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 0,
+      "errorF1Format": 0,
+      "errorF1Minor": 1
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-19",
+      "question": "What are the first names of the persons in the organization?",
+      "refSparql": "SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }",
+      "refResultSet": [
+        "Anne",
+        "Bob"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.929727",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:11:23.076861",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:11:25.006577",
+        ":anne\n:bob \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:11:25.064963",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2566,
+      "actualSize": 2433
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-27",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "1 "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-27",
+      "question": "How many people are members of the Marketing Department?",
+      "refSparql": "SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }",
+      "refResultSet": [
+        "1"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.435171",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:11:25.065006",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:11:26.500134",
+        "1 \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:11:26.576707",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2498,
+      "actualSize": 2419
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-1",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":chiefResearchOfficer "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-1",
+      "question": "What role does Anne Miller have in the Research Department?",
+      "refSparql": "SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }",
+      "refResultSet": [
+        ":chiefResearchOfficer"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:39.723770",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:11:26.576715",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:12:06.300477",
+        ":chiefResearchOfficer \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:12:06.373520",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2450,
+      "actualSize": 2384
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-5",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        ":wonderOrg "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-5",
+      "question": "Which organization does the Research Department belong to?",
+      "refSparql": "SELECT ?organization WHERE { :researchDep org:unitOf ?organization }",
+      "refResultSet": [
+        ":wonderOrg"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.626300",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:12:06.373528",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?organization WHERE { :researchDep org:unitOf ?organization }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:12:07.999820",
+        ":wonderOrg \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:12:08.064447",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2488,
+      "actualSize": 2394
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-10",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "2 "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-10",
+      "question": "How many Organizational Units are there in the Knowledge Graph?",
+      "refSparql": "SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }",
+      "refResultSet": [
+        "2"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.709378",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:12:08.064461",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(DISTINCT ?orgUnit) AS ?count) WHERE { ?orgUnit a org:OrganizationalUnit }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:12:09.773825",
+        "2 \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:12:09.828471",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2536,
+      "actualSize": 2425
+    },
+    "scores": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.875
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-19",
+      "answerResultLength": 2,
+      "answerSetSize": 2,
+      "answerSet": [
+        "Anne",
+        "Bob "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-19",
+      "question": "What are the first names of the persons in the organization?",
+      "refSparql": "SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }",
+      "refResultSet": [
+        "Anne",
+        "Bob"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:52.591498",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:12:09.828479",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT ?firstName WHERE { ?membership org:member ?person ; org:role ?role . ?person foaf:firstName ?firstName }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:13:02.419969",
+        "Anne\nBob \n"
+      ]
+    ]
+  },
+  {
+    "startTime": "2024-05-08T00:13:02.493381",
+    "reevalOriginalTime": null,
+    "modelId": "Google--models/gemini-1.5-pro-latest",
+    "taskInfo": {
+      "taskId": "Sparql2AnswerListOrganizational",
+      "taskLabel": "Sparql2AnswerListOrgaJsonld",
+      "version": "2.0",
+      "gitCommit": "1c783524f11e26999def6c300f3d27581769083a"
+    },
+    "taskSizeInfo": {
+      "targetSize": null,
+      "estimatedSize": 2566,
+      "actualSize": 2433
+    },
+    "scores": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "trimPrecision": 1.0,
+      "trimRecall": 1.0,
+      "trimF1": 1.0,
+      "fixedPrecision": 1.0,
+      "fixedRecall": 1.0,
+      "fixedF1": 1.0,
+      "relaxedPrecision": 1.0,
+      "relaxedRecall": 1.0,
+      "relaxedF1": 1.0,
+      "brevity": 0.5,
+      "combinedF1": 0.75
+    },
+    "info": {
+      "testUid": "vcard-org-data-big-27",
+      "answerResultLength": 1,
+      "answerSetSize": 1,
+      "answerSet": [
+        "1 "
+      ],
+      "errorHttp": 0,
+      "errorGreaterThan": 0,
+      "errorQuotationMark": 0,
+      "errorNumber": 0,
+      "errorF1Spaces": 1,
+      "errorF1Format": 0,
+      "errorF1Minor": 0
+    },
+    "taskData": {
+      "uid": "vcard-org-data-big-27",
+      "question": "How many people are members of the Marketing Department?",
+      "refSparql": "SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }",
+      "refResultSet": [
+        "1"
+      ],
+      "entityLabelMapping": null,
+      "multishotLimit": 1,
+      "multishotSyntaxLimit": 1,
+      "multishotResultLimit": 1,
+      "graphFormat": "json-ld"
+    },
+    "duration": "0:00:01.475746",
+    "interactions": [
+      [
+        "prompt",
+        "2024-05-08T00:13:02.493389",
+        "Please generate the answer for the following SPARQL query based on the given RDF graph in turtle format.\nTo support automated parsing, please answer with just the result, one entity or literal per line, no other text.\nPlease assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.\nFor e.g. \"<https://abc.def/ghi/anne>\" answer with \":anne\", for the literal \"Anne\" answer with \"Anne\" and for a count of 3 answer with \"3\".\n\nSPARQL: SELECT (COUNT(?person) AS ?count) WHERE { ?membership a org:Membership ; org:member ?person ; org:organization :marketingDep }\n\nGraph:\n{\n  \"@context\": {\n    \"0\": \"https://abc.def/ghi/\",\n    \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n    \"owl\": \"http://www.w3.org/2002/07/owl#\",\n    \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n    \"vcard\": \"http://www.w3.org/2006/vcard/ns#\",\n    \"org\": \"http://www.w3.org/ns/org#\"\n  },\n  \"@graph\": [\n    {\n      \"@id\": \"0:anne\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Anne\",\n      \"foaf:surname\": \"Miller\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"UK\"\n      }\n    },\n    {\n      \"@id\": \"0:bob\",\n      \"@type\": \"foaf:Person\",\n      \"foaf:firstName\": \"Bob\",\n      \"foaf:surname\": \"Tanner\",\n      \"vcard:hasAddress\": {\n        \"@type\": \"vcard:Home\",\n        \"vcard:country-name\": \"US\"\n      }\n    },\n    {\n      \"@id\": \"0:wonderOrg\",\n      \"@type\": \"org:Organization\"\n    },\n    {\n      \"@id\": \"0:researchDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Research Department\"\n    },\n    {\n      \"@id\": \"0:marketingDep\",\n      \"@type\": \"org:OrganizationalUnit\",\n      \"org:unitOf\": {\n        \"@id\": \"0:wonderOrg\"\n      },\n      \"rdfs:label\": \"Marketing Department\"\n    },\n    {\n      \"@id\": \"0:chiefResearchOfficer\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@id\": \"0:marketingManager\",\n      \"@type\": \"org:Role\"\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:anne\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:researchDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:chiefResearchOfficer\"\n      }\n    },\n    {\n      \"@type\": \"org:Membership\",\n      \"org:member\": {\n        \"@id\": \"0:bob\"\n      },\n      \"org:organization\": {\n        \"@id\": \"0:marketingDep\"\n      },\n      \"org:role\": {\n        \"@id\": \"0:marketingManager\"\n      }\n    }\n  ]\n}\n\n"
+      ],
+      [
+        "response",
+        "2024-05-08T00:13:03.969127",
+        "1 \n"
+      ]
+    ]
+  }
+]
