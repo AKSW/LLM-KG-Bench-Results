@@ -1,6 +1,7 @@
 # Results for task type 'SPARQL Syntax Fixing' (SSF)
 
-This folder contains the results for the task type 'SPARQL Syntax Fixing' (SSF)
+This folder contains the results for the task type 'SPARQL Syntax Fixing' (SSF).
+The raw results are included in the zip file [Results-SparqlSyntaxFixing.zip](Results-SparqlSyntaxFixing.zip).
 
 The task SPARQL Syntax Fixing asks to fix a syntax error in a given SPARQL query.
 To be more precise, the LLM is given a syntactically malformed SPARQL query together with the resulting rdflib parsing error message.

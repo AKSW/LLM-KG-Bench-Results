@@ -1,6 +1,7 @@
 # Results for task type 'SPARQL to Answer' (S2A)
 
-This folder contains the results for the task type 'SPARQL to Answer' (S2A)
+This folder contains the results for the task type 'SPARQL to Answer' (S2A).
+The raw results are included in the zip file [Results-Sparql2Answer.zip](Results-Sparql2Answer.zip).
 
 The SPARQL-to-Answer task asks to interpret a given *SPARQL SELECT* query on a given KG(the organizational graph is used here) and answer with the binding values.
 The LLM is asked to give one value per line and the F1 measure is used to score the result.

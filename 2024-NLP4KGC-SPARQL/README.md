@@ -1,6 +1,9 @@
 # LLM-KG-Bench SPARQL Results 2024
 Results for SPARQL tasks of [LLM-KG-Bench framework](https://github.com/AKSW/LLM-KG-Bench) as described in the article "Assessing SPARQL capabilities of Large Language Models" by L.-P. Meyer et al. in proceedings of the NLP4KGC workshop at SEMANTICS 2024.
 
+Code used for this run is archived at zenodo as [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13622575.svg)](https://doi.org/10.5281/zenodo.13622575).
+This results are archived at zenodo as [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13621581.svg)](https://doi.org/10.5281/zenodo.13621581).
+
 ## Results for 4 SPARQL SELECT query related task types:
 
 * [SparqlSyntaxFixing](SparqlSyntaxFixing/README.md): Fixing syntax errors in SPARQL SELECT queries
@@ -33,3 +36,6 @@ Overview on the task types and their input and output:
 
 ## repetition of evaluation with given result files:
 * The Benchmarking framework supports the reevaluation of given result files via the `--reeval` parameter
+
+## Test dataset, please do not use for training
+The result files collected here contain test data. Please do not use them for training of LLMs. If you are interested in training data, please contact us, e.g.  via [email](https://orcid.org/0000-0001-5260-5181).
