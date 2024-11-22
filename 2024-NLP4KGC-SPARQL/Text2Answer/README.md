@@ -1,7 +1,7 @@
 # Results for task type 'Text to Answer' (T2A)
 
 This folder contains the results for the task type 'Text to Answer' (T2A).
-The raw results are included in the zip file [results-Text2Answer.zip](results-Text2Answer.zip).
+The raw results are included in the zip file [results-Text2Answer.zip](results-Text2Answer.zip). This zip file is password protected with: `2Forbes-4Tech-2Mouse-4Freeze-2Sheet4`
 
 The Text-to-Answer task asks to interpret a given natural language question on a given KG(the organizational graph is used here) and answer with the binding values.
 The LLM is asked to give one value per line and the F1 measure is used to score the result.

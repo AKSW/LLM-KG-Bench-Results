@@ -6,6 +6,8 @@ This results are archived at zenodo as [![DOI](https://zenodo.org/badge/DOI/10.5
 
 ## Results for 4 SPARQL SELECT query related task types:
 
+To reduce test data leakage, all results zip files are password protected with: `2Forbes-4Tech-2Mouse-4Freeze-2Sheet4`
+
 * [SparqlSyntaxFixing](SparqlSyntaxFixing/README.md): Fixing syntax errors in SPARQL SELECT queries
 * [Text2Sparql](Text2Sparql/README.md): Generate SPARQL SELECT queries from textual questions
 * [Text2Answer](Text2Answer/README.md): Generate the answer for a textual question with a given knowledge graph

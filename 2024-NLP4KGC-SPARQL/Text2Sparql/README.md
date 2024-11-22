@@ -1,7 +1,7 @@
 # Results for task type 'Text to SPARQL' (T2S)
 
 This folder contains the results for the task type 'Text 2 SPARQL' (T2S).
-The raw results are included in the zip file [results-Text2Sparql.zip](results-Text2Sparql.zip).
+The raw results are included in the zip file [results-Text2Sparql.zip](results-Text2Sparql.zip). This zip file is password protected with: `2Forbes-4Tech-2Mouse-4Freeze-2Sheet4`
 
 The Text-to-Sparql task asks to create a *SPARQL SELECT* query for a KG and a textual question.
 Many KBQA approaches build upon this capability.

@@ -1,7 +1,7 @@
 # Results for task type 'SPARQL to Answer' (S2A)
 
 This folder contains the results for the task type 'SPARQL to Answer' (S2A).
-The raw results are included in the zip file [Results-Sparql2Answer.zip](Results-Sparql2Answer.zip).
+The raw results are included in the zip file [Results-Sparql2Answer.zip](Results-Sparql2Answer.zip). This zip file is password protected with: `2Forbes-4Tech-2Mouse-4Freeze-2Sheet4`
 
 The SPARQL-to-Answer task asks to interpret a given *SPARQL SELECT* query on a given KG(the organizational graph is used here) and answer with the binding values.
 The LLM is asked to give one value per line and the F1 measure is used to score the result.
@@ -15,7 +15,7 @@ An example prompt is the following:
     Please assume common prefixes and the default/base prefix is set as <https://abc.def/ghi/>.
     For e.g. "<https://abc.def/ghi/anne>" answer with ":anne", for the literal "Anne" answer with "Anne" and for a count of 3 answer with "3".
     
-    SPARQL: SELECT ?role WHERE { [ org:member :anne ; org:organization :researchDep ; org:role ?role ] }
+    SPARQL: SELECT ?role WHERE <<rest of query removed to reduce test data leakage>>
     
     Graph:
     PREFIX : <https://abc.def/ghi/>
