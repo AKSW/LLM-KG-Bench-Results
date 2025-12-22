@@ -1,0 +1,54 @@
+---
+"Syn-1": # "Sparql-Syntax-Capability-first-shot": 
+  SparqlSyntaxFixingListLcQuad: # task label
+    score: 0_combined # name of the scoreRdfFriendCount-nt-1
+    weight: 1.0 # weight of this score for this aggregation. 1 is default and can be omitted
+  Text2SparqlExecEvalListOrganizational:
+    score: 0_answerParse
+    weight: 0.25
+  Text2SparqlExecEvalListOrgaNumerical:
+    score: 0_answerParse
+    weight: 0.25
+  Text2SparqlExecEvalListCoypuMini:
+    score: 0_answerParse
+    weight: 0.25
+  Text2SparqlExecEvalListBeastiary-turtle-subgraph:
+    score: 0_answerParse
+    weight: 0.25
+"Syn-Max": # "Sparql-Syntax-Capability-dialog":
+  SparqlSyntaxFixingListLcQuad: # task label
+    score: max_combined # name of the scoreRdfFriendCount-nt-1
+    weight: 1.0 # weight of this score for this aggregation. 1 is default and can be omitted
+  Text2SparqlExecEvalListOrganizational:
+    score: max_answerParse
+    weight: 0.25
+  Text2SparqlExecEvalListOrgaNumerical:
+    score: max_answerParse
+    weight: 0.25
+  Text2SparqlExecEvalListCoypuMini:
+    score: max_answerParse
+    weight: 0.25
+  Text2SparqlExecEvalListBeastiary-turtle-subgraph:
+    score: max_answerParse
+    weight: 0.25
+"Sem-R": # "Sparql-Semantics-Read-Capability":
+  Sparql2AnswerListOrga-turtle:
+    score: combinedF1
+"Sem-W-1": # "Sparql-Semantics-Write-Capability":
+  Text2SparqlExecEvalListOrganizational:
+    score: 0_combined
+  Text2SparqlExecEvalListOrgaNumerical:
+    score: 0_combined
+  Text2SparqlExecEvalListCoypuMini:
+    score: 0_combined
+  Text2SparqlExecEvalListBeastiary-turtle-subgraph:
+    score: 0_combined
+"Sem-W-max": # "Sparql-Semantics-Write-Capability":
+  Text2SparqlExecEvalListOrganizational:
+    score: max_combined
+  Text2SparqlExecEvalListOrgaNumerical:
+    score: max_combined
+  Text2SparqlExecEvalListCoypuMini:
+    score: max_combined
+  Text2SparqlExecEvalListBeastiary-turtle-subgraph:
+    score: max_combined
